@@ -16,6 +16,6 @@ public class Demo {
 
 		}
 		//加载布局文件
-		GuiXmlLoader.loader("D:\\Workspaces\\MyEclipse 8.5\\AXmlSwing\\bin\\org\\arong\\axmlswing\\demo\\demo.xml");
+		GuiXmlLoader.loader("F:\\AXmlSwing\\bin\\org\\arong\\axmlswing\\demo\\demo.xml");
 	}
 }

@@ -1,4 +1,4 @@
-package org.arong.axmlswing;
+package org.arong.axmlswing.attribute;
 /**
  * 控件属性模型
  * @author dipoo
@@ -30,6 +30,10 @@ public class AttributeModel {
 	private String text;
 	private String actionCommand;
 	private Boolean borderPainted;
+	private Boolean contentAreaFilled;//是否填充
+	private String icon;//图标
+	private String disabledIcon;
+	private Boolean defaultCapable;
 	
 	
 	public String getId() {
@@ -181,5 +185,29 @@ public class AttributeModel {
 	}
 	public void setAlwaysOnTop(Boolean alwaysOnTop) {
 		this.alwaysOnTop = alwaysOnTop;
+	}
+	public void setContentAreaFilled(Boolean contentAreaFilled) {
+		this.contentAreaFilled = contentAreaFilled;
+	}
+	public Boolean getContentAreaFilled() {
+		return contentAreaFilled;
+	}
+	public void setDisabledIcon(String disabledIcon) {
+		this.disabledIcon = disabledIcon;
+	}
+	public String getDisabledIcon() {
+		return disabledIcon;
+	}
+	public void setIcon(String icon) {
+		this.icon = icon;
+	}
+	public String getIcon() {
+		return icon;
+	}
+	public void setDefaultCapable(Boolean defaultCapable) {
+		this.defaultCapable = defaultCapable;
+	}
+	public Boolean getDefaultCapable() {
+		return defaultCapable;
 	}
 }

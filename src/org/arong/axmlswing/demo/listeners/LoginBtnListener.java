@@ -6,9 +6,9 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 
-import org.arong.axmlswing.AbstractListener;
-import org.arong.axmlswing.ComponentManager;
-import org.arong.axmlswing.EventAnnotation;
+import org.arong.axmlswing.event.AbstractListener;
+import org.arong.axmlswing.event.EventAnnotation;
+import org.arong.axmlswing.manager.ComponentManager;
 @EventAnnotation("loginBtn")
 public class LoginBtnListener extends AbstractListener{
 

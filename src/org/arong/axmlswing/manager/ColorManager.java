@@ -1,4 +1,4 @@
-package org.arong.axmlswing;
+package org.arong.axmlswing.manager;
 
 import java.awt.Color;
 import java.util.HashMap;

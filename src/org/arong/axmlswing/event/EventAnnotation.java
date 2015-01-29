@@ -1,4 +1,4 @@
-package org.arong.axmlswing;
+package org.arong.axmlswing.event;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;

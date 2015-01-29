@@ -1,4 +1,4 @@
-package org.arong.axmlswing;
+package org.arong.axmlswing.event;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
