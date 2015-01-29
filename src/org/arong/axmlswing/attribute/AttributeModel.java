@@ -39,6 +39,7 @@ public class AttributeModel {
 	private Boolean focusable;//能否聚焦
 	private Boolean focusPainted;//是否绘制焦点
 	private String font;//字体
+	private Boolean hideActionText;
 	
 	
 	public String getId() {
@@ -244,5 +245,11 @@ public class AttributeModel {
 	}
 	public String getFont() {
 		return font;
+	}
+	public void setHideActionText(Boolean hideActionText) {
+		this.hideActionText = hideActionText;
+	}
+	public Boolean getHideActionText() {
+		return hideActionText;
 	}
 }

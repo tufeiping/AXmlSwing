@@ -8,6 +8,7 @@ import java.util.Map;
 
 import javax.swing.Icon;
 import javax.swing.ImageIcon;
+import javax.swing.SwingConstants;
 
 import org.arong.axmlswing.manager.ColorManager;
 import org.arong.axmlswing.manager.CursorManager;
@@ -25,6 +26,7 @@ public class AttributeTransfer {
 	static{
 		String rootPath = ClassLoader.getSystemResource("").getPath();
 		vars.put("rootPath", rootPath);
+		vars.put("SwingConstants.RIGHT", SwingConstants.RIGHT + "");
 	}
 	
 	/**

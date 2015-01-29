@@ -20,6 +20,7 @@ import java.util.List;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
+import javax.swing.SwingConstants;
 import javax.swing.event.AncestorListener;
 import javax.swing.event.ChangeListener;
 
@@ -130,7 +131,7 @@ public class GuiXmlLoader {
 					if(AttributeValidator.font(attr.getFont())){
 						btn.setFont(AttributeTransfer.font(attr.getFont()));
 					}
-					//btn.setFont(new font)
+					btn.setHorizontalAlignment(SwingConstants.BOTTOM);;
 					if(l != null){
 						btn.addMouseListener((MouseListener) l);
 						btn.addMouseMotionListener((MouseMotionListener) l);
