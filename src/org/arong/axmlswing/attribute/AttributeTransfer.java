@@ -2,6 +2,7 @@ package org.arong.axmlswing.attribute;
 
 import java.awt.Color;
 import java.awt.Cursor;
+import java.awt.Font;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -10,6 +11,7 @@ import javax.swing.ImageIcon;
 
 import org.arong.axmlswing.manager.ColorManager;
 import org.arong.axmlswing.manager.CursorManager;
+import org.arong.axmlswing.manager.FontManager;
 
 /**
  * 属性转换，与AttributeValidator配合使用
@@ -38,6 +40,15 @@ public class AttributeTransfer {
 		return str;
 	}
 	
+	public static int[] size(String value){
+		String[] arr = value.split(",");
+		int[] ret = new int[2];
+		for(int i = 0; i < arr.length; i ++){
+			ret[i] = Integer.parseInt(arr[i].trim());
+		}
+		return ret;
+	}
+	
 	public static int[] bounds(String value){
 		String[] arr = value.split(",");
 		int[] ret = new int[4];
@@ -61,6 +72,16 @@ public class AttributeTransfer {
             }
 		}
 		return color;
+	}
+	
+	public static Font font(String value){
+		Font font = FontManager.getFonts().get(value);
+		if(font == null){
+			String[] arr = value.split(",");
+			font = new Font(arr[0], Integer.parseInt(arr[1].trim()), Integer.parseInt(arr[2].trim()));
+			FontManager.getFonts().put(value, font);
+		}
+		return font;
 	}
 	
 	public static Icon icon(String value){

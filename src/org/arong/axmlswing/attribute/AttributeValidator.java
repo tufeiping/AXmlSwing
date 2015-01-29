@@ -22,6 +22,24 @@ public class AttributeValidator {
 	}
 	
 	/**
+	 * 是否为size的格式：60,30
+	 */
+	public static boolean size(String value){
+		if(isBlank(value))
+			return false;
+		//以逗号分隔
+		String[] arr = value.split(",");
+		if(arr.length == 2){
+			for(String str : arr){
+				if(! integer(str.trim(), true))
+					return false;
+			}
+			return true;
+		}
+		return false;
+	}
+	
+	/**
 	 * 是否为bounds的格式：10,10,60,30
 	 */
 	public static boolean bounds(String value){
@@ -53,6 +71,26 @@ public class AttributeValidator {
 		return true;
 	}
 	
+	public static boolean font(String value){
+		if(isBlank(value))
+			return false;
+		//以逗号分隔
+		String[] arr = value.split(",");
+		if(arr.length == 3){
+			for(int i = 0; i < arr.length; i ++){
+				if(i == 1){
+					if(! integer(arr[i].trim(), true) || Integer.parseInt(arr[i].trim()) > 2)
+						return false;
+				}
+				if(i == 2 && ! integer(arr[i].trim(), true)){
+					return false;
+				}	
+			}
+			return true;
+		}
+		return false;
+	}
+	
 	/**
 	 * 对象是否为空
 	 */
@@ -64,6 +102,6 @@ public class AttributeValidator {
 	}
 	
 	public static void main(String[] args) {
-		System.out.println(bounds("10,10,60,30"));
+		System.out.println(font("123, 2, 1"));
 	}
 }

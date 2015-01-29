@@ -1,5 +1,6 @@
 package org.arong.axmlswing;
 
+import java.awt.Dimension;
 import java.awt.event.ActionListener;
 import java.awt.event.ComponentListener;
 import java.awt.event.ContainerListener;
@@ -94,7 +95,23 @@ public class GuiXmlLoader {
 					if(AttributeValidator.color(attr.getForeground())){
 						btn.setForeground(AttributeTransfer.color(attr.getForeground()));
 					}
-					if(attr.getBounds() != null && AttributeValidator.bounds(attr.getBounds())){
+					if(AttributeValidator.size(attr.getSize())){
+						int[] arr = AttributeTransfer.size(attr.getSize());
+						btn.setSize(arr[0], arr[1]);
+					}
+					if(AttributeValidator.size(attr.getMaximumSize())){
+						int[] arr = AttributeTransfer.size(attr.getMaximumSize());
+						btn.setMaximumSize(new Dimension(arr[0], arr[1]));
+					}
+					if(AttributeValidator.size(attr.getMinimumSize())){
+						int[] arr = AttributeTransfer.size(attr.getMinimumSize());
+						btn.setMinimumSize(new Dimension(arr[0], arr[1]));
+					}
+					if(AttributeValidator.size(attr.getPreferredSize())){
+						int[] arr = AttributeTransfer.size(attr.getPreferredSize());
+						btn.setPreferredSize(new Dimension(arr[0], arr[1]));
+					}
+					if(AttributeValidator.bounds(attr.getBounds())){
 						int[] arr = AttributeTransfer.bounds(attr.getBounds());
 						btn.setBounds(arr[0], arr[1], arr[2], arr[3]);
 					}
@@ -104,10 +121,16 @@ public class GuiXmlLoader {
 					if(!AttributeValidator.isBlank(attr.getIcon())){
 						btn.setIcon(AttributeTransfer.icon(attr.getIcon()));
 					}
+					if(!AttributeValidator.isBlank(attr.getDisabledSelectedIcon())){
+						btn.setDisabledSelectedIcon(AttributeTransfer.icon(attr.getDisabledSelectedIcon()));
+					}
 					if(AttributeValidator.cursor(attr.getCursor())){
 						btn.setCursor(AttributeTransfer.cursor(attr.getCursor()));
 					}
-					//
+					if(AttributeValidator.font(attr.getFont())){
+						btn.setFont(AttributeTransfer.font(attr.getFont()));
+					}
+					//btn.setFont(new font)
 					if(l != null){
 						btn.addMouseListener((MouseListener) l);
 						btn.addMouseMotionListener((MouseMotionListener) l);

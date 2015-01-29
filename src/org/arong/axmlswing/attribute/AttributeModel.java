@@ -33,8 +33,12 @@ public class AttributeModel {
 	private Boolean contentAreaFilled;//是否填充
 	private String icon;//图标
 	private String disabledIcon;
+	private String disabledSelectedIcon;
 	private Boolean defaultCapable;
 	private String cursor;//光标类型
+	private Boolean focusable;//能否聚焦
+	private Boolean focusPainted;//是否绘制焦点
+	private String font;//字体
 	
 	
 	public String getId() {
@@ -216,5 +220,29 @@ public class AttributeModel {
 	}
 	public String getCursor() {
 		return cursor;
+	}
+	public void setDisabledSelectedIcon(String disabledSelectedIcon) {
+		this.disabledSelectedIcon = disabledSelectedIcon;
+	}
+	public String getDisabledSelectedIcon() {
+		return disabledSelectedIcon;
+	}
+	public void setFocusable(Boolean focusable) {
+		this.focusable = focusable;
+	}
+	public Boolean getFocusable() {
+		return focusable;
+	}
+	public void setFocusPainted(Boolean focusPainted) {
+		this.focusPainted = focusPainted;
+	}
+	public Boolean getFocusPainted() {
+		return focusPainted;
+	}
+	public void setFont(String font) {
+		this.font = font;
+	}
+	public String getFont() {
+		return font;
 	}
 }
