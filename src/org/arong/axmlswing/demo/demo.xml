@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+	主窗口里的配置可以覆盖全局配置
+ -->
+<JFrame id="mainWindow" title="主窗口" width="300" height="200">
+	<JButton id="loginBtn" text="登陆按钮" x="100" y="60" width="100" height="30" foreground="blue" visible="true" />
+</JFrame>
+
+<!-- 
+	JFrame:
+		title:
+		width:
+		height:
+		background:
+		foreground:
+		alwaysOnTop:
+		bounds:1,2,3,4
+		cursor:int
+		defaultCloseOperation:
+		enabled:
+ -->
