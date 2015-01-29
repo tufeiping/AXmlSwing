@@ -1,6 +1,5 @@
 package org.arong.axmlswing;
 
-import java.awt.Cursor;
 import java.awt.event.ActionListener;
 import java.awt.event.ComponentListener;
 import java.awt.event.ContainerListener;
@@ -106,7 +105,10 @@ public class GuiXmlLoader {
 					if(!AttributeValidator.isBlank(attr.getIcon())){
 						btn.setIcon(AttributeTransfer.icon(attr.getIcon()));
 					}
-					//btn.setCursor(Cursor.)
+					if(AttributeValidator.cursor(attr.getCursor())){
+						btn.setCursor(AttributeTransfer.cursor(attr.getCursor()));
+					}
+					//
 					if(l != null){
 						btn.addMouseListener((MouseListener) l);
 						btn.addMouseMotionListener((MouseMotionListener) l);

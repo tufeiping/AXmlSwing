@@ -1,10 +1,13 @@
 package org.arong.axmlswing.attribute;
 
+import java.awt.Cursor;
 import java.util.HashMap;
 import java.util.Map;
 
 import javax.swing.Icon;
 import javax.swing.ImageIcon;
+
+import org.arong.axmlswing.manager.CursorManager;
 
 /**
  * 属性转换，与AttributeValidator配合使用
@@ -38,6 +41,10 @@ public class AttributeTransfer {
 			ret[i] = Integer.parseInt(arr[i].trim());
 		}
 		return ret;
+	}
+	
+	public static Cursor cursor(String value){
+		return CursorManager.getCursors().get(value.toUpperCase());
 	}
 	
 	public static Icon icon(String value){

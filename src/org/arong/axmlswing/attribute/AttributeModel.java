@@ -34,6 +34,7 @@ public class AttributeModel {
 	private String icon;//图标
 	private String disabledIcon;
 	private Boolean defaultCapable;
+	private String cursor;//光标类型
 	
 	
 	public String getId() {
@@ -209,5 +210,11 @@ public class AttributeModel {
 	}
 	public Boolean getDefaultCapable() {
 		return defaultCapable;
+	}
+	public void setCursor(String cursor) {
+		this.cursor = cursor;
+	}
+	public String getCursor() {
+		return cursor;
 	}
 }

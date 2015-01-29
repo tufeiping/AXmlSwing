@@ -1,5 +1,6 @@
 package org.arong.axmlswing.attribute;
 
+import org.arong.axmlswing.manager.CursorManager;
 import org.arong.util.NumberUtil;
 
 /**
@@ -35,6 +36,14 @@ public class AttributeValidator {
 			}
 			return true;
 		}
+		return false;
+	}
+	
+	public static boolean cursor(String value){
+		if(isBlank(value))
+			return false;
+		if(CursorManager.getCursors().containsKey(value.toUpperCase()))
+			return true;
 		return false;
 	}
 	
