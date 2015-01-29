@@ -25,7 +25,6 @@ import javax.swing.event.ChangeListener;
 import org.arong.axmlswing.attribute.AttributeModel;
 import org.arong.axmlswing.attribute.AttributeTransfer;
 import org.arong.axmlswing.attribute.AttributeValidator;
-import org.arong.axmlswing.manager.ColorManager;
 import org.arong.axmlswing.manager.ComponentManager;
 import org.arong.axmlswing.manager.ListenerManager;
 import org.arong.util.BeanUtil;
@@ -89,11 +88,11 @@ public class GuiXmlLoader {
 					BeanUtil.apply(attr, btn);
 					//其他类型或者参数个数大于一个的需要手动设置
 					btn.setBounds(attr.getX(), attr.getY(), attr.getWidth(), attr.getHeight());
-					if(attr.getBackground() != null){
-						btn.setBackground(ColorManager.parseHex(attr.getBackground()));
+					if(AttributeValidator.color(attr.getBackground())){
+						btn.setBackground(AttributeTransfer.color(attr.getBackground()));
 					}
-					if(attr.getForeground() != null){
-						btn.setForeground(ColorManager.parseHex(attr.getForeground()));
+					if(AttributeValidator.color(attr.getForeground())){
+						btn.setForeground(AttributeTransfer.color(attr.getForeground()));
 					}
 					if(attr.getBounds() != null && AttributeValidator.bounds(attr.getBounds())){
 						int[] arr = AttributeTransfer.bounds(attr.getBounds());

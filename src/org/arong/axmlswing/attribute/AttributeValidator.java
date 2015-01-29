@@ -47,6 +47,12 @@ public class AttributeValidator {
 		return false;
 	}
 	
+	public static boolean color(String value){
+		if(isBlank(value))
+			return false;
+		return true;
+	}
+	
 	/**
 	 * 对象是否为空
 	 */
