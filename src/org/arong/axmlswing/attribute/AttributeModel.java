@@ -40,6 +40,7 @@ public class AttributeModel {
 	private Boolean focusPainted;//是否绘制焦点
 	private String font;//字体
 	private Boolean hideActionText;
+	private Integer horizontalAlignment;//水平对齐方式
 	
 	
 	public String getId() {
@@ -251,5 +252,11 @@ public class AttributeModel {
 	}
 	public Boolean getHideActionText() {
 		return hideActionText;
+	}
+	public void setHorizontalAlignment(Integer horizontalAlignment) {
+		this.horizontalAlignment = horizontalAlignment;
+	}
+	public Integer getHorizontalAlignment() {
+		return horizontalAlignment;
 	}
 }

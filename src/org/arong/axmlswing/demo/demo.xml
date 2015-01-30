@@ -7,7 +7,7 @@
 <JFrame id="mainWindow" title="主窗口" width="300" height="200">
 	<JButton id="loginBtn" text="登陆按钮" icon="${rootPath}/anchor.gif"
 	bounds="100, 60, 100, 30" minimumSize="200, 40" foreground="red" cursor="HAND_CURSOR"
-	focusable="false" font="微软染黑,0,12" />
+	focusable="false" font="微软染黑,0,12" horizontalAlignment="6" />
 </JFrame>
 
 <!-- 

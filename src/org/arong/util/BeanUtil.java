@@ -216,6 +216,7 @@ public class BeanUtil {
 		Method[] methods = dest.getClass().getMethods();
 		String propertyName;
 		String methodName;
+		String srcType, destType;
 		for(Method method : methods){
 			methodName = method.getName();
 			//方法有一个参数，并且以set或is开头
@@ -228,8 +229,12 @@ public class BeanUtil {
 				}
 				//检测类型是否一致
 //				System.out.println(propertyName);
-//				System.out.println(method.getParameterTypes()[0].getSimpleName().toLowerCase() + ":" + srcMap.get(propertyName).getClass().getSimpleName().toLowerCase());
-				if(method.getParameterTypes()[0].getSimpleName().toLowerCase().equals(srcMap.get(propertyName).getClass().getSimpleName().toLowerCase())){
+				srcType = method.getParameterTypes()[0].getSimpleName();
+				srcType = simpleTypeChange(srcType);
+				destType = srcMap.get(propertyName).getClass().getSimpleName();
+				destType = simpleTypeChange(destType);
+				System.out.println(srcType + ":" + destType);
+				if(srcType.equals(destType)){
 					try {
 //						System.out.println(srcMap.get(propertyName));
 						method.invoke(dest, srcMap.get(propertyName));
@@ -243,5 +248,29 @@ public class BeanUtil {
 				}
 			}
 		}
+	}
+	
+	/**
+	 * 基本类名转换为包装类名
+	 */
+	private static String simpleTypeChange(String type){
+		if("int".equals(type)){
+			return "Integer";
+		}else if("double".equals(type)){
+			return "Double";
+		}else if("float".equals(type)){
+			return "Float";
+		}else if("char".equals(type)){
+			return "Char";
+		}else if("byte".equals(type)){
+			return "Byte";
+		}else if("boolean".equals(type)){
+			return "Boolean";
+		}else if("short".equals(type)){
+			return "Short";
+		}else if("long".equals(type)){
+			return "Long";
+		}
+		return type;
 	}
 }

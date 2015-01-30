@@ -29,6 +29,7 @@ import org.arong.axmlswing.attribute.AttributeTransfer;
 import org.arong.axmlswing.attribute.AttributeValidator;
 import org.arong.axmlswing.manager.ComponentManager;
 import org.arong.axmlswing.manager.ListenerManager;
+import org.arong.axmlswing.manager.VarsManager;
 import org.arong.util.BeanUtil;
 import org.arong.util.Dom4jUtil;
 import org.dom4j.Attribute;
@@ -131,7 +132,6 @@ public class GuiXmlLoader {
 					if(AttributeValidator.font(attr.getFont())){
 						btn.setFont(AttributeTransfer.font(attr.getFont()));
 					}
-					btn.setHorizontalAlignment(SwingConstants.BOTTOM);;
 					if(l != null){
 						btn.addMouseListener((MouseListener) l);
 						btn.addMouseMotionListener((MouseMotionListener) l);
@@ -168,7 +168,7 @@ public class GuiXmlLoader {
 			for(Attribute attr : attrs){
 				for(Field field : fields){
 					if(attr.getName().equals(field.getName())){
-						BeanUtil.setProperty(model, attr.getName(), new String[]{AttributeTransfer.transfer(attr.getText())});
+						BeanUtil.setProperty(model, attr.getName(), new String[]{VarsManager.transfer(attr.getText())});
 					}
 				}
 			}
