@@ -13,8 +13,8 @@ public class AttributeModel {
 	private Integer height = 30;
 	private String size;
 	private String bounds;
-	private Float alignmentX;
-	private Float alignmentY;
+	private Float alignmentX;//垂直对齐方式
+	private Float alignmentY;//水平对齐方式
 	private Boolean autoscrolls;
 	private String background;
 	private String foreground;
@@ -34,6 +34,9 @@ public class AttributeModel {
 	private String icon;//图标
 	private String disabledIcon;
 	private String disabledSelectedIcon;
+	private String pressedIcon;
+	private String rolloverIcon;//翻转图标
+	private String rolloverSelectedIcon;
 	private Boolean defaultCapable;
 	private String cursor;//光标类型
 	private Boolean focusable;//能否聚焦
@@ -41,7 +44,19 @@ public class AttributeModel {
 	private String font;//字体
 	private Boolean hideActionText;
 	private Integer horizontalAlignment;//水平对齐方式
-	
+	private Integer horizontalTextPosition;//文本相对于图标的水平位置
+	private Integer verticalAlignment;//图标和文本的垂直对齐方式。
+	private Integer verticalTextPosition;//文本相对于图标的垂直位置
+	private Integer iconTextGap;//图标与文本间隔，默认四个像素
+	private Boolean ignoreRepaint;
+	private Boolean inheritsPopupMenu;
+	private Integer mnemonic;//键盘助记符
+	private Boolean requestFocusEnabled;
+	private Boolean rolloverEnabled;
+	private String margin;//按钮边框和标签之间的空白
+	private Boolean selected;
+	private Boolean verifyInputWhenFocusTarget;
+	private Boolean doubleBuffered;
 	
 	public String getId() {
 		return id;
@@ -258,5 +273,101 @@ public class AttributeModel {
 	}
 	public Integer getHorizontalAlignment() {
 		return horizontalAlignment;
+	}
+	public void setHorizontalTextPosition(Integer horizontalTextPosition) {
+		this.horizontalTextPosition = horizontalTextPosition;
+	}
+	public Integer getHorizontalTextPosition() {
+		return horizontalTextPosition;
+	}
+	public void setIconTextGap(Integer iconTextGap) {
+		this.iconTextGap = iconTextGap;
+	}
+	public Integer getIconTextGap() {
+		return iconTextGap;
+	}
+	public void setIgnoreRepaint(Boolean ignoreRepaint) {
+		this.ignoreRepaint = ignoreRepaint;
+	}
+	public Boolean getIgnoreRepaint() {
+		return ignoreRepaint;
+	}
+	public void setInheritsPopupMenu(Boolean inheritsPopupMenu) {
+		this.inheritsPopupMenu = inheritsPopupMenu;
+	}
+	public Boolean getInheritsPopupMenu() {
+		return inheritsPopupMenu;
+	}
+	public void setPressedIcon(String pressedIcon) {
+		this.pressedIcon = pressedIcon;
+	}
+	public String getPressedIcon() {
+		return pressedIcon;
+	}
+	public void setMnemonic(Integer mnemonic) {
+		this.mnemonic = mnemonic;
+	}
+	public Integer getMnemonic() {
+		return mnemonic;
+	}
+	public void setRequestFocusEnabled(Boolean requestFocusEnabled) {
+		this.requestFocusEnabled = requestFocusEnabled;
+	}
+	public Boolean getRequestFocusEnabled() {
+		return requestFocusEnabled;
+	}
+	public void setRolloverIcon(String rolloverIcon) {
+		this.rolloverIcon = rolloverIcon;
+	}
+	public String getRolloverIcon() {
+		return rolloverIcon;
+	}
+	public void setRolloverSelectedIcon(String rolloverSelectedIcon) {
+		this.rolloverSelectedIcon = rolloverSelectedIcon;
+	}
+	public String getRolloverSelectedIcon() {
+		return rolloverSelectedIcon;
+	}
+	public void setRolloverEnabled(Boolean rolloverEnabled) {
+		this.rolloverEnabled = rolloverEnabled;
+	}
+	public Boolean getRolloverEnabled() {
+		return rolloverEnabled;
+	}
+	public void setMargin(String margin) {
+		this.margin = margin;
+	}
+	public String getMargin() {
+		return margin;
+	}
+	public void setSelected(Boolean selected) {
+		this.selected = selected;
+	}
+	public Boolean getSelected() {
+		return selected;
+	}
+	public void setVerifyInputWhenFocusTarget(Boolean verifyInputWhenFocusTarget) {
+		this.verifyInputWhenFocusTarget = verifyInputWhenFocusTarget;
+	}
+	public Boolean getVerifyInputWhenFocusTarget() {
+		return verifyInputWhenFocusTarget;
+	}
+	public void setVerticalAlignment(Integer verticalAlignment) {
+		this.verticalAlignment = verticalAlignment;
+	}
+	public Integer getVerticalAlignment() {
+		return verticalAlignment;
+	}
+	public void setVerticalTextPosition(Integer verticalTextPosition) {
+		this.verticalTextPosition = verticalTextPosition;
+	}
+	public Integer getVerticalTextPosition() {
+		return verticalTextPosition;
+	}
+	public void setDoubleBuffered(Boolean doubleBuffered) {
+		this.doubleBuffered = doubleBuffered;
+	}
+	public Boolean getDoubleBuffered() {
+		return doubleBuffered;
 	}
 }

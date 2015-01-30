@@ -1,6 +1,7 @@
 package org.arong.axmlswing;
 
 import java.awt.Dimension;
+import java.awt.Insets;
 import java.awt.event.ActionListener;
 import java.awt.event.ComponentListener;
 import java.awt.event.ContainerListener;
@@ -20,7 +21,6 @@ import java.util.List;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
-import javax.swing.SwingConstants;
 import javax.swing.event.AncestorListener;
 import javax.swing.event.ChangeListener;
 
@@ -126,12 +126,27 @@ public class GuiXmlLoader {
 					if(!AttributeValidator.isBlank(attr.getDisabledSelectedIcon())){
 						btn.setDisabledSelectedIcon(AttributeTransfer.icon(attr.getDisabledSelectedIcon()));
 					}
+					if(!AttributeValidator.isBlank(attr.getPressedIcon())){
+						btn.setPressedIcon(AttributeTransfer.icon(attr.getPressedIcon()));
+					}
+					if(!AttributeValidator.isBlank(attr.getRolloverIcon())){
+						btn.setRolloverIcon(AttributeTransfer.icon(attr.getRolloverIcon()));
+					}
+					if(!AttributeValidator.isBlank(attr.getRolloverSelectedIcon())){
+						btn.setRolloverSelectedIcon(AttributeTransfer.icon(attr.getRolloverSelectedIcon()));
+					}
 					if(AttributeValidator.cursor(attr.getCursor())){
 						btn.setCursor(AttributeTransfer.cursor(attr.getCursor()));
 					}
 					if(AttributeValidator.font(attr.getFont())){
 						btn.setFont(AttributeTransfer.font(attr.getFont()));
 					}
+					if(AttributeValidator.bounds(attr.getMargin())){
+						int[] arr = AttributeTransfer.bounds(attr.getMargin());
+						btn.setMargin(new Insets(arr[0], arr[1], arr[2], arr[3]));
+					}
+//					btn.setDoubleBuffered(aFlag)
+					System.out.println(btn.getAlignmentY());
 					if(l != null){
 						btn.addMouseListener((MouseListener) l);
 						btn.addMouseMotionListener((MouseMotionListener) l);
@@ -152,9 +167,9 @@ public class GuiXmlLoader {
 				}
 				window.setVisible(true);
 			} catch (IllegalArgumentException e1) {
-				e1.printStackTrace();
+				//e1.printStackTrace();
 			} catch (IllegalAccessException e1) {
-				e1.printStackTrace();
+				//e1.printStackTrace();
 			}
 		}
 	}

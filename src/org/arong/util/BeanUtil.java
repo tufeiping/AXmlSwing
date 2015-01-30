@@ -233,7 +233,7 @@ public class BeanUtil {
 				srcType = simpleTypeChange(srcType);
 				destType = srcMap.get(propertyName).getClass().getSimpleName();
 				destType = simpleTypeChange(destType);
-				System.out.println(srcType + ":" + destType);
+//				System.out.println(srcType + ":" + destType);
 				if(srcType.equals(destType)){
 					try {
 //						System.out.println(srcMap.get(propertyName));

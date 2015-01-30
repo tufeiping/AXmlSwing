@@ -33,7 +33,7 @@ public class ListenerManager {
 		for(Class<?> clazz : classes){
 			EventAnnotation ea = clazz.getAnnotation(EventAnnotation.class);
 			if(ea != null){
-				System.out.println(ea.value());
+				//System.out.println(ea.value());
 				String id = ea.value();
 				try {
 					listeners.put(id, (EventListener)clazz.newInstance());
@@ -78,7 +78,7 @@ public class ListenerManager {
 				String protocol = url.getProtocol();
 				// 如果是以文件的形式保存在服务器上
 				if ("file".equals(protocol)) {
-					System.err.println("file类型的扫描");
+//					System.err.println("file类型的扫描");
 					// 获取包的物理路径
 					String filePath = URLDecoder.decode(url.getFile(), "UTF-8");
 					// 以文件的方式扫描整个包下的文件 并添加到集合中

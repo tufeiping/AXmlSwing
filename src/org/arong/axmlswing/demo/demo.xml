@@ -5,9 +5,11 @@
 	${rootPath}:项目根目录src
  -->
 <JFrame id="mainWindow" title="主窗口" width="300" height="200">
-	<JButton id="loginBtn" text="登陆按钮" icon="${rootPath}/anchor.gif"
+	<JButton id="loginBtn" text="登陆按钮" rolloverEnabled="true" icon="${rootPath}/anchor.gif" toolTipText="按钮提示"
 	bounds="100, 60, 100, 30" minimumSize="200, 40" foreground="red" cursor="HAND_CURSOR"
-	focusable="false" font="微软染黑,0,12" horizontalAlignment="6" />
+	focusable="true" font="微软染黑,0,12" horizontalAlignment="0" 
+	horizontalTextPosition="${SwingConstants.LEFT}" iconTextGap="10" mnemonic="13"
+	margin="" selected="false" />
 </JFrame>
 
 <!-- 
