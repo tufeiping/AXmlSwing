@@ -12,6 +12,7 @@ public class AttributeModel {
 	private Integer width = 60;
 	private Integer height = 30;
 	private String size;
+	private String location;
 	private String bounds;
 	private Float alignmentX;//垂直对齐方式
 	private Float alignmentY;//水平对齐方式
@@ -22,11 +23,20 @@ public class AttributeModel {
 	private String maximumSize;
 	private String minimumSize;
 	private String preferredSize;
-	private Boolean opaque;//如果为 true，则该组件绘制其边界内的所有像素。
-	private String toolTipText;
 	private Boolean visible;
+	
+	
+	private String title;
+	private Integer defaultCloseOperation;
+	private String locationRelativeTo;
 	private Boolean alwaysOnTop;
 	private String iconImage;
+	private String maximizedBounds;//最大化边界
+	private Boolean resizable;//是否可由用户调整大小
+	
+	private Boolean opaque;//如果为 true，则该组件绘制其边界内的所有像素。
+	private String toolTipText;
+
 	private String text;
 	private String actionCommand;
 	private Boolean borderPainted;
@@ -369,5 +379,41 @@ public class AttributeModel {
 	}
 	public Boolean getDoubleBuffered() {
 		return doubleBuffered;
+	}
+	public void setTitle(String title) {
+		this.title = title;
+	}
+	public String getTitle() {
+		return title;
+	}
+	public void setDefaultCloseOperation(Integer defaultCloseOperation) {
+		this.defaultCloseOperation = defaultCloseOperation;
+	}
+	public Integer getDefaultCloseOperation() {
+		return defaultCloseOperation;
+	}
+	public void setLocation(String location) {
+		this.location = location;
+	}
+	public String getLocation() {
+		return location;
+	}
+	public void setLocationRelativeTo(String locationRelativeTo) {
+		this.locationRelativeTo = locationRelativeTo;
+	}
+	public String getLocationRelativeTo() {
+		return locationRelativeTo;
+	}
+	public void setMaximizedBounds(String maximizedBounds) {
+		this.maximizedBounds = maximizedBounds;
+	}
+	public String getMaximizedBounds() {
+		return maximizedBounds;
+	}
+	public void setResizable(Boolean resizable) {
+		this.resizable = resizable;
+	}
+	public Boolean getResizable() {
+		return resizable;
 	}
 }
