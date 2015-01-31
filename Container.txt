@@ -55,3 +55,31 @@
 
 * **alwaysOnTop**~boolean,设置此窗口是否应该始终位于其他窗口上方
 * **locationByPlatform**~boolean,窗口应出现在默认位置，则为 true，如果应出现在当前位置，则为 false
+
+
+
+
+* **icon**~string,设置图标,使用${rootPath}配合使用
+* **horizontalAlignment**~int,图标和文本的水平对齐方式
+   * 0:CENTER
+   * 2:LEFT
+   * 4:RIGHT
+   * 10:LEADING
+   * 11:TRAILING
+* **horizontalTextPosition**~int,文本相对于图标的水平位置
+   * 0:CENTER
+   * 2:LEFT
+   * 4:RIGHT
+   * 10:LEADING
+   * 11:TRAILING（默认）
+* **verticalAlignment**~int,图标和文本的垂直对齐方式
+   * 0:CENTER(默认)
+   * 1:TOP
+   * 3:BOTTOM
+* **verticalTextPosition**~int,文本相对于图标的垂直位置
+   * 0:CENTER(默认)
+   * 1:TOP
+   * 3:BOTTOM
+* **iconTextGap**~int,图标和文本之间的间隔
+
+
