@@ -36,9 +36,25 @@ public class AttributeModel {
 	private Boolean focusableWindowState;//是否可以成为焦点窗口
 	private Boolean locationByPlatform;//窗口应出现在默认位置，则为 true，如果应出现在当前位置，则为 false
 	
+	private String caretColor;//光标颜色
+	private String selectionColor;//呈现选定的当前颜色
+	private String selectedTextColor;//选中文本颜色
+	private String disabledTextColor;//
+	private Integer caretPosition;//光标位置，此位置不能大于文本长度
+	private Integer columns;//设置此 TextField 中的列数,不能小于0
+	private Boolean dragEnabled;//是否启用自动拖动处理
+	private Boolean editable;//是否可编辑
+	private Integer scrollOffset;//滚动偏移量,单位:像素
+	private Integer selectionStart;//选择开始点设置为指定的位置
+	private Integer selectionEnd;//选择结束点设置为指定的位置
+	
+	private Boolean lineWrap;//是否可以换行
+	private Integer rows;//设置此 TextArea 的行数
+	private Integer tabSize;//设置选项卡要扩大到的字符数
+	private Boolean wrapStyleWord;//是否应该使用单词边界来换行
+	
 	private Boolean opaque;//如果为 true，则该组件绘制其边界内的所有像素。
 	private String toolTipText;
-
 	private String text;
 	private String actionCommand;
 	private Boolean borderPainted;
@@ -429,5 +445,95 @@ public class AttributeModel {
 	}
 	public Boolean getLocationByPlatform() {
 		return locationByPlatform;
+	}
+	public void setCaretColor(String caretColor) {
+		this.caretColor = caretColor;
+	}
+	public String getCaretColor() {
+		return caretColor;
+	}
+	public void setSelectionColor(String selectionColor) {
+		this.selectionColor = selectionColor;
+	}
+	public String getSelectionColor() {
+		return selectionColor;
+	}
+	public void setSelectedTextColor(String selectedTextColor) {
+		this.selectedTextColor = selectedTextColor;
+	}
+	public String getSelectedTextColor() {
+		return selectedTextColor;
+	}
+	public void setCaretPosition(Integer caretPosition) {
+		this.caretPosition = caretPosition;
+	}
+	public Integer getCaretPosition() {
+		return caretPosition;
+	}
+	public void setColumns(Integer columns) {
+		this.columns = columns;
+	}
+	public Integer getColumns() {
+		return columns;
+	}
+	public void setDisabledTextColor(String disabledTextColor) {
+		this.disabledTextColor = disabledTextColor;
+	}
+	public String getDisabledTextColor() {
+		return disabledTextColor;
+	}
+	public void setDragEnabled(Boolean dragEnabled) {
+		this.dragEnabled = dragEnabled;
+	}
+	public Boolean getDragEnabled() {
+		return dragEnabled;
+	}
+	public void setEditable(Boolean editable) {
+		this.editable = editable;
+	}
+	public Boolean getEditable() {
+		return editable;
+	}
+	public void setScrollOffset(Integer scrollOffset) {
+		this.scrollOffset = scrollOffset;
+	}
+	public Integer getScrollOffset() {
+		return scrollOffset;
+	}
+	public void setSelectionStart(Integer selectionStart) {
+		this.selectionStart = selectionStart;
+	}
+	public Integer getSelectionStart() {
+		return selectionStart;
+	}
+	public void setSelectionEnd(Integer selectionEnd) {
+		this.selectionEnd = selectionEnd;
+	}
+	public Integer getSelectionEnd() {
+		return selectionEnd;
+	}
+	public void setLineWrap(Boolean lineWrap) {
+		this.lineWrap = lineWrap;
+	}
+	public Boolean getLineWrap() {
+		return lineWrap;
+	}
+	public void setRows(Integer rows) {
+		this.rows = rows;
+	}
+	public Integer getRows() {
+		return rows;
+	}
+	public void setTabSize(Integer tabSize) {
+		this.tabSize = tabSize;
+	}
+	public Integer getTabSize() {
+		return tabSize;
+	}
+	public void setWrapStyleWord(Boolean wrapStyleWord) {
+		this.wrapStyleWord = wrapStyleWord;
+	}
+	public Boolean getWrapStyleWord() {
+		return wrapStyleWord;
 	}
 }

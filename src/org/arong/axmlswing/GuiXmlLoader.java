@@ -1,7 +1,6 @@
 package org.arong.axmlswing;
 
 import java.awt.Container;
-import java.awt.Insets;
 import java.awt.Rectangle;
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
@@ -13,6 +12,7 @@ import java.util.Map;
 
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
+import javax.swing.JDialog;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JTextField;
@@ -127,109 +127,74 @@ public class GuiXmlLoader {
 					//设置一些基本类型的值
 					BeanUtil.apply(attr, comp);
 					ComponentManager.setCommonAttribute(comp, attr);
+					ComponentManager.setComponentSpecificAttribute(e.getName(), comp, attr);
 					if(l != null){
 						ListenerManager.setComponentListeners(comp, l);
 					}
-					//container.add(comp);
 					parse(comp, e, attr);
-					
-					if(AttributeValidator.bounds(attr.getMaximizedBounds())){
-						int[] arr = AttributeTransfer.bounds(attr.getMaximizedBounds());
-						comp.setMaximizedBounds(new Rectangle(arr[0], arr[1], arr[2], arr[3]));
-					}
-					if(!AttributeValidator.isBlank(attr.getIconImage())){
-						comp.setIconImage(((ImageIcon)AttributeTransfer.icon(attr.getIconImage())).getImage());
-					}
-					if(!AttributeValidator.isBlank(attr.getLocationRelativeTo())){
-						comp.setLocationRelativeTo(ComponentManager.getComponent(attr.getLocationRelativeTo()));
-					}
 				}else if("JWindow".equals(e.getName())){
 					JWindow comp = new JWindow();
 					ComponentManager.putComponent(id, comp);
 					//设置一些基本类型的值
 					BeanUtil.apply(attr, comp);
 					ComponentManager.setCommonAttribute(comp, attr);
+					ComponentManager.setComponentSpecificAttribute(e.getName(), comp, attr);
 					if(l != null){
 						ListenerManager.setComponentListeners(comp, l);
 					}
 					parse(comp, e, attr);
-					
-					if(!AttributeValidator.isBlank(attr.getIconImage())){
-						comp.setIconImage(((ImageIcon)AttributeTransfer.icon(attr.getIconImage())).getImage());
+				}else if("JDialog".equals(e.getName())){
+					JDialog comp = new JDialog();
+					ComponentManager.putComponent(id, comp);
+					//设置一些基本类型的值
+					BeanUtil.apply(attr, comp);
+					ComponentManager.setCommonAttribute(comp, attr);
+					ComponentManager.setComponentSpecificAttribute(e.getName(), comp, attr);
+					if(l != null){
+						ListenerManager.setComponentListeners(comp, l);
 					}
-					if(!AttributeValidator.isBlank(attr.getLocationRelativeTo())){
-						comp.setLocationRelativeTo(ComponentManager.getComponent(attr.getLocationRelativeTo()));
-					}
+					parse(comp, e, attr);
 				}else if("JTextField".equals(e.getName())){
 					JTextField comp = new JTextField();
 					ComponentManager.putComponent(id, comp);
 					//设置一些基本类型的值
 					BeanUtil.apply(attr, comp);
 					ComponentManager.setCommonAttribute(comp, attr);
+					ComponentManager.setComponentSpecificAttribute(e.getName(), comp, attr);
 					if(l != null){
 						ListenerManager.setComponentListeners(comp, l);
 					}
 					container.add(comp);
 					parse(comp, e, attr);
-					
+//					comp.setCaretColor(c);
 				}else if("JLabel".equals(e.getName())){
 					JLabel comp = new JLabel();
 					ComponentManager.putComponent(id, comp);
 					//设置一些基本类型的值
 					BeanUtil.apply(attr, comp);
 					ComponentManager.setCommonAttribute(comp, attr);
+					ComponentManager.setComponentSpecificAttribute(e.getName(), comp, attr);
 					if(l != null){
 						ListenerManager.setComponentListeners(comp, l);
 					}
 					container.add(comp);
 					parse(comp, e, attr);
-					
-					if(!AttributeValidator.isBlank(attr.getIcon())){
-						comp.setIcon(AttributeTransfer.icon(attr.getIcon()));
-					}
-					if(!AttributeValidator.isBlank(attr.getDisabledIcon())){
-						comp.setDisabledIcon(AttributeTransfer.icon(attr.getDisabledIcon()));
-					}
-					
 				}else if("JButton".equals(e.getName())){
 					JButton comp = new JButton();
 					ComponentManager.putComponent(id, comp);
 					//设置一些基本类型的值
 					BeanUtil.apply(attr, comp);
 					ComponentManager.setCommonAttribute(comp, attr);
+					ComponentManager.setComponentSpecificAttribute(e.getName(), comp, attr);
 					if(l != null){
 						ListenerManager.setComponentListeners(comp, l);
 					}
 					container.add(comp);
 					parse(comp, e, attr);
-					
-					//其他类型或者参数个数大于一个的需要手动设置
-					if(!AttributeValidator.isBlank(attr.getDisabledIcon())){
-						comp.setDisabledIcon(AttributeTransfer.icon(attr.getDisabledIcon()));
-					}
-					if(!AttributeValidator.isBlank(attr.getIcon())){
-						comp.setIcon(AttributeTransfer.icon(attr.getIcon()));
-					}
-					if(!AttributeValidator.isBlank(attr.getDisabledSelectedIcon())){
-						comp.setDisabledSelectedIcon(AttributeTransfer.icon(attr.getDisabledSelectedIcon()));
-					}
-					if(!AttributeValidator.isBlank(attr.getPressedIcon())){
-						comp.setPressedIcon(AttributeTransfer.icon(attr.getPressedIcon()));
-					}
-					if(!AttributeValidator.isBlank(attr.getRolloverIcon())){
-						comp.setRolloverIcon(AttributeTransfer.icon(attr.getRolloverIcon()));
-					}
-					if(!AttributeValidator.isBlank(attr.getRolloverSelectedIcon())){
-						comp.setRolloverSelectedIcon(AttributeTransfer.icon(attr.getRolloverSelectedIcon()));
-					}
-					if(AttributeValidator.bounds(attr.getMargin())){
-						int[] arr = AttributeTransfer.bounds(attr.getMargin());
-						comp.setMargin(new Insets(arr[0], arr[1], arr[2], arr[3]));
-					}
 				}
 			}
 		} catch (IllegalArgumentException e1) {
-			e1.printStackTrace();
+			//e1.printStackTrace();
 		} catch (IllegalAccessException e1) {
 			e1.printStackTrace();
 		} finally{

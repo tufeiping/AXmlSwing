@@ -3,8 +3,19 @@ package org.arong.axmlswing.manager;
 import java.awt.Component;
 import java.awt.Container;
 import java.awt.Dimension;
+import java.awt.Insets;
+import java.awt.Rectangle;
 import java.util.HashMap;
 import java.util.Map;
+
+import javax.swing.ImageIcon;
+import javax.swing.JButton;
+import javax.swing.JDialog;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JTextArea;
+import javax.swing.JTextField;
+import javax.swing.JWindow;
 
 import org.arong.axmlswing.attribute.AttributeModel;
 import org.arong.axmlswing.attribute.AttributeTransfer;
@@ -85,6 +96,151 @@ public class ComponentManager {
 		if(AttributeValidator.font(attr.getFont())){
 			//setFont
 			comp.setFont(AttributeTransfer.font(attr.getFont()));
+		}
+	}
+	
+	/**
+	 * 设置组件的特殊属性
+	 */
+	public static void setComponentSpecificAttribute(String name, Component c, AttributeModel attr){
+		if("JFrame".equals(name)){
+			JFrame comp = (JFrame)c;
+			if(AttributeValidator.bounds(attr.getMaximizedBounds())){
+				int[] arr = AttributeTransfer.bounds(attr.getMaximizedBounds());
+				comp.setMaximizedBounds(new Rectangle(arr[0], arr[1], arr[2], arr[3]));
+			}
+			if(!AttributeValidator.isBlank(attr.getIconImage())){
+				comp.setIconImage(((ImageIcon)AttributeTransfer.icon(attr.getIconImage())).getImage());
+			}
+			if(!AttributeValidator.isBlank(attr.getLocationRelativeTo())){
+				comp.setLocationRelativeTo(ComponentManager.getComponent(attr.getLocationRelativeTo()));
+			}
+			
+		}else if("JWindow".equals(name)){
+			JWindow comp = (JWindow) c;
+			if(!AttributeValidator.isBlank(attr.getIconImage())){
+				comp.setIconImage(((ImageIcon)AttributeTransfer.icon(attr.getIconImage())).getImage());
+			}
+			if(!AttributeValidator.isBlank(attr.getLocationRelativeTo())){
+				comp.setLocationRelativeTo(ComponentManager.getComponent(attr.getLocationRelativeTo()));
+			}
+		}else if("JDialog".equals(name)){
+			JDialog comp = (JDialog) c;
+			if(!AttributeValidator.isBlank(attr.getIconImage())){
+				comp.setIconImage(((ImageIcon)AttributeTransfer.icon(attr.getIconImage())).getImage());
+			}
+			if(!AttributeValidator.isBlank(attr.getLocationRelativeTo())){
+				comp.setLocationRelativeTo(ComponentManager.getComponent(attr.getLocationRelativeTo()));
+			}
+		}else if("JTextField".equals(name)){
+			JTextField comp = (JTextField) c;
+			if(AttributeValidator.color(attr.getCaretColor())){
+				comp.setCaretColor(AttributeTransfer.color(attr.getCaretColor()));
+			}
+			if(AttributeValidator.color(attr.getSelectionColor())){
+				comp.setSelectionColor(AttributeTransfer.color(attr.getSelectionColor()));
+			}
+			if(AttributeValidator.color(attr.getSelectedTextColor())){
+				comp.setSelectedTextColor(AttributeTransfer.color(attr.getSelectedTextColor()));
+			}
+			if(AttributeValidator.color(attr.getDisabledTextColor())){
+				comp.setDisabledTextColor(AttributeTransfer.color(attr.getDisabledTextColor()));
+			}
+			if(AttributeValidator.bounds(attr.getMargin())){
+				int[] arr = AttributeTransfer.bounds(attr.getMargin());
+				comp.setMargin(new Insets(arr[0], arr[1], arr[2], arr[3]));
+			}
+		}else if("JTextArea".equals(name)){
+			JTextArea comp = (JTextArea) c;
+			if(AttributeValidator.color(attr.getCaretColor())){
+				comp.setCaretColor(AttributeTransfer.color(attr.getCaretColor()));
+			}
+			if(AttributeValidator.color(attr.getSelectionColor())){
+				comp.setSelectionColor(AttributeTransfer.color(attr.getSelectionColor()));
+			}
+			if(AttributeValidator.color(attr.getSelectedTextColor())){
+				comp.setSelectedTextColor(AttributeTransfer.color(attr.getSelectedTextColor()));
+			}
+			if(AttributeValidator.color(attr.getDisabledTextColor())){
+				comp.setDisabledTextColor(AttributeTransfer.color(attr.getDisabledTextColor()));
+			}
+			if(AttributeValidator.bounds(attr.getMargin())){
+				int[] arr = AttributeTransfer.bounds(attr.getMargin());
+				comp.setMargin(new Insets(arr[0], arr[1], arr[2], arr[3]));
+			}
+		}else if("JLabel".equals(name)){
+			JLabel comp = (JLabel) c;
+			if(!AttributeValidator.isBlank(attr.getIcon())){
+				comp.setIcon(AttributeTransfer.icon(attr.getIcon()));
+			}
+			if(!AttributeValidator.isBlank(attr.getDisabledIcon())){
+				comp.setDisabledIcon(AttributeTransfer.icon(attr.getDisabledIcon()));
+			}
+		}else if("JButton".equals(name)){
+			JButton comp = (JButton) c;
+			//其他类型或者参数个数大于一个的需要手动设置
+			if(!AttributeValidator.isBlank(attr.getDisabledIcon())){
+				comp.setDisabledIcon(AttributeTransfer.icon(attr.getDisabledIcon()));
+			}
+			if(!AttributeValidator.isBlank(attr.getIcon())){
+				comp.setIcon(AttributeTransfer.icon(attr.getIcon()));
+			}
+			if(!AttributeValidator.isBlank(attr.getDisabledSelectedIcon())){
+				comp.setDisabledSelectedIcon(AttributeTransfer.icon(attr.getDisabledSelectedIcon()));
+			}
+			if(!AttributeValidator.isBlank(attr.getPressedIcon())){
+				comp.setPressedIcon(AttributeTransfer.icon(attr.getPressedIcon()));
+			}
+			if(!AttributeValidator.isBlank(attr.getRolloverIcon())){
+				comp.setRolloverIcon(AttributeTransfer.icon(attr.getRolloverIcon()));
+			}
+			if(!AttributeValidator.isBlank(attr.getRolloverSelectedIcon())){
+				comp.setRolloverSelectedIcon(AttributeTransfer.icon(attr.getRolloverSelectedIcon()));
+			}
+			if(AttributeValidator.bounds(attr.getMargin())){
+				int[] arr = AttributeTransfer.bounds(attr.getMargin());
+				comp.setMargin(new Insets(arr[0], arr[1], arr[2], arr[3]));
+			}
+		}else if("".equals(name)){
+			
+		}else if("".equals(name)){
+			
+		}else if("".equals(name)){
+			
+		}else if("".equals(name)){
+			
+		}else if("".equals(name)){
+			
+		}else if("".equals(name)){
+			
+		}else if("".equals(name)){
+			
+		}else if("".equals(name)){
+			
+		}else if("".equals(name)){
+			
+		}else if("".equals(name)){
+			
+		}else if("".equals(name)){
+			
+		}else if("".equals(name)){
+			
+		}else if("".equals(name)){
+			
+		}else if("".equals(name)){
+			
+		}else if("".equals(name)){
+			
+		}else if("".equals(name)){
+			
+		}else if("".equals(name)){
+			
+		}else if("".equals(name)){
+			
+		}else if("".equals(name)){
+			
+		}else if("".equals(name)){
+			
 		}
 	}
 	
