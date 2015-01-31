@@ -16,14 +16,14 @@ public class AttributeModel {
 	private String bounds;
 	private Float alignmentX;//垂直对齐方式
 	private Float alignmentY;//水平对齐方式
-	private Boolean autoscrolls;
 	private String background;
 	private String foreground;
-	private Boolean enabled;
 	private String maximumSize;
 	private String minimumSize;
 	private String preferredSize;
 	private Boolean visible;
+	private Boolean autoscrolls;
+	private Boolean enabled;
 	
 	
 	private String title;

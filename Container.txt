@@ -1,0 +1,57 @@
+* **id**~string,组件id,用于编写事件
+* **name**~string,组件名称
+* **x**~int,x坐标
+* **y**~int,y坐标
+* **location**~int,int(x,y),坐标，优先级大于前者
+* **width**~int,宽度
+* **height**~int,高度
+* **size**~int,int(width,height),大小，优先级大于前者
+* **maximumSize**~int,int(width,height),最大大小
+* **minimumSize**~int,int(width,height),最小大小
+* **preferredSize**~int,int(width,height),首选大小
+* **bounds**~int,int,int,int(x,y,width,height),坐标及大小，优先级大于前者
+* **background**~string,背景颜色---red或者ffffff
+* **foreground**~string,文本颜色---red或者ffffff
+* **font**~格式：字体,样式,大小,如：**微软雅黑,1,14**；其中样式0为正常，1为粗体，2为斜体
+* **cursor**~string,光标类型
+   * DEFAULT:默认
+   * CROSSHAIR_CURSOR:十字
+   * HAND_CURSOR:手型
+   * MOVE_CURSOR:移动
+   * TEXT_CURSOR:文字
+   * WAIT_CURSOR:等待
+   * E_RESIZE_CURSOR:调整窗口右边框大小的光标类型。
+   * N_RESIZE_CURSOR:调整窗口上边框大小的光标类型。
+   * NE_RESIZE_CURSOR:调整窗口右上角大小的光标类型。
+   * NW_RESIZE_CURSOR:调整窗口左上角大小的光标类型。
+   * S_RESIZE_CURSOR:调整窗口下边框大小的光标类型。
+   * SE_RESIZE_CURSOR:调整窗口右下角大小的光标类型。
+   * SW_RESIZE_CURSOR:调整窗口左下角大小的光标类型。
+   * W_RESIZE_CURSOR:调整窗口左边框大小的光标类型。
+* **enabled**~boolean,是否可用
+* **visible**~boolean,是否可见
+* **ignoreRepaint**~boolean,应该忽略从操作系统接受的绘制消息
+
+
+==================JComponent=====================
+* **alignmentX**~float,垂直对齐方式
+   * 0.0:LEFT
+   * 0.5:CENTER
+   * 1.0:RIGHT
+* **alignmentY**~float,水平对齐方式
+   * 0.0:TOP
+   * 0.5:CENTER
+   * 1.0:BOTTOM
+* **toolTipText**~string,提示文本
+
+* **autoscrolls**~boolean   
+* **opaque**~boolean,是否绘制其边界内的所有像素
+* **requestFocusEnabled**~boolean
+
+
+==================Window=====================
+* **iconImage**~string,设置窗口图标,使用${rootPath}配合使用
+* **locationRelativeTo**~string,设置窗口相对于指定组件的位置,值取其他组件的id值，null表示全屏居中
+
+* **alwaysOnTop**~boolean,设置此窗口是否应该始终位于其他窗口上方
+* **locationByPlatform**~boolean,窗口应出现在默认位置，则为 true，如果应出现在当前位置，则为 false

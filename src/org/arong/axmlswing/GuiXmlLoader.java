@@ -23,6 +23,8 @@ import java.util.List;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JTextField;
 import javax.swing.event.AncestorListener;
 import javax.swing.event.ChangeListener;
 
@@ -99,53 +101,104 @@ public class GuiXmlLoader {
 				/**
 				 * 元素的属性可以对应一个组件的javabean,使用反射一一对应
 				 */
-				if("JButton".equals(e.getName())){
-					JButton btn = new JButton();
-					ComponentManager.putComponent(id, btn);
+				if("JTextField".equals(e.getName())){
+					JTextField comp = new JTextField();
+					ComponentManager.putComponent(id, comp);
 					//设置一些基本类型的值
-					BeanUtil.apply(attr, btn);
-					ComponentManager.setCommonAttribute(btn, attr);
+					BeanUtil.apply(attr, comp);
+					ComponentManager.setCommonAttribute(comp, attr);
+					
+					if(l != null){
+						comp.addMouseListener((MouseListener) l);
+						comp.addMouseMotionListener((MouseMotionListener) l);
+						comp.addMouseWheelListener((MouseWheelListener) l);
+						comp.addActionListener((ActionListener) l);
+						comp.addFocusListener((FocusListener) l);
+						comp.addKeyListener((KeyListener) l);
+						comp.addComponentListener((ComponentListener) l);
+						comp.addContainerListener((ContainerListener) l);
+						comp.addAncestorListener((AncestorListener) l);
+						comp.addHierarchyBoundsListener((HierarchyBoundsListener) l);
+						comp.addHierarchyListener((HierarchyListener) l);
+						comp.addInputMethodListener((InputMethodListener) l);
+					}
+					container.add(comp);
+					parse(comp, e, attr);
+				}else if("JLabel".equals(e.getName())){
+					JLabel comp = new JLabel();
+					ComponentManager.putComponent(id, comp);
+					//设置一些基本类型的值
+					BeanUtil.apply(attr, comp);
+					ComponentManager.setCommonAttribute(comp, attr);
+					if(!AttributeValidator.isBlank(attr.getIcon())){
+						comp.setIcon(AttributeTransfer.icon(attr.getIcon()));
+					}
+					if(!AttributeValidator.isBlank(attr.getDisabledIcon())){
+						comp.setDisabledIcon(AttributeTransfer.icon(attr.getDisabledIcon()));
+					}
+					if(l != null){
+						comp.addMouseListener((MouseListener) l);
+						comp.addMouseMotionListener((MouseMotionListener) l);
+						comp.addMouseWheelListener((MouseWheelListener) l);
+						comp.addFocusListener((FocusListener) l);
+						comp.addKeyListener((KeyListener) l);
+						comp.addComponentListener((ComponentListener) l);
+						comp.addContainerListener((ContainerListener) l);
+						comp.addAncestorListener((AncestorListener) l);
+						comp.addHierarchyBoundsListener((HierarchyBoundsListener) l);
+						comp.addHierarchyListener((HierarchyListener) l);
+						comp.addInputMethodListener((InputMethodListener) l);
+					}
+					container.add(comp);
+					parse(comp, e, attr);
+					
+				}else if("JButton".equals(e.getName())){
+					JButton comp = new JButton();
+					ComponentManager.putComponent(id, comp);
+					//设置一些基本类型的值
+					BeanUtil.apply(attr, comp);
+					ComponentManager.setCommonAttribute(comp, attr);
 					//其他类型或者参数个数大于一个的需要手动设置
 					if(!AttributeValidator.isBlank(attr.getDisabledIcon())){
-						btn.setDisabledIcon(AttributeTransfer.icon(attr.getDisabledIcon()));
+						comp.setDisabledIcon(AttributeTransfer.icon(attr.getDisabledIcon()));
 					}
 					if(!AttributeValidator.isBlank(attr.getIcon())){
-						btn.setIcon(AttributeTransfer.icon(attr.getIcon()));
+						comp.setIcon(AttributeTransfer.icon(attr.getIcon()));
 					}
 					if(!AttributeValidator.isBlank(attr.getDisabledSelectedIcon())){
-						btn.setDisabledSelectedIcon(AttributeTransfer.icon(attr.getDisabledSelectedIcon()));
+						comp.setDisabledSelectedIcon(AttributeTransfer.icon(attr.getDisabledSelectedIcon()));
 					}
 					if(!AttributeValidator.isBlank(attr.getPressedIcon())){
-						btn.setPressedIcon(AttributeTransfer.icon(attr.getPressedIcon()));
+						comp.setPressedIcon(AttributeTransfer.icon(attr.getPressedIcon()));
 					}
 					if(!AttributeValidator.isBlank(attr.getRolloverIcon())){
-						btn.setRolloverIcon(AttributeTransfer.icon(attr.getRolloverIcon()));
+						comp.setRolloverIcon(AttributeTransfer.icon(attr.getRolloverIcon()));
 					}
 					if(!AttributeValidator.isBlank(attr.getRolloverSelectedIcon())){
-						btn.setRolloverSelectedIcon(AttributeTransfer.icon(attr.getRolloverSelectedIcon()));
+						comp.setRolloverSelectedIcon(AttributeTransfer.icon(attr.getRolloverSelectedIcon()));
 					}
 					if(AttributeValidator.bounds(attr.getMargin())){
 						int[] arr = AttributeTransfer.bounds(attr.getMargin());
-						btn.setMargin(new Insets(arr[0], arr[1], arr[2], arr[3]));
+						comp.setMargin(new Insets(arr[0], arr[1], arr[2], arr[3]));
 					}
 					if(l != null){
-						btn.addMouseListener((MouseListener) l);
-						btn.addMouseMotionListener((MouseMotionListener) l);
-						btn.addMouseWheelListener((MouseWheelListener) l);
-						btn.addActionListener((ActionListener) l);
-						btn.addChangeListener((ChangeListener) l);
-						btn.addFocusListener((FocusListener) l);
-						btn.addKeyListener((KeyListener) l);
-						btn.addComponentListener((ComponentListener) l);
-						btn.addContainerListener((ContainerListener) l);
-						btn.addAncestorListener((AncestorListener) l);
-						btn.addHierarchyBoundsListener((HierarchyBoundsListener) l);
-						btn.addHierarchyListener((HierarchyListener) l);
-						btn.addInputMethodListener((InputMethodListener) l);
-						btn.addItemListener((ItemListener) l);
+						comp.addMouseListener((MouseListener) l);
+						comp.addMouseMotionListener((MouseMotionListener) l);
+						comp.addMouseWheelListener((MouseWheelListener) l);
+						comp.addActionListener((ActionListener) l);
+						comp.addChangeListener((ChangeListener) l);
+						comp.addFocusListener((FocusListener) l);
+						comp.addKeyListener((KeyListener) l);
+						comp.addComponentListener((ComponentListener) l);
+						comp.addContainerListener((ContainerListener) l);
+						comp.addAncestorListener((AncestorListener) l);
+						comp.addHierarchyBoundsListener((HierarchyBoundsListener) l);
+						comp.addHierarchyListener((HierarchyListener) l);
+						comp.addInputMethodListener((InputMethodListener) l);
+						comp.addItemListener((ItemListener) l);
 					}
-					container.add(btn);
-					parse(btn, e, attr);
+					container.add(comp);
+					parse(comp, e, attr);
 				}
 			}
 		} catch (IllegalArgumentException e1) {

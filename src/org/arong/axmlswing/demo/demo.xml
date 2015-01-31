@@ -6,14 +6,15 @@
  -->
 <JFrame id="mainWindow" title="主窗口" width="300" height="200" locationRelativeTo="null" defaultCloseOperation="3"
 	iconImage="${rootPath}/anchor.gif" resizable="false">
+	<JLabel text="用户名" bounds="10, 30, 60, 30" foreground="blue" icon="${rootPath}/anchor.gif"></JLabel>
+	<JTextField id="loginUsernameField" text="张绍荣" bounds="80, 30, 180, 30" requestFocusEnabled="true"></JTextField>
 	<JButton id="loginBtn" text="登陆按钮" rolloverEnabled="true" icon="${rootPath}/anchor.gif" toolTipText="按钮提示"
-		bounds="100, 60, 100, 30" minimumSize="200, 40" foreground="red" cursor="HAND_CURSOR"
+		bounds="100, 100, 100, 30" minimumSize="200, 40" foreground="red" cursor="HAND_CURSOR"
 		focusable="true" font="微软染黑,0,12" horizontalAlignment="0" 
 		 iconTextGap="10" mnemonic="13"
 		margin="" selected="false">
-			
 		
-		</JButton>
+	</JButton>
 </JFrame>
 
 <!-- 

@@ -87,4 +87,5 @@ public class ComponentManager {
 			comp.setFont(AttributeTransfer.font(attr.getFont()));
 		}
 	}
+	
 }
