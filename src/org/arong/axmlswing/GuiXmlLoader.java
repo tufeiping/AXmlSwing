@@ -3,30 +3,20 @@ package org.arong.axmlswing;
 import java.awt.Container;
 import java.awt.Insets;
 import java.awt.Rectangle;
-import java.awt.event.ActionListener;
-import java.awt.event.ComponentListener;
-import java.awt.event.ContainerListener;
-import java.awt.event.FocusListener;
-import java.awt.event.HierarchyBoundsListener;
-import java.awt.event.HierarchyListener;
-import java.awt.event.InputMethodListener;
-import java.awt.event.ItemListener;
-import java.awt.event.KeyListener;
-import java.awt.event.MouseListener;
-import java.awt.event.MouseMotionListener;
-import java.awt.event.MouseWheelListener;
 import java.lang.reflect.Field;
+import java.lang.reflect.Method;
 import java.util.EventListener;
+import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
+import java.util.Map;
 
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JTextField;
-import javax.swing.event.AncestorListener;
-import javax.swing.event.ChangeListener;
+import javax.swing.JWindow;
 
 import org.arong.axmlswing.attribute.AttributeModel;
 import org.arong.axmlswing.attribute.AttributeTransfer;
@@ -89,6 +79,36 @@ public class GuiXmlLoader {
 		}
 	}
 	
+	public static void printListener(Class<?>... classes){
+		Map<String, String> maps = new HashMap<String, String>();
+		String key;
+		int i = 0;
+		for(Class<?> clazz : classes){
+			Method[] methods = clazz.getMethods();
+			for(Method method : methods){
+				if(method.getName().startsWith("add") && method.getName().endsWith("Listener")){
+					key = method.getName().substring(3, method.getName().length());
+					if(!maps.containsKey(key)){
+						System.out.println(key + ",");
+						maps.put(key, key);
+						i++;
+					}
+				}
+			}
+		}
+		System.out.println(i);
+	}
+	
+	public static void main(String[] args) {
+		/*printListener(JFrame.class, JWindow.class, JDialog.class, JTextField.class, JButton.class, JTabbedPane.class, JEditorPane.class,
+				JTable.class ,JLabel.class, JTextArea.class, JRadioButton.class, JRadioButtonMenuItem.class, JCheckBox.class, JCheckBoxMenuItem.class,
+				JColorChooser.class, JComboBox.class, JDesktopPane.class, JFileChooser.class, JFormattedTextField.class,
+				JInternalFrame.class,JLayeredPane.class,JList.class, JMenu.class, JMenuBar.class,JMenuItem.class, JPanel.class, JPasswordField.class,
+				JPopupMenu.class, JProgressBar.class,JRootPane.class, JScrollBar.class, JScrollPane.class,JSeparator.class, JSlider.class,
+				JSpinner.class, JSplitPane.class, JToggleButton.class, JToolBar.class, JToolTip.class, JTree.class, JViewport.class);*/
+//		ListenerManager.setComponentListeners(JLabel.class, null);
+	}
+	
 	@SuppressWarnings("unchecked")
 	public static void parse(Container container, Element e, AttributeModel attr){
 		try {
@@ -101,56 +121,75 @@ public class GuiXmlLoader {
 				/**
 				 * 元素的属性可以对应一个组件的javabean,使用反射一一对应
 				 */
-				if("JTextField".equals(e.getName())){
+				if("JFrame".equals(e.getName())){
+					JFrame comp = new JFrame();
+					ComponentManager.putComponent(id, comp);
+					//设置一些基本类型的值
+					BeanUtil.apply(attr, comp);
+					ComponentManager.setCommonAttribute(comp, attr);
+					if(l != null){
+						ListenerManager.setComponentListeners(comp, l);
+					}
+					//container.add(comp);
+					parse(comp, e, attr);
+					
+					if(AttributeValidator.bounds(attr.getMaximizedBounds())){
+						int[] arr = AttributeTransfer.bounds(attr.getMaximizedBounds());
+						comp.setMaximizedBounds(new Rectangle(arr[0], arr[1], arr[2], arr[3]));
+					}
+					if(!AttributeValidator.isBlank(attr.getIconImage())){
+						comp.setIconImage(((ImageIcon)AttributeTransfer.icon(attr.getIconImage())).getImage());
+					}
+					if(!AttributeValidator.isBlank(attr.getLocationRelativeTo())){
+						comp.setLocationRelativeTo(ComponentManager.getComponent(attr.getLocationRelativeTo()));
+					}
+				}else if("JWindow".equals(e.getName())){
+					JWindow comp = new JWindow();
+					ComponentManager.putComponent(id, comp);
+					//设置一些基本类型的值
+					BeanUtil.apply(attr, comp);
+					ComponentManager.setCommonAttribute(comp, attr);
+					if(l != null){
+						ListenerManager.setComponentListeners(comp, l);
+					}
+					parse(comp, e, attr);
+					
+					if(!AttributeValidator.isBlank(attr.getIconImage())){
+						comp.setIconImage(((ImageIcon)AttributeTransfer.icon(attr.getIconImage())).getImage());
+					}
+					if(!AttributeValidator.isBlank(attr.getLocationRelativeTo())){
+						comp.setLocationRelativeTo(ComponentManager.getComponent(attr.getLocationRelativeTo()));
+					}
+				}else if("JTextField".equals(e.getName())){
 					JTextField comp = new JTextField();
 					ComponentManager.putComponent(id, comp);
 					//设置一些基本类型的值
 					BeanUtil.apply(attr, comp);
 					ComponentManager.setCommonAttribute(comp, attr);
-					
 					if(l != null){
-						comp.addMouseListener((MouseListener) l);
-						comp.addMouseMotionListener((MouseMotionListener) l);
-						comp.addMouseWheelListener((MouseWheelListener) l);
-						comp.addActionListener((ActionListener) l);
-						comp.addFocusListener((FocusListener) l);
-						comp.addKeyListener((KeyListener) l);
-						comp.addComponentListener((ComponentListener) l);
-						comp.addContainerListener((ContainerListener) l);
-						comp.addAncestorListener((AncestorListener) l);
-						comp.addHierarchyBoundsListener((HierarchyBoundsListener) l);
-						comp.addHierarchyListener((HierarchyListener) l);
-						comp.addInputMethodListener((InputMethodListener) l);
+						ListenerManager.setComponentListeners(comp, l);
 					}
 					container.add(comp);
 					parse(comp, e, attr);
+					
 				}else if("JLabel".equals(e.getName())){
 					JLabel comp = new JLabel();
 					ComponentManager.putComponent(id, comp);
 					//设置一些基本类型的值
 					BeanUtil.apply(attr, comp);
 					ComponentManager.setCommonAttribute(comp, attr);
+					if(l != null){
+						ListenerManager.setComponentListeners(comp, l);
+					}
+					container.add(comp);
+					parse(comp, e, attr);
+					
 					if(!AttributeValidator.isBlank(attr.getIcon())){
 						comp.setIcon(AttributeTransfer.icon(attr.getIcon()));
 					}
 					if(!AttributeValidator.isBlank(attr.getDisabledIcon())){
 						comp.setDisabledIcon(AttributeTransfer.icon(attr.getDisabledIcon()));
 					}
-					if(l != null){
-						comp.addMouseListener((MouseListener) l);
-						comp.addMouseMotionListener((MouseMotionListener) l);
-						comp.addMouseWheelListener((MouseWheelListener) l);
-						comp.addFocusListener((FocusListener) l);
-						comp.addKeyListener((KeyListener) l);
-						comp.addComponentListener((ComponentListener) l);
-						comp.addContainerListener((ContainerListener) l);
-						comp.addAncestorListener((AncestorListener) l);
-						comp.addHierarchyBoundsListener((HierarchyBoundsListener) l);
-						comp.addHierarchyListener((HierarchyListener) l);
-						comp.addInputMethodListener((InputMethodListener) l);
-					}
-					container.add(comp);
-					parse(comp, e, attr);
 					
 				}else if("JButton".equals(e.getName())){
 					JButton comp = new JButton();
@@ -158,6 +197,12 @@ public class GuiXmlLoader {
 					//设置一些基本类型的值
 					BeanUtil.apply(attr, comp);
 					ComponentManager.setCommonAttribute(comp, attr);
+					if(l != null){
+						ListenerManager.setComponentListeners(comp, l);
+					}
+					container.add(comp);
+					parse(comp, e, attr);
+					
 					//其他类型或者参数个数大于一个的需要手动设置
 					if(!AttributeValidator.isBlank(attr.getDisabledIcon())){
 						comp.setDisabledIcon(AttributeTransfer.icon(attr.getDisabledIcon()));
@@ -181,24 +226,6 @@ public class GuiXmlLoader {
 						int[] arr = AttributeTransfer.bounds(attr.getMargin());
 						comp.setMargin(new Insets(arr[0], arr[1], arr[2], arr[3]));
 					}
-					if(l != null){
-						comp.addMouseListener((MouseListener) l);
-						comp.addMouseMotionListener((MouseMotionListener) l);
-						comp.addMouseWheelListener((MouseWheelListener) l);
-						comp.addActionListener((ActionListener) l);
-						comp.addChangeListener((ChangeListener) l);
-						comp.addFocusListener((FocusListener) l);
-						comp.addKeyListener((KeyListener) l);
-						comp.addComponentListener((ComponentListener) l);
-						comp.addContainerListener((ContainerListener) l);
-						comp.addAncestorListener((AncestorListener) l);
-						comp.addHierarchyBoundsListener((HierarchyBoundsListener) l);
-						comp.addHierarchyListener((HierarchyListener) l);
-						comp.addInputMethodListener((InputMethodListener) l);
-						comp.addItemListener((ItemListener) l);
-					}
-					container.add(comp);
-					parse(comp, e, attr);
 				}
 			}
 		} catch (IllegalArgumentException e1) {

@@ -1,8 +1,11 @@
 package org.arong.axmlswing.manager;
 
+import java.awt.Container;
 import java.io.File;
 import java.io.FileFilter;
 import java.io.IOException;
+import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
 import java.net.URL;
 import java.net.URLDecoder;
 import java.util.Enumeration;
@@ -201,8 +204,27 @@ public class ListenerManager {
 		}
 	}
 
-	public static void main(String[] args) {
-		
+	/**
+	 * 设置控件的事件监听器
+	 */
+	public static void setComponentListeners(Container comp, EventListener l){
+		Method[] methods = comp.getClass().getMethods();
+		for(Method method : methods){
+			if(method.getParameterTypes().length == 1 && 
+					method.getName().startsWith("add") &&
+					method.getName().endsWith("Listener")){
+				try {
+//					System.out.println(comp + ":" + method.getName());
+					method.invoke(comp, l);
+				} catch (IllegalArgumentException e) {
+					e.printStackTrace();
+				} catch (IllegalAccessException e) {
+					e.printStackTrace();
+				} catch (InvocationTargetException e) {
+					e.printStackTrace();
+				}
+			}
+		}
 	}
 
 }

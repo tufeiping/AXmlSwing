@@ -2,6 +2,8 @@ package org.arong.axmlswing.event;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.AdjustmentEvent;
+import java.awt.event.AdjustmentListener;
 import java.awt.event.ComponentEvent;
 import java.awt.event.ComponentListener;
 import java.awt.event.ContainerEvent;
@@ -26,11 +28,37 @@ import java.awt.event.WindowEvent;
 import java.awt.event.WindowFocusListener;
 import java.awt.event.WindowListener;
 import java.awt.event.WindowStateListener;
+import java.beans.PropertyChangeEvent;
+import java.beans.PropertyChangeListener;
+import java.beans.PropertyVetoException;
+import java.beans.VetoableChangeListener;
 
 import javax.swing.event.AncestorEvent;
 import javax.swing.event.AncestorListener;
+import javax.swing.event.CaretEvent;
+import javax.swing.event.CaretListener;
 import javax.swing.event.ChangeEvent;
 import javax.swing.event.ChangeListener;
+import javax.swing.event.HyperlinkEvent;
+import javax.swing.event.HyperlinkListener;
+import javax.swing.event.InternalFrameEvent;
+import javax.swing.event.InternalFrameListener;
+import javax.swing.event.ListSelectionEvent;
+import javax.swing.event.ListSelectionListener;
+import javax.swing.event.MenuDragMouseEvent;
+import javax.swing.event.MenuDragMouseListener;
+import javax.swing.event.MenuEvent;
+import javax.swing.event.MenuKeyEvent;
+import javax.swing.event.MenuKeyListener;
+import javax.swing.event.MenuListener;
+import javax.swing.event.PopupMenuEvent;
+import javax.swing.event.PopupMenuListener;
+import javax.swing.event.TreeExpansionEvent;
+import javax.swing.event.TreeExpansionListener;
+import javax.swing.event.TreeSelectionEvent;
+import javax.swing.event.TreeSelectionListener;
+import javax.swing.event.TreeWillExpandListener;
+import javax.swing.tree.ExpandVetoException;
 /**
  * 抽象事件监听器，所有控件的事件实现类应该要继承这个类，然后按需重写方法
  * @author dipoo
@@ -53,7 +81,21 @@ public class AbstractListener implements
 	HierarchyBoundsListener, //祖先的移动和大小调整事件
 	HierarchyListener, //层次结构变化
 	InputMethodListener, //文本变化
-	ItemListener //已选定或取消选定某项
+	ItemListener, //已选定或取消选定某项
+	CaretListener,//文本组件插入符的位置更改
+	HyperlinkListener,//更新超文本链接
+	MenuDragMouseListener,//菜单鼠标拖动
+	MenuKeyListener,//菜单按键
+	PopupMenuListener,//弹出菜单侦听器 
+	InternalFrameListener,
+	ListSelectionListener,//选择值发生更改
+	MenuListener,//菜单事件侦听器
+	AdjustmentListener,//调整事件的侦听器
+	TreeExpansionListener,//树扩展或折叠某一节点
+	TreeSelectionListener,//TreeSelectionModel 中的选择发生更改时
+	TreeWillExpandListener,//当树扩展或折叠某一节点
+	VetoableChangeListener,
+	PropertyChangeListener
 {
 	//--------------MouseListener---------------
 	/**
@@ -283,4 +325,42 @@ public class AbstractListener implements
      * that need to occur when an item is selected (or deselected).
      */    
     public void itemStateChanged(ItemEvent e){}
+    
+    
+    //--------------CaretListener---------------
+    /**
+     * Called when the caret position is updated.
+     */
+	public void caretUpdate(CaretEvent e) {}
+	
+	public void hyperlinkUpdate(HyperlinkEvent e) {}
+	public void menuDragMouseDragged(MenuDragMouseEvent e) {}
+	public void menuDragMouseEntered(MenuDragMouseEvent e) {}
+	public void menuDragMouseExited(MenuDragMouseEvent e) {}
+	public void menuDragMouseReleased(MenuDragMouseEvent e) {}
+	public void menuKeyPressed(MenuKeyEvent e) {}
+	public void menuKeyReleased(MenuKeyEvent e) {}
+	public void menuKeyTyped(MenuKeyEvent e) {}
+	public void popupMenuCanceled(PopupMenuEvent e) {}
+	public void popupMenuWillBecomeInvisible(PopupMenuEvent e) {}
+	public void popupMenuWillBecomeVisible(PopupMenuEvent e) {}
+	public void internalFrameActivated(InternalFrameEvent e) {}
+	public void internalFrameClosed(InternalFrameEvent e) {}
+	public void internalFrameClosing(InternalFrameEvent e) {}
+	public void internalFrameDeactivated(InternalFrameEvent e) {}
+	public void internalFrameDeiconified(InternalFrameEvent e) {}
+	public void internalFrameIconified(InternalFrameEvent e) {}
+	public void internalFrameOpened(InternalFrameEvent e) {}
+	public void valueChanged(ListSelectionEvent e) {}
+	public void menuCanceled(MenuEvent e) {}
+	public void menuDeselected(MenuEvent e) {}
+	public void menuSelected(MenuEvent e) {}
+	public void adjustmentValueChanged(AdjustmentEvent e) {}
+	public void treeCollapsed(TreeExpansionEvent event) {}
+	public void treeExpanded(TreeExpansionEvent event) {}
+	public void valueChanged(TreeSelectionEvent e) {}
+	public void treeWillCollapse(TreeExpansionEvent event) throws ExpandVetoException {}
+	public void treeWillExpand(TreeExpansionEvent event) throws ExpandVetoException {}
+	public void vetoableChange(PropertyChangeEvent evt) throws PropertyVetoException {}
+	public void propertyChange(PropertyChangeEvent evt) {}
 }
