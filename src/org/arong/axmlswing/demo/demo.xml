@@ -10,7 +10,10 @@
 		bounds="100, 60, 100, 30" minimumSize="200, 40" foreground="red" cursor="HAND_CURSOR"
 		focusable="true" font="微软染黑,0,12" horizontalAlignment="0" 
 		 iconTextGap="10" mnemonic="13"
-		margin="" selected="false" />
+		margin="" selected="false">
+			
+		
+		</JButton>
 </JFrame>
 
 <!-- 

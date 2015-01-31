@@ -33,6 +33,8 @@ public class AttributeModel {
 	private String iconImage;
 	private String maximizedBounds;//最大化边界
 	private Boolean resizable;//是否可由用户调整大小
+	private Boolean focusableWindowState;//是否可以成为焦点窗口
+	private Boolean locationByPlatform;//窗口应出现在默认位置，则为 true，如果应出现在当前位置，则为 false
 	
 	private Boolean opaque;//如果为 true，则该组件绘制其边界内的所有像素。
 	private String toolTipText;
@@ -415,5 +417,17 @@ public class AttributeModel {
 	}
 	public Boolean getResizable() {
 		return resizable;
+	}
+	public void setFocusableWindowState(Boolean focusableWindowState) {
+		this.focusableWindowState = focusableWindowState;
+	}
+	public Boolean getFocusableWindowState() {
+		return focusableWindowState;
+	}
+	public void setLocationByPlatform(Boolean locationByPlatform) {
+		this.locationByPlatform = locationByPlatform;
+	}
+	public Boolean getLocationByPlatform() {
+		return locationByPlatform;
 	}
 }
