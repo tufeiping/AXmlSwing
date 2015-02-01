@@ -38,7 +38,7 @@ import org.dom4j.Element;
  */
 public class GuiXmlLoader {
 	
-	public static void loader(String path){
+	public static void load(String path){
 		Document doc = null;
 		try {
 			doc = Dom4jUtil.getDOM(path);

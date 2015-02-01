@@ -1,4 +1,4 @@
-# AXmlSwing
+﻿# AXmlSwing
 使用xml简化swing开发
 ###demo.xml
 
@@ -35,6 +35,6 @@
     public class Demo {
       public static void main(String[] args) throws Exception {
 		    //加载布局文件
-		  GuiXmlLoader.loader("demo.xml");
+		  GuiXmlLoader.load("demo.xml");
 	    }
     }
