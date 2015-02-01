@@ -10,6 +10,7 @@ import java.util.Map;
 
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
+import javax.swing.JCheckBox;
 import javax.swing.JDialog;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -115,7 +116,6 @@ public class ComponentManager {
 			if(!AttributeValidator.isBlank(attr.getLocationRelativeTo())){
 				comp.setLocationRelativeTo(ComponentManager.getComponent(attr.getLocationRelativeTo()));
 			}
-			
 		}else if("JWindow".equals(name)){
 			JWindow comp = (JWindow) c;
 			if(!AttributeValidator.isBlank(attr.getIconImage())){
@@ -201,8 +201,30 @@ public class ComponentManager {
 				int[] arr = AttributeTransfer.bounds(attr.getMargin());
 				comp.setMargin(new Insets(arr[0], arr[1], arr[2], arr[3]));
 			}
-		}else if("".equals(name)){
-			
+		}else if("JCheckBox".equals(name)){
+			JCheckBox comp = (JCheckBox) c;
+			if(!AttributeValidator.isBlank(attr.getDisabledIcon())){
+				comp.setDisabledIcon(AttributeTransfer.icon(attr.getDisabledIcon()));
+			}
+			if(!AttributeValidator.isBlank(attr.getIcon())){
+				comp.setIcon(AttributeTransfer.icon(attr.getIcon()));
+			}
+			if(!AttributeValidator.isBlank(attr.getDisabledSelectedIcon())){
+				comp.setDisabledSelectedIcon(AttributeTransfer.icon(attr.getDisabledSelectedIcon()));
+			}
+			if(!AttributeValidator.isBlank(attr.getPressedIcon())){
+				comp.setPressedIcon(AttributeTransfer.icon(attr.getPressedIcon()));
+			}
+			if(!AttributeValidator.isBlank(attr.getRolloverIcon())){
+				comp.setRolloverIcon(AttributeTransfer.icon(attr.getRolloverIcon()));
+			}
+			if(!AttributeValidator.isBlank(attr.getRolloverSelectedIcon())){
+				comp.setRolloverSelectedIcon(AttributeTransfer.icon(attr.getRolloverSelectedIcon()));
+			}
+			if(AttributeValidator.bounds(attr.getMargin())){
+				int[] arr = AttributeTransfer.bounds(attr.getMargin());
+				comp.setMargin(new Insets(arr[0], arr[1], arr[2], arr[3]));
+			}
 		}else if("".equals(name)){
 			
 		}else if("".equals(name)){

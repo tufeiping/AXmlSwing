@@ -85,6 +85,9 @@ public class AttributeModel {
 	private Boolean selected;
 	private Boolean verifyInputWhenFocusTarget;
 	private Boolean doubleBuffered;
+	private Integer displayedMnemonicIndex;
+	private Boolean focusCycleRoot;
+	private Long multiClickThreshhold;
 	
 	public String getId() {
 		return id;
@@ -535,5 +538,23 @@ public class AttributeModel {
 	}
 	public Boolean getWrapStyleWord() {
 		return wrapStyleWord;
+	}
+	public Integer getDisplayedMnemonicIndex() {
+		return displayedMnemonicIndex;
+	}
+	public void setDisplayedMnemonicIndex(Integer displayedMnemonicIndex) {
+		this.displayedMnemonicIndex = displayedMnemonicIndex;
+	}
+	public Boolean getFocusCycleRoot() {
+		return focusCycleRoot;
+	}
+	public void setFocusCycleRoot(Boolean focusCycleRoot) {
+		this.focusCycleRoot = focusCycleRoot;
+	}
+	public Long getMultiClickThreshhold() {
+		return multiClickThreshhold;
+	}
+	public void setMultiClickThreshhold(Long multiClickThreshhold) {
+		this.multiClickThreshhold = multiClickThreshhold;
 	}
 }

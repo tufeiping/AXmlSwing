@@ -12,6 +12,7 @@ import java.util.Map;
 
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
+import javax.swing.JCheckBox;
 import javax.swing.JDialog;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -181,6 +182,18 @@ public class GuiXmlLoader {
 					parse(comp, e, attr);
 				}else if("JButton".equals(e.getName())){
 					JButton comp = new JButton();
+					ComponentManager.putComponent(id, comp);
+					//设置一些基本类型的值
+					BeanUtil.apply(attr, comp);
+					ComponentManager.setCommonAttribute(comp, attr);
+					ComponentManager.setComponentSpecificAttribute(e.getName(), comp, attr);
+					if(l != null){
+						ListenerManager.setComponentListeners(comp, l);
+					}
+					container.add(comp);
+					parse(comp, e, attr);
+				}else if("JCheckBox".equals(e.getName())){
+					JCheckBox comp = new JCheckBox();
 					ComponentManager.putComponent(id, comp);
 					//设置一些基本类型的值
 					BeanUtil.apply(attr, comp);

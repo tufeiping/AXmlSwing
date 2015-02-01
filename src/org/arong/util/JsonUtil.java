@@ -202,7 +202,7 @@ public final class JsonUtil {
 					value = "null";
 				//如果还包含有集合，则递归
 				if(value instanceof List){
-					executeAppend(sb, "{", name.toString(), mapList2Json((List)value));
+					executeAppend(sb, "{", name.toString(), mapList2Json((List<Map<Object, Object>>)value));
 				}else{
 					executeAppend(sb, "{", name.toString(), value);
 				}
