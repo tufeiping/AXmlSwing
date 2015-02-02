@@ -8,12 +8,14 @@ import java.awt.Rectangle;
 import java.util.HashMap;
 import java.util.Map;
 
+import javax.swing.AbstractButton;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JCheckBox;
 import javax.swing.JDialog;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JRadioButton;
 import javax.swing.JTextArea;
 import javax.swing.JTextField;
 import javax.swing.JWindow;
@@ -101,6 +103,34 @@ public class ComponentManager {
 	}
 	
 	/**
+	 * 设置按钮共有的属性
+	 */
+	public static void setAbstactButtonAttribute(AbstractButton comp, AttributeModel attr){
+		if(!AttributeValidator.isBlank(attr.getDisabledIcon())){
+			comp.setDisabledIcon(AttributeTransfer.icon(attr.getDisabledIcon()));
+		}
+		if(!AttributeValidator.isBlank(attr.getIcon())){
+			comp.setIcon(AttributeTransfer.icon(attr.getIcon()));
+		}
+		if(!AttributeValidator.isBlank(attr.getDisabledSelectedIcon())){
+			comp.setDisabledSelectedIcon(AttributeTransfer.icon(attr.getDisabledSelectedIcon()));
+		}
+		if(!AttributeValidator.isBlank(attr.getPressedIcon())){
+			comp.setPressedIcon(AttributeTransfer.icon(attr.getPressedIcon()));
+		}
+		if(!AttributeValidator.isBlank(attr.getRolloverIcon())){
+			comp.setRolloverIcon(AttributeTransfer.icon(attr.getRolloverIcon()));
+		}
+		if(!AttributeValidator.isBlank(attr.getRolloverSelectedIcon())){
+			comp.setRolloverSelectedIcon(AttributeTransfer.icon(attr.getRolloverSelectedIcon()));
+		}
+		if(AttributeValidator.bounds(attr.getMargin())){
+			int[] arr = AttributeTransfer.bounds(attr.getMargin());
+			comp.setMargin(new Insets(arr[0], arr[1], arr[2], arr[3]));
+		}
+	}
+	
+	/**
 	 * 设置组件的特殊属性
 	 */
 	public static void setComponentSpecificAttribute(String name, Component c, AttributeModel attr){
@@ -178,54 +208,14 @@ public class ComponentManager {
 			}
 		}else if("JButton".equals(name)){
 			JButton comp = (JButton) c;
-			//其他类型或者参数个数大于一个的需要手动设置
-			if(!AttributeValidator.isBlank(attr.getDisabledIcon())){
-				comp.setDisabledIcon(AttributeTransfer.icon(attr.getDisabledIcon()));
-			}
-			if(!AttributeValidator.isBlank(attr.getIcon())){
-				comp.setIcon(AttributeTransfer.icon(attr.getIcon()));
-			}
-			if(!AttributeValidator.isBlank(attr.getDisabledSelectedIcon())){
-				comp.setDisabledSelectedIcon(AttributeTransfer.icon(attr.getDisabledSelectedIcon()));
-			}
-			if(!AttributeValidator.isBlank(attr.getPressedIcon())){
-				comp.setPressedIcon(AttributeTransfer.icon(attr.getPressedIcon()));
-			}
-			if(!AttributeValidator.isBlank(attr.getRolloverIcon())){
-				comp.setRolloverIcon(AttributeTransfer.icon(attr.getRolloverIcon()));
-			}
-			if(!AttributeValidator.isBlank(attr.getRolloverSelectedIcon())){
-				comp.setRolloverSelectedIcon(AttributeTransfer.icon(attr.getRolloverSelectedIcon()));
-			}
-			if(AttributeValidator.bounds(attr.getMargin())){
-				int[] arr = AttributeTransfer.bounds(attr.getMargin());
-				comp.setMargin(new Insets(arr[0], arr[1], arr[2], arr[3]));
-			}
+			setAbstactButtonAttribute(comp, attr);
+			
 		}else if("JCheckBox".equals(name)){
 			JCheckBox comp = (JCheckBox) c;
-			if(!AttributeValidator.isBlank(attr.getDisabledIcon())){
-				comp.setDisabledIcon(AttributeTransfer.icon(attr.getDisabledIcon()));
-			}
-			if(!AttributeValidator.isBlank(attr.getIcon())){
-				comp.setIcon(AttributeTransfer.icon(attr.getIcon()));
-			}
-			if(!AttributeValidator.isBlank(attr.getDisabledSelectedIcon())){
-				comp.setDisabledSelectedIcon(AttributeTransfer.icon(attr.getDisabledSelectedIcon()));
-			}
-			if(!AttributeValidator.isBlank(attr.getPressedIcon())){
-				comp.setPressedIcon(AttributeTransfer.icon(attr.getPressedIcon()));
-			}
-			if(!AttributeValidator.isBlank(attr.getRolloverIcon())){
-				comp.setRolloverIcon(AttributeTransfer.icon(attr.getRolloverIcon()));
-			}
-			if(!AttributeValidator.isBlank(attr.getRolloverSelectedIcon())){
-				comp.setRolloverSelectedIcon(AttributeTransfer.icon(attr.getRolloverSelectedIcon()));
-			}
-			if(AttributeValidator.bounds(attr.getMargin())){
-				int[] arr = AttributeTransfer.bounds(attr.getMargin());
-				comp.setMargin(new Insets(arr[0], arr[1], arr[2], arr[3]));
-			}
-		}else if("".equals(name)){
+			setAbstactButtonAttribute(comp, attr);
+		}else if("JRadioButton".equals(name)){
+			JRadioButton comp = (JRadioButton) c;
+			setAbstactButtonAttribute(comp, attr);
 			
 		}else if("".equals(name)){
 			
