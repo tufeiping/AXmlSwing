@@ -57,6 +57,7 @@ public class AttributeModel {
 	private Integer delay;//向上或向下弹出前建议的延迟
 	private String menuLocation;//设置弹出组件的位置。
 	private Boolean popupMenuVisible;//设置菜单弹出的可见性
+	private Boolean state;//选定状态
 	
 	private Boolean opaque;//如果为 true，则该组件绘制其边界内的所有像素。
 	private String toolTipText;
@@ -585,5 +586,11 @@ public class AttributeModel {
 	}
 	public Boolean getPopupMenuVisible() {
 		return popupMenuVisible;
+	}
+	public void setState(Boolean state) {
+		this.state = state;
+	}
+	public Boolean getState() {
+		return state;
 	}
 }

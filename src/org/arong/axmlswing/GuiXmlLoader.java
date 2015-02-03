@@ -245,6 +245,17 @@ public class GuiXmlLoader {
 					}
 					container.add(comp);
 					parse(comp, e, attr);
+				}else if("JCheckBoxMenuItem".toLowerCase().equals(e.getName().toLowerCase())){
+					JMenu comp = new JMenu();
+					ComponentManager.putComponent(id, comp);
+					BeanUtil.apply(attr, comp);
+					ComponentManager.setCommonAttribute(comp, attr);
+					ComponentManager.setComponentSpecificAttribute(e.getName(), comp, attr);
+					if(l != null){
+						ListenerManager.setComponentListeners(comp, l);
+					}
+					container.add(comp);
+					parse(comp, e, attr);
 				}
 			}
 		} catch (IllegalArgumentException e1) {

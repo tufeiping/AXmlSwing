@@ -12,6 +12,7 @@ import javax.swing.AbstractButton;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JCheckBox;
+import javax.swing.JCheckBoxMenuItem;
 import javax.swing.JDialog;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -231,8 +232,9 @@ public class ComponentManager {
 				int[] arr = AttributeTransfer.size(attr.getMenuLocation());
 				comp.setMenuLocation(arr[0], arr[1]);
 			}
-		}else if("".equals(name)){
-			
+		}else if("JCheckBoxMenuItem".equals(name)){
+			JCheckBoxMenuItem comp = (JCheckBoxMenuItem) c;
+			setAbstactButtonAttribute(comp, attr);
 		}else if("".equals(name)){
 			
 		}else if("".equals(name)){
