@@ -149,7 +149,7 @@ public final class FileUtil {
 			}
 			
 		}catch(Exception e){
-			Tracker.println(FileUtil.class, e.getMessage());
+			//Tracker.println(FileUtil.class, e.getMessage());
 		}
 		return null;
 	}
