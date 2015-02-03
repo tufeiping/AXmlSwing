@@ -15,6 +15,7 @@ import javax.swing.JCheckBox;
 import javax.swing.JDialog;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JMenu;
 import javax.swing.JMenuItem;
 import javax.swing.JRadioButton;
 import javax.swing.JTextArea;
@@ -223,8 +224,13 @@ public class ComponentManager {
 		}else if("JMenuItem".equals(name)){
 			JMenuItem comp = (JMenuItem) c;
 			setAbstactButtonAttribute(comp, attr);
-		}else if("".equals(name)){
-			
+		}else if("JMenu".equals(name)){
+			JMenu comp = (JMenu) c;
+			setAbstactButtonAttribute(comp, attr);
+			if(AttributeValidator.size(attr.getMenuLocation())){
+				int[] arr = AttributeTransfer.size(attr.getMenuLocation());
+				comp.setMenuLocation(arr[0], arr[1]);
+			}
 		}else if("".equals(name)){
 			
 		}else if("".equals(name)){

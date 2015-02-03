@@ -54,6 +54,9 @@ public class AttributeModel {
 	private Boolean wrapStyleWord;//是否应该使用单词边界来换行
 	
 	private Boolean armed;// 将菜单项标识为“调出”。
+	private Integer delay;//向上或向下弹出前建议的延迟
+	private String menuLocation;//设置弹出组件的位置。
+	private Boolean popupMenuVisible;//设置菜单弹出的可见性
 	
 	private Boolean opaque;//如果为 true，则该组件绘制其边界内的所有像素。
 	private String toolTipText;
@@ -564,5 +567,23 @@ public class AttributeModel {
 	}
 	public Boolean getArmed() {
 		return armed;
+	}
+	public void setDelay(Integer delay) {
+		this.delay = delay;
+	}
+	public Integer getDelay() {
+		return delay;
+	}
+	public void setMenuLocation(String menuLocation) {
+		this.menuLocation = menuLocation;
+	}
+	public String getMenuLocation() {
+		return menuLocation;
+	}
+	public void setPopupMenuVisible(Boolean popupMenuVisible) {
+		this.popupMenuVisible = popupMenuVisible;
+	}
+	public Boolean getPopupMenuVisible() {
+		return popupMenuVisible;
 	}
 }

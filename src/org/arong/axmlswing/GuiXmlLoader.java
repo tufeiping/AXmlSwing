@@ -16,6 +16,7 @@ import javax.swing.JCheckBox;
 import javax.swing.JDialog;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JMenu;
 import javax.swing.JMenuItem;
 import javax.swing.JRadioButton;
 import javax.swing.JTextField;
@@ -224,6 +225,17 @@ public class GuiXmlLoader {
 					parse(comp, e, attr);
 				}else if("JMenuItem".toLowerCase().equals(e.getName().toLowerCase())){
 					JMenuItem comp = new JMenuItem();
+					ComponentManager.putComponent(id, comp);
+					BeanUtil.apply(attr, comp);
+					ComponentManager.setCommonAttribute(comp, attr);
+					ComponentManager.setComponentSpecificAttribute(e.getName(), comp, attr);
+					if(l != null){
+						ListenerManager.setComponentListeners(comp, l);
+					}
+					container.add(comp);
+					parse(comp, e, attr);
+				}else if("JMenu".toLowerCase().equals(e.getName().toLowerCase())){
+					JMenu comp = new JMenu();
 					ComponentManager.putComponent(id, comp);
 					BeanUtil.apply(attr, comp);
 					ComponentManager.setCommonAttribute(comp, attr);
