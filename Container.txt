@@ -47,7 +47,9 @@
 * **autoscrolls**~boolean   
 * **opaque**~boolean,是否绘制其边界内的所有像素
 * **requestFocusEnabled**~boolean
-
+* **verifyInputWhenFocusTarget**~boolean
+* **doubleBuffered**~boolean
+* **inheritsPopupMenu**~boolean
 
 ==================Window=====================
 * **iconImage**~string,设置窗口图标,使用${rootPath}配合使用
@@ -82,4 +84,4 @@
    * 3:BOTTOM
 * **iconTextGap**~int,图标和文本之间的间隔
 
-
+* **margin**~int,int,int,int---边框和标签之间的空白(top,left,bottom,right)

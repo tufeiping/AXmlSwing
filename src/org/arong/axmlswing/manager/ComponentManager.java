@@ -17,6 +17,7 @@ import javax.swing.JDialog;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JMenu;
+import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
 import javax.swing.JRadioButton;
 import javax.swing.JRadioButtonMenuItem;
@@ -239,8 +240,12 @@ public class ComponentManager {
 		}else if("jradiobuttonmenuitem".equals(name)){
 			JRadioButtonMenuItem comp = (JRadioButtonMenuItem) c;
 			setAbstactButtonAttribute(comp, attr);
-		}else if("".equals(name)){
-			
+		}else if("jmenubar".equals(name)){
+			JMenuBar comp = (JMenuBar) c;
+			if(AttributeValidator.bounds(attr.getMargin())){
+				int[] arr = AttributeTransfer.bounds(attr.getMargin());
+				comp.setMargin(new Insets(arr[0], arr[1], arr[2], arr[3]));
+			}
 		}else if("".equals(name)){
 			
 		}else if("".equals(name)){
