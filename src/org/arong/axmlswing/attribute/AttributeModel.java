@@ -53,6 +53,8 @@ public class AttributeModel {
 	private Integer tabSize;//设置选项卡要扩大到的字符数
 	private Boolean wrapStyleWord;//是否应该使用单词边界来换行
 	
+	private Boolean armed;// 将菜单项标识为“调出”。
+	
 	private Boolean opaque;//如果为 true，则该组件绘制其边界内的所有像素。
 	private String toolTipText;
 	private String text;
@@ -556,5 +558,11 @@ public class AttributeModel {
 	}
 	public void setMultiClickThreshhold(Long multiClickThreshhold) {
 		this.multiClickThreshhold = multiClickThreshhold;
+	}
+	public void setArmed(Boolean armed) {
+		this.armed = armed;
+	}
+	public Boolean getArmed() {
+		return armed;
 	}
 }

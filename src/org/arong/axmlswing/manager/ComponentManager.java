@@ -15,6 +15,7 @@ import javax.swing.JCheckBox;
 import javax.swing.JDialog;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JMenuItem;
 import javax.swing.JRadioButton;
 import javax.swing.JTextArea;
 import javax.swing.JTextField;
@@ -210,17 +211,18 @@ public class ComponentManager {
 		}else if("JButton".toLowerCase().equals(name.toLowerCase())){
 			JButton comp = (JButton) c;
 			setAbstactButtonAttribute(comp, attr);
+		}else if("JToggleButton".equals(name)){
+			JToggleButton comp = (JToggleButton) c;
+			setAbstactButtonAttribute(comp, attr);
 		}else if("JCheckBox".toLowerCase().equals(name.toLowerCase())){
 			JCheckBox comp = (JCheckBox) c;
 			setAbstactButtonAttribute(comp, attr);
 		}else if("JRadioButton".toLowerCase().equals(name.toLowerCase())){
 			JRadioButton comp = (JRadioButton) c;
 			setAbstactButtonAttribute(comp, attr);
-		}else if("JToggleButton".equals(name)){
-			JToggleButton comp = (JToggleButton) c;
+		}else if("JMenuItem".equals(name)){
+			JMenuItem comp = (JMenuItem) c;
 			setAbstactButtonAttribute(comp, attr);
-		}else if("".equals(name)){
-			
 		}else if("".equals(name)){
 			
 		}else if("".equals(name)){
