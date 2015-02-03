@@ -1,4 +1,4 @@
-package org.arong.axmlswing.demo;
+package demo;
 
 import javax.swing.UIManager;
 

@@ -1,4 +1,4 @@
-package org.arong.axmlswing.demo.listeners;
+package demo.listeners;
 
 import java.awt.event.MouseEvent;
 

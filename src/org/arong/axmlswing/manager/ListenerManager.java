@@ -32,11 +32,11 @@ public class ListenerManager {
 	 * 扫描注解，添加控件事件
 	 */
 	static {
-		Set<Class<?>> classes = getClasses("org.arong.axmlswing.demo.listeners");
+		Set<Class<?>> classes = getClasses("demo.listeners");
 		for(Class<?> clazz : classes){
 			EventAnnotation ea = clazz.getAnnotation(EventAnnotation.class);
 			if(ea != null){
-				//System.out.println(ea.value());
+				System.out.println(ea.value());
 				String id = ea.value();
 				try {
 					listeners.put(id, (EventListener)clazz.newInstance());

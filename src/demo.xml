@@ -4,17 +4,23 @@
 	变量列表
 	${rootPath}:项目根目录src
  -->
-<JFrame id="mainWindow" title="主窗口" width="300" height="200" locationRelativeTo="null" defaultCloseOperation="3"
+<JFrame id="mainWindow" title="虾片神器" width="300" height="200" locationRelativeTo="null" defaultCloseOperation="3"
 	iconImage="${rootPath}/anchor.gif" resizable="false">
-	<JLabel text="用户名" bounds="10, 30, 60, 30" foreground="blue" icon="${rootPath}/anchor.gif"></JLabel>
-	<JTextField id="loginUsernameField" text="张绍荣" bounds="80, 30, 180, 30" selectionStart="1" selectionEnd="2"></JTextField>
-	<JButton id="loginBtn" text="登陆按钮" rolloverEnabled="true" icon="${rootPath}/anchor.gif" toolTipText="按钮提示"
-		bounds="100, 100, 100, 30" minimumSize="200, 40" foreground="red" cursor="HAND_CURSOR"
-		focusable="true" font="微软染黑,0,12" horizontalAlignment="0" 
-		 iconTextGap="10" mnemonic="13"
-		margin="" selected="false">
-		
-	</JButton>
+	<JMenuBar bounds="5, 0, 280, 25" cursor="HAND_CURSOR">
+		<JMenu text="任务">
+			<JMenuItem text="打开"/>
+			<JMenuItem text="保存"/>
+			<JMenuItem text="另存为"/>
+			<JMenuItem id="exitMenuItem" text="退出" icon="${rootPath}/anchor.gif"/>
+		</JMenu>
+		<JMenu text="编辑"/>
+		<JMenu text="搜索"/>
+		<JMenu text="帮助"/>
+	</JMenuBar>
+	<JLabel text="地址" bounds="10, 50, 60, 30" foreground="blue" icon="${rootPath}/anchor.gif" />
+	<JTextField id="loginUsernameField" text="逗比" bounds="60, 50, 220, 30" />
+	<JButton id="loginBtn" text="下载" icon="${rootPath}/anchor.gif" toolTipText="按钮提示"
+		bounds="100, 100, 100, 30" foreground="red" cursor="HAND_CURSOR" font="微软染黑,0,12"/>
 </JFrame>
 
 <!-- 
