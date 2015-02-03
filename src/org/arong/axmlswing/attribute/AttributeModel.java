@@ -59,6 +59,8 @@ public class AttributeModel {
 	private Boolean popupMenuVisible;//设置菜单弹出的可见性
 	private Boolean state;//选定状态
 	
+	private Integer windowDecorationStyle;//设置 JRootPane应提供的 Window装饰类型（例如，边界、关闭 Window 的小部件、标题等）。
+	
 	private Boolean opaque;//如果为 true，则该组件绘制其边界内的所有像素。
 	private String toolTipText;
 	private String text;
@@ -592,5 +594,11 @@ public class AttributeModel {
 	}
 	public Boolean getState() {
 		return state;
+	}
+	public void setWindowDecorationStyle(Integer windowDecorationStyle) {
+		this.windowDecorationStyle = windowDecorationStyle;
+	}
+	public Integer getWindowDecorationStyle() {
+		return windowDecorationStyle;
 	}
 }
