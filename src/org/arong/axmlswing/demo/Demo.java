@@ -16,6 +16,6 @@ public class Demo {
 
 		}
 		//加载布局文件
-		GuiXmlLoader.load("F:\\git-src\\AXmlSwing\\bin\\org\\arong\\axmlswing\\demo\\demo.xml");
+		GuiXmlLoader.load(Demo.class.getResource("/").getPath() + "/demo.xml");
 	}
 }

@@ -134,7 +134,7 @@ public class ComponentManager {
 	 * 设置组件的特殊属性
 	 */
 	public static void setComponentSpecificAttribute(String name, Component c, AttributeModel attr){
-		if("JFrame".equals(name)){
+		if("JFrame".toLowerCase().equals(name.toLowerCase())){
 			JFrame comp = (JFrame)c;
 			if(AttributeValidator.bounds(attr.getMaximizedBounds())){
 				int[] arr = AttributeTransfer.bounds(attr.getMaximizedBounds());
@@ -146,7 +146,7 @@ public class ComponentManager {
 			if(!AttributeValidator.isBlank(attr.getLocationRelativeTo())){
 				comp.setLocationRelativeTo(ComponentManager.getComponent(attr.getLocationRelativeTo()));
 			}
-		}else if("JWindow".equals(name)){
+		}else if("JWindow".toLowerCase().equals(name.toLowerCase())){
 			JWindow comp = (JWindow) c;
 			if(!AttributeValidator.isBlank(attr.getIconImage())){
 				comp.setIconImage(((ImageIcon)AttributeTransfer.icon(attr.getIconImage())).getImage());
@@ -154,7 +154,7 @@ public class ComponentManager {
 			if(!AttributeValidator.isBlank(attr.getLocationRelativeTo())){
 				comp.setLocationRelativeTo(ComponentManager.getComponent(attr.getLocationRelativeTo()));
 			}
-		}else if("JDialog".equals(name)){
+		}else if("JDialog".toLowerCase().equals(name.toLowerCase())){
 			JDialog comp = (JDialog) c;
 			if(!AttributeValidator.isBlank(attr.getIconImage())){
 				comp.setIconImage(((ImageIcon)AttributeTransfer.icon(attr.getIconImage())).getImage());
@@ -162,7 +162,7 @@ public class ComponentManager {
 			if(!AttributeValidator.isBlank(attr.getLocationRelativeTo())){
 				comp.setLocationRelativeTo(ComponentManager.getComponent(attr.getLocationRelativeTo()));
 			}
-		}else if("JTextField".equals(name)){
+		}else if("JTextField".toLowerCase().equals(name.toLowerCase())){
 			JTextField comp = (JTextField) c;
 			if(AttributeValidator.color(attr.getCaretColor())){
 				comp.setCaretColor(AttributeTransfer.color(attr.getCaretColor()));
@@ -180,7 +180,7 @@ public class ComponentManager {
 				int[] arr = AttributeTransfer.bounds(attr.getMargin());
 				comp.setMargin(new Insets(arr[0], arr[1], arr[2], arr[3]));
 			}
-		}else if("JTextArea".equals(name)){
+		}else if("JTextArea".toLowerCase().equals(name.toLowerCase())){
 			JTextArea comp = (JTextArea) c;
 			if(AttributeValidator.color(attr.getCaretColor())){
 				comp.setCaretColor(AttributeTransfer.color(attr.getCaretColor()));
@@ -198,7 +198,7 @@ public class ComponentManager {
 				int[] arr = AttributeTransfer.bounds(attr.getMargin());
 				comp.setMargin(new Insets(arr[0], arr[1], arr[2], arr[3]));
 			}
-		}else if("JLabel".equals(name)){
+		}else if("JLabel".toLowerCase().equals(name.toLowerCase())){
 			JLabel comp = (JLabel) c;
 			if(!AttributeValidator.isBlank(attr.getIcon())){
 				comp.setIcon(AttributeTransfer.icon(attr.getIcon()));
@@ -206,14 +206,14 @@ public class ComponentManager {
 			if(!AttributeValidator.isBlank(attr.getDisabledIcon())){
 				comp.setDisabledIcon(AttributeTransfer.icon(attr.getDisabledIcon()));
 			}
-		}else if("JButton".equals(name)){
+		}else if("JButton".toLowerCase().equals(name.toLowerCase())){
 			JButton comp = (JButton) c;
 			setAbstactButtonAttribute(comp, attr);
 			
-		}else if("JCheckBox".equals(name)){
+		}else if("JCheckBox".toLowerCase().equals(name.toLowerCase())){
 			JCheckBox comp = (JCheckBox) c;
 			setAbstactButtonAttribute(comp, attr);
-		}else if("JRadioButton".equals(name)){
+		}else if("JRadioButton".toLowerCase().equals(name.toLowerCase())){
 			JRadioButton comp = (JRadioButton) c;
 			setAbstactButtonAttribute(comp, attr);
 			

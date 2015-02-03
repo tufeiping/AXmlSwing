@@ -18,6 +18,7 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JRadioButton;
 import javax.swing.JTextField;
+import javax.swing.JToggleButton;
 import javax.swing.JWindow;
 
 import org.arong.axmlswing.attribute.AttributeModel;
@@ -123,7 +124,7 @@ public class GuiXmlLoader {
 				/**
 				 * 元素的属性可以对应一个组件的javabean,使用反射一一对应
 				 */
-				if("JFrame".equals(e.getName())){
+				if("JFrame".toLowerCase().equals(e.getName().toLowerCase())){
 					JFrame comp = new JFrame();
 					ComponentManager.putComponent(id, comp);
 					//设置一些基本类型的值
@@ -134,7 +135,7 @@ public class GuiXmlLoader {
 						ListenerManager.setComponentListeners(comp, l);
 					}
 					parse(comp, e, attr);
-				}else if("JWindow".equals(e.getName())){
+				}else if("JWindow".toLowerCase().equals(e.getName().toLowerCase())){
 					JWindow comp = new JWindow();
 					ComponentManager.putComponent(id, comp);
 					//设置一些基本类型的值
@@ -145,7 +146,7 @@ public class GuiXmlLoader {
 						ListenerManager.setComponentListeners(comp, l);
 					}
 					parse(comp, e, attr);
-				}else if("JDialog".equals(e.getName())){
+				}else if("JDialog".toLowerCase().equals(e.getName().toLowerCase())){
 					JDialog comp = new JDialog();
 					ComponentManager.putComponent(id, comp);
 					//设置一些基本类型的值
@@ -156,7 +157,7 @@ public class GuiXmlLoader {
 						ListenerManager.setComponentListeners(comp, l);
 					}
 					parse(comp, e, attr);
-				}else if("JTextField".equals(e.getName())){
+				}else if("JTextField".toLowerCase().equals(e.getName().toLowerCase())){
 					JTextField comp = new JTextField();
 					ComponentManager.putComponent(id, comp);
 					//设置一些基本类型的值
@@ -169,7 +170,7 @@ public class GuiXmlLoader {
 					container.add(comp);
 					parse(comp, e, attr);
 //					comp.setCaretColor(c);
-				}else if("JLabel".equals(e.getName())){
+				}else if("JLabel".toLowerCase().equals(e.getName().toLowerCase())){
 					JLabel comp = new JLabel();
 					ComponentManager.putComponent(id, comp);
 					//设置一些基本类型的值
@@ -181,7 +182,7 @@ public class GuiXmlLoader {
 					}
 					container.add(comp);
 					parse(comp, e, attr);
-				}else if("JButton".equals(e.getName())){
+				}else if("JButton".toLowerCase().equals(e.getName().toLowerCase())){
 					JButton comp = new JButton();
 					ComponentManager.putComponent(id, comp);
 					//设置一些基本类型的值
@@ -193,7 +194,7 @@ public class GuiXmlLoader {
 					}
 					container.add(comp);
 					parse(comp, e, attr);
-				}else if("JCheckBox".equals(e.getName())){
+				}else if("JCheckBox".toLowerCase().equals(e.getName().toLowerCase())){
 					JCheckBox comp = new JCheckBox();
 					ComponentManager.putComponent(id, comp);
 					//设置一些基本类型的值
@@ -205,8 +206,20 @@ public class GuiXmlLoader {
 					}
 					container.add(comp);
 					parse(comp, e, attr);
-				}else if("JRadioButton".equals(e.getName())){
+				}else if("JRadioButton".toLowerCase().equals(e.getName().toLowerCase())){
 					JRadioButton comp = new JRadioButton();
+					ComponentManager.putComponent(id, comp);
+					//设置一些基本类型的值
+					BeanUtil.apply(attr, comp);
+					ComponentManager.setCommonAttribute(comp, attr);
+					ComponentManager.setComponentSpecificAttribute(e.getName(), comp, attr);
+					if(l != null){
+						ListenerManager.setComponentListeners(comp, l);
+					}
+					container.add(comp);
+					parse(comp, e, attr);
+				}else if("JToggleButton".toLowerCase().equals(e.getName().toLowerCase())){
+					JToggleButton comp = new JToggleButton();
 					ComponentManager.putComponent(id, comp);
 					//设置一些基本类型的值
 					BeanUtil.apply(attr, comp);
