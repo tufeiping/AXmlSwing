@@ -18,6 +18,7 @@ import javax.swing.JLabel;
 import javax.swing.JRadioButton;
 import javax.swing.JTextArea;
 import javax.swing.JTextField;
+import javax.swing.JToggleButton;
 import javax.swing.JWindow;
 
 import org.arong.axmlswing.attribute.AttributeModel;
@@ -209,16 +210,15 @@ public class ComponentManager {
 		}else if("JButton".toLowerCase().equals(name.toLowerCase())){
 			JButton comp = (JButton) c;
 			setAbstactButtonAttribute(comp, attr);
-			
 		}else if("JCheckBox".toLowerCase().equals(name.toLowerCase())){
 			JCheckBox comp = (JCheckBox) c;
 			setAbstactButtonAttribute(comp, attr);
 		}else if("JRadioButton".toLowerCase().equals(name.toLowerCase())){
 			JRadioButton comp = (JRadioButton) c;
 			setAbstactButtonAttribute(comp, attr);
-			
-		}else if("".equals(name)){
-			
+		}else if("JToggleButton".equals(name)){
+			JToggleButton comp = (JToggleButton) c;
+			setAbstactButtonAttribute(comp, attr);
 		}else if("".equals(name)){
 			
 		}else if("".equals(name)){
