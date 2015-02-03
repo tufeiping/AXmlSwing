@@ -61,6 +61,10 @@ public class AttributeModel {
 	
 	private Integer windowDecorationStyle;//设置 JRootPane应提供的 Window装饰类型（例如，边界、关闭 Window 的小部件、标题等）。
 	
+	//scroll
+	private Integer horizontalScrollBarPolicy;//确定水平滚动条何时显示在滚动窗格上
+	private Integer verticalScrollBarPolicy;//确定垂直滚动条何时显示在滚动窗格上
+	
 	private Boolean opaque;//如果为 true，则该组件绘制其边界内的所有像素。
 	private String toolTipText;
 	private String text;
@@ -600,5 +604,17 @@ public class AttributeModel {
 	}
 	public Integer getWindowDecorationStyle() {
 		return windowDecorationStyle;
+	}
+	public void setHorizontalScrollBarPolicy(Integer horizontalScrollBarPolicy) {
+		this.horizontalScrollBarPolicy = horizontalScrollBarPolicy;
+	}
+	public Integer getHorizontalScrollBarPolicy() {
+		return horizontalScrollBarPolicy;
+	}
+	public void setVerticalScrollBarPolicy(Integer verticalScrollBarPolicy) {
+		this.verticalScrollBarPolicy = verticalScrollBarPolicy;
+	}
+	public Integer getVerticalScrollBarPolicy() {
+		return verticalScrollBarPolicy;
 	}
 }

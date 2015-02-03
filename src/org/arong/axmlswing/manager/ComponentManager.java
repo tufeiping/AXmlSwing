@@ -248,8 +248,7 @@ public class ComponentManager {
 			}
 		}else if("jpanel".equals(name)){
 		}else if("jrootpane".equals(name)){
-		}else if("".equals(name)){
-			
+		}else if("jscrollpane".equals(name)){
 		}else if("".equals(name)){
 			
 		}else if("".equals(name)){

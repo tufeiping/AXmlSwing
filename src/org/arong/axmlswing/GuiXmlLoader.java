@@ -23,6 +23,7 @@ import javax.swing.JPanel;
 import javax.swing.JRadioButton;
 import javax.swing.JRadioButtonMenuItem;
 import javax.swing.JRootPane;
+import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
 import javax.swing.JTextField;
 import javax.swing.JToggleButton;
@@ -184,6 +185,9 @@ public class GuiXmlLoader {
 					common(id, comp, attr, l, container, e);
 				}else if("jrootpane".equals(tagName)){
 					JRootPane comp = new JRootPane();
+					common(id, comp, attr, l, container, e);
+				}else if("jscrollpane".equals(tagName)){
+					JScrollPane comp = new JScrollPane();
 					common(id, comp, attr, l, container, e);
 				}
 			}
