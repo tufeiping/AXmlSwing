@@ -19,6 +19,7 @@ import javax.swing.JLabel;
 import javax.swing.JMenu;
 import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
+import javax.swing.JPanel;
 import javax.swing.JRadioButton;
 import javax.swing.JRadioButtonMenuItem;
 import javax.swing.JTextArea;
@@ -176,6 +177,9 @@ public class GuiXmlLoader {
 					common(id, comp, attr, l, container, e);
 				}else if("jmenubar".equals(tagName)){
 					JMenuBar comp = new JMenuBar();
+					common(id, comp, attr, l, container, e);
+				}else if("jpanel".equals(tagName)){
+					JPanel comp = new JPanel();
 					common(id, comp, attr, l, container, e);
 				}
 			}

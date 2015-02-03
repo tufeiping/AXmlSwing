@@ -36,7 +36,7 @@ public class ListenerManager {
 		for(Class<?> clazz : classes){
 			EventAnnotation ea = clazz.getAnnotation(EventAnnotation.class);
 			if(ea != null){
-				System.out.println(ea.value());
+//				System.out.println(ea.value());
 				String id = ea.value();
 				try {
 					listeners.put(id, (EventListener)clazz.newInstance());
