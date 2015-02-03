@@ -139,7 +139,7 @@ public class ComponentManager {
 	 * 设置组件的特殊属性
 	 */
 	public static void setComponentSpecificAttribute(String name, Component c, AttributeModel attr){
-		if("JFrame".toLowerCase().equals(name.toLowerCase())){
+		if("jframe".equals(name)){
 			JFrame comp = (JFrame)c;
 			if(AttributeValidator.bounds(attr.getMaximizedBounds())){
 				int[] arr = AttributeTransfer.bounds(attr.getMaximizedBounds());
@@ -151,7 +151,7 @@ public class ComponentManager {
 			if(!AttributeValidator.isBlank(attr.getLocationRelativeTo())){
 				comp.setLocationRelativeTo(ComponentManager.getComponent(attr.getLocationRelativeTo()));
 			}
-		}else if("JWindow".toLowerCase().equals(name.toLowerCase())){
+		}else if("jwindow".equals(name)){
 			JWindow comp = (JWindow) c;
 			if(!AttributeValidator.isBlank(attr.getIconImage())){
 				comp.setIconImage(((ImageIcon)AttributeTransfer.icon(attr.getIconImage())).getImage());
@@ -159,7 +159,7 @@ public class ComponentManager {
 			if(!AttributeValidator.isBlank(attr.getLocationRelativeTo())){
 				comp.setLocationRelativeTo(ComponentManager.getComponent(attr.getLocationRelativeTo()));
 			}
-		}else if("JDialog".toLowerCase().equals(name.toLowerCase())){
+		}else if("jdialog".equals(name)){
 			JDialog comp = (JDialog) c;
 			if(!AttributeValidator.isBlank(attr.getIconImage())){
 				comp.setIconImage(((ImageIcon)AttributeTransfer.icon(attr.getIconImage())).getImage());
@@ -167,7 +167,7 @@ public class ComponentManager {
 			if(!AttributeValidator.isBlank(attr.getLocationRelativeTo())){
 				comp.setLocationRelativeTo(ComponentManager.getComponent(attr.getLocationRelativeTo()));
 			}
-		}else if("JTextField".toLowerCase().equals(name.toLowerCase())){
+		}else if("jtextfield".equals(name)){
 			JTextField comp = (JTextField) c;
 			if(AttributeValidator.color(attr.getCaretColor())){
 				comp.setCaretColor(AttributeTransfer.color(attr.getCaretColor()));
@@ -185,7 +185,7 @@ public class ComponentManager {
 				int[] arr = AttributeTransfer.bounds(attr.getMargin());
 				comp.setMargin(new Insets(arr[0], arr[1], arr[2], arr[3]));
 			}
-		}else if("JTextArea".toLowerCase().equals(name.toLowerCase())){
+		}else if("jtextarea".equals(name)){
 			JTextArea comp = (JTextArea) c;
 			if(AttributeValidator.color(attr.getCaretColor())){
 				comp.setCaretColor(AttributeTransfer.color(attr.getCaretColor()));
@@ -203,7 +203,7 @@ public class ComponentManager {
 				int[] arr = AttributeTransfer.bounds(attr.getMargin());
 				comp.setMargin(new Insets(arr[0], arr[1], arr[2], arr[3]));
 			}
-		}else if("JLabel".toLowerCase().equals(name.toLowerCase())){
+		}else if("jlabel".equals(name)){
 			JLabel comp = (JLabel) c;
 			if(!AttributeValidator.isBlank(attr.getIcon())){
 				comp.setIcon(AttributeTransfer.icon(attr.getIcon()));
@@ -211,32 +211,32 @@ public class ComponentManager {
 			if(!AttributeValidator.isBlank(attr.getDisabledIcon())){
 				comp.setDisabledIcon(AttributeTransfer.icon(attr.getDisabledIcon()));
 			}
-		}else if("JButton".toLowerCase().equals(name.toLowerCase())){
+		}else if("jbutton".equals(name)){
 			JButton comp = (JButton) c;
 			setAbstactButtonAttribute(comp, attr);
-		}else if("JToggleButton".equals(name)){
+		}else if("jtogglebutton".equals(name)){
 			JToggleButton comp = (JToggleButton) c;
 			setAbstactButtonAttribute(comp, attr);
-		}else if("JCheckBox".toLowerCase().equals(name.toLowerCase())){
+		}else if("jcheckbox".equals(name)){
 			JCheckBox comp = (JCheckBox) c;
 			setAbstactButtonAttribute(comp, attr);
-		}else if("JRadioButton".toLowerCase().equals(name.toLowerCase())){
+		}else if("jradiobutton".equals(name)){
 			JRadioButton comp = (JRadioButton) c;
 			setAbstactButtonAttribute(comp, attr);
-		}else if("JMenuItem".equals(name)){
+		}else if("jmenuitem".equals(name)){
 			JMenuItem comp = (JMenuItem) c;
 			setAbstactButtonAttribute(comp, attr);
-		}else if("JMenu".equals(name)){
+		}else if("jmenu".equals(name)){
 			JMenu comp = (JMenu) c;
 			setAbstactButtonAttribute(comp, attr);
 			if(AttributeValidator.size(attr.getMenuLocation())){
 				int[] arr = AttributeTransfer.size(attr.getMenuLocation());
 				comp.setMenuLocation(arr[0], arr[1]);
 			}
-		}else if("JCheckBoxMenuItem".equals(name)){
+		}else if("jcheckboxmenuitem".equals(name)){
 			JCheckBoxMenuItem comp = (JCheckBoxMenuItem) c;
 			setAbstactButtonAttribute(comp, attr);
-		}else if("JRadioButtonMenuItem".equals(name)){
+		}else if("jradiobuttonmenuitem".equals(name)){
 			JRadioButtonMenuItem comp = (JRadioButtonMenuItem) c;
 			setAbstactButtonAttribute(comp, attr);
 		}else if("".equals(name)){

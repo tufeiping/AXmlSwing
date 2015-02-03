@@ -17,9 +17,11 @@ import javax.swing.JDialog;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JMenu;
+import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
 import javax.swing.JRadioButton;
 import javax.swing.JRadioButtonMenuItem;
+import javax.swing.JTextArea;
 import javax.swing.JTextField;
 import javax.swing.JToggleButton;
 import javax.swing.JWindow;
@@ -119,52 +121,61 @@ public class GuiXmlLoader {
 	public static void parse(Container container, Element e, AttributeModel attr){
 		try {
 			Iterator<Element> it = e.elementIterator();
+			String id;
+			String tagName;
 			while(it.hasNext()){
 				e = it.next();
 				attr = parseAttribute(e);
-				String id = attr.getId();
+				id = attr.getId();
+				tagName = e.getName().toLowerCase();
 				EventListener l = ListenerManager.getListener(id);
 				/**
 				 * 元素的属性可以对应一个组件的javabean,使用反射一一对应
 				 */
-				if("JFrame".toLowerCase().equals(e.getName().toLowerCase())){
+				if("jframe".equals(tagName)){
 					JFrame comp = new JFrame();
 					common(id, comp, attr, l, null, e);
-				}else if("JWindow".toLowerCase().equals(e.getName().toLowerCase())){
+				}else if("jwindow".equals(tagName)){
 					JWindow comp = new JWindow();
 					common(id, comp, attr, l, null, e);
-				}else if("JDialog".toLowerCase().equals(e.getName().toLowerCase())){
+				}else if("jdialog".equals(tagName)){
 					JDialog comp = new JDialog();
 					common(id, comp, attr, l, null, e);
-				}else if("JTextField".toLowerCase().equals(e.getName().toLowerCase())){
+				}else if("jtextfield".equals(tagName)){
 					JTextField comp = new JTextField();
 					common(id, comp, attr, l, container, e);
-				}else if("JLabel".toLowerCase().equals(e.getName().toLowerCase())){
+				}else if("jtextarea".equals(tagName)){
+					JTextArea comp = new JTextArea();
+					common(id, comp, attr, l, container, e);
+				}else if("jlabel".equals(tagName)){
 					JLabel comp = new JLabel();
 					common(id, comp, attr, l, container, e);
-				}else if("JButton".toLowerCase().equals(e.getName().toLowerCase())){
+				}else if("jbutton".equals(tagName)){
 					JButton comp = new JButton();
 					common(id, comp, attr, l, container, e);
-				}else if("JToggleButton".toLowerCase().equals(e.getName().toLowerCase())){
+				}else if("jtogglebutton".equals(tagName)){
 					JToggleButton comp = new JToggleButton();
 					common(id, comp, attr, l, container, e);
-				}else if("JCheckBox".toLowerCase().equals(e.getName().toLowerCase())){
+				}else if("jcheckbox".equals(tagName)){
 					JCheckBox comp = new JCheckBox();
 					common(id, comp, attr, l, container, e);
-				}else if("JRadioButton".toLowerCase().equals(e.getName().toLowerCase())){
+				}else if("jradiobutton".equals(tagName)){
 					JRadioButton comp = new JRadioButton();
 					common(id, comp, attr, l, container, e);
-				}else if("JMenuItem".toLowerCase().equals(e.getName().toLowerCase())){
+				}else if("jmenuitem".equals(tagName)){
 					JMenuItem comp = new JMenuItem();
 					common(id, comp, attr, l, container, e);
-				}else if("JMenu".toLowerCase().equals(e.getName().toLowerCase())){
+				}else if("jmenu".equals(tagName)){
 					JMenu comp = new JMenu();
 					common(id, comp, attr, l, container, e);
-				}else if("JCheckBoxMenuItem".toLowerCase().equals(e.getName().toLowerCase())){
+				}else if("jcheckboxmenuitem".equals(tagName)){
 					JMenu comp = new JMenu();
 					common(id, comp, attr, l, container, e);
-				}else if("JRadioButtonMenuItem".toLowerCase().equals(e.getName().toLowerCase())){
+				}else if("jradiobuttonmenuitem".equals(tagName)){
 					JRadioButtonMenuItem comp = new JRadioButtonMenuItem();
+					common(id, comp, attr, l, container, e);
+				}else if("jmenubar".equals(tagName)){
+					JMenuBar comp = new JMenuBar();
 					common(id, comp, attr, l, container, e);
 				}
 			}
@@ -175,7 +186,6 @@ public class GuiXmlLoader {
 		} finally{
 			
 		}
-		
 	}
 	
 	public static void common(String id, Container comp, AttributeModel attr, EventListener l, Container container, Element e){
@@ -183,7 +193,7 @@ public class GuiXmlLoader {
 		//设置一些基本类型的值
 		BeanUtil.apply(attr, comp);
 		ComponentManager.setCommonAttribute(comp, attr);
-		ComponentManager.setComponentSpecificAttribute(e.getName(), comp, attr);
+		ComponentManager.setComponentSpecificAttribute(e.getName().toLowerCase(), comp, attr);
 		if(l != null){
 			ListenerManager.setComponentListeners(comp, l);
 		}
