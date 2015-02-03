@@ -19,6 +19,7 @@ import javax.swing.JLabel;
 import javax.swing.JMenu;
 import javax.swing.JMenuItem;
 import javax.swing.JRadioButton;
+import javax.swing.JRadioButtonMenuItem;
 import javax.swing.JTextArea;
 import javax.swing.JTextField;
 import javax.swing.JToggleButton;
@@ -235,8 +236,9 @@ public class ComponentManager {
 		}else if("JCheckBoxMenuItem".equals(name)){
 			JCheckBoxMenuItem comp = (JCheckBoxMenuItem) c;
 			setAbstactButtonAttribute(comp, attr);
-		}else if("".equals(name)){
-			
+		}else if("JRadioButtonMenuItem".equals(name)){
+			JRadioButtonMenuItem comp = (JRadioButtonMenuItem) c;
+			setAbstactButtonAttribute(comp, attr);
 		}else if("".equals(name)){
 			
 		}else if("".equals(name)){

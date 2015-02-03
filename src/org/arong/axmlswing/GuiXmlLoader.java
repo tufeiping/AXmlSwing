@@ -19,6 +19,7 @@ import javax.swing.JLabel;
 import javax.swing.JMenu;
 import javax.swing.JMenuItem;
 import javax.swing.JRadioButton;
+import javax.swing.JRadioButtonMenuItem;
 import javax.swing.JTextField;
 import javax.swing.JToggleButton;
 import javax.swing.JWindow;
@@ -128,134 +129,43 @@ public class GuiXmlLoader {
 				 */
 				if("JFrame".toLowerCase().equals(e.getName().toLowerCase())){
 					JFrame comp = new JFrame();
-					ComponentManager.putComponent(id, comp);
-					//设置一些基本类型的值
-					BeanUtil.apply(attr, comp);
-					ComponentManager.setCommonAttribute(comp, attr);
-					ComponentManager.setComponentSpecificAttribute(e.getName(), comp, attr);
-					if(l != null){
-						ListenerManager.setComponentListeners(comp, l);
-					}
-					parse(comp, e, attr);
+					common(id, comp, attr, l, null, e);
 				}else if("JWindow".toLowerCase().equals(e.getName().toLowerCase())){
 					JWindow comp = new JWindow();
-					ComponentManager.putComponent(id, comp);
-					BeanUtil.apply(attr, comp);
-					ComponentManager.setCommonAttribute(comp, attr);
-					ComponentManager.setComponentSpecificAttribute(e.getName(), comp, attr);
-					if(l != null){
-						ListenerManager.setComponentListeners(comp, l);
-					}
-					parse(comp, e, attr);
+					common(id, comp, attr, l, null, e);
 				}else if("JDialog".toLowerCase().equals(e.getName().toLowerCase())){
 					JDialog comp = new JDialog();
-					ComponentManager.putComponent(id, comp);
-					BeanUtil.apply(attr, comp);
-					ComponentManager.setCommonAttribute(comp, attr);
-					ComponentManager.setComponentSpecificAttribute(e.getName(), comp, attr);
-					if(l != null){
-						ListenerManager.setComponentListeners(comp, l);
-					}
-					parse(comp, e, attr);
+					common(id, comp, attr, l, null, e);
 				}else if("JTextField".toLowerCase().equals(e.getName().toLowerCase())){
 					JTextField comp = new JTextField();
-					ComponentManager.putComponent(id, comp);
-					BeanUtil.apply(attr, comp);
-					ComponentManager.setCommonAttribute(comp, attr);
-					ComponentManager.setComponentSpecificAttribute(e.getName(), comp, attr);
-					if(l != null){
-						ListenerManager.setComponentListeners(comp, l);
-					}
-					container.add(comp);
-					parse(comp, e, attr);
+					common(id, comp, attr, l, container, e);
 				}else if("JLabel".toLowerCase().equals(e.getName().toLowerCase())){
 					JLabel comp = new JLabel();
-					ComponentManager.putComponent(id, comp);
-					BeanUtil.apply(attr, comp);
-					ComponentManager.setCommonAttribute(comp, attr);
-					ComponentManager.setComponentSpecificAttribute(e.getName(), comp, attr);
-					if(l != null){
-						ListenerManager.setComponentListeners(comp, l);
-					}
-					container.add(comp);
-					parse(comp, e, attr);
+					common(id, comp, attr, l, container, e);
 				}else if("JButton".toLowerCase().equals(e.getName().toLowerCase())){
 					JButton comp = new JButton();
-					ComponentManager.putComponent(id, comp);
-					BeanUtil.apply(attr, comp);
-					ComponentManager.setCommonAttribute(comp, attr);
-					ComponentManager.setComponentSpecificAttribute(e.getName(), comp, attr);
-					if(l != null){
-						ListenerManager.setComponentListeners(comp, l);
-					}
-					container.add(comp);
-					parse(comp, e, attr);
+					common(id, comp, attr, l, container, e);
 				}else if("JToggleButton".toLowerCase().equals(e.getName().toLowerCase())){
 					JToggleButton comp = new JToggleButton();
-					ComponentManager.putComponent(id, comp);
-					BeanUtil.apply(attr, comp);
-					ComponentManager.setCommonAttribute(comp, attr);
-					ComponentManager.setComponentSpecificAttribute(e.getName(), comp, attr);
-					if(l != null){
-						ListenerManager.setComponentListeners(comp, l);
-					}
-					container.add(comp);
-					parse(comp, e, attr);
+					common(id, comp, attr, l, container, e);
 				}else if("JCheckBox".toLowerCase().equals(e.getName().toLowerCase())){
 					JCheckBox comp = new JCheckBox();
-					ComponentManager.putComponent(id, comp);
-					BeanUtil.apply(attr, comp);
-					ComponentManager.setCommonAttribute(comp, attr);
-					ComponentManager.setComponentSpecificAttribute(e.getName(), comp, attr);
-					if(l != null){
-						ListenerManager.setComponentListeners(comp, l);
-					}
-					container.add(comp);
-					parse(comp, e, attr);
+					common(id, comp, attr, l, container, e);
 				}else if("JRadioButton".toLowerCase().equals(e.getName().toLowerCase())){
 					JRadioButton comp = new JRadioButton();
-					ComponentManager.putComponent(id, comp);
-					BeanUtil.apply(attr, comp);
-					ComponentManager.setCommonAttribute(comp, attr);
-					ComponentManager.setComponentSpecificAttribute(e.getName(), comp, attr);
-					if(l != null){
-						ListenerManager.setComponentListeners(comp, l);
-					}
-					container.add(comp);
-					parse(comp, e, attr);
+					common(id, comp, attr, l, container, e);
 				}else if("JMenuItem".toLowerCase().equals(e.getName().toLowerCase())){
 					JMenuItem comp = new JMenuItem();
-					ComponentManager.putComponent(id, comp);
-					BeanUtil.apply(attr, comp);
-					ComponentManager.setCommonAttribute(comp, attr);
-					ComponentManager.setComponentSpecificAttribute(e.getName(), comp, attr);
-					if(l != null){
-						ListenerManager.setComponentListeners(comp, l);
-					}
-					container.add(comp);
-					parse(comp, e, attr);
+					common(id, comp, attr, l, container, e);
 				}else if("JMenu".toLowerCase().equals(e.getName().toLowerCase())){
 					JMenu comp = new JMenu();
-					ComponentManager.putComponent(id, comp);
-					BeanUtil.apply(attr, comp);
-					ComponentManager.setCommonAttribute(comp, attr);
-					ComponentManager.setComponentSpecificAttribute(e.getName(), comp, attr);
-					if(l != null){
-						ListenerManager.setComponentListeners(comp, l);
-					}
-					container.add(comp);
-					parse(comp, e, attr);
+					common(id, comp, attr, l, container, e);
 				}else if("JCheckBoxMenuItem".toLowerCase().equals(e.getName().toLowerCase())){
 					JMenu comp = new JMenu();
-					ComponentManager.putComponent(id, comp);
-					BeanUtil.apply(attr, comp);
-					ComponentManager.setCommonAttribute(comp, attr);
-					ComponentManager.setComponentSpecificAttribute(e.getName(), comp, attr);
-					if(l != null){
-						ListenerManager.setComponentListeners(comp, l);
-					}
-					container.add(comp);
-					parse(comp, e, attr);
+					common(id, comp, attr, l, container, e);
+				}else if("JRadioButtonMenuItem".toLowerCase().equals(e.getName().toLowerCase())){
+					JRadioButtonMenuItem comp = new JRadioButtonMenuItem();
+					common(id, comp, attr, l, container, e);
 				}
 			}
 		} catch (IllegalArgumentException e1) {
@@ -266,6 +176,21 @@ public class GuiXmlLoader {
 			
 		}
 		
+	}
+	
+	public static void common(String id, Container comp, AttributeModel attr, EventListener l, Container container, Element e){
+		ComponentManager.putComponent(id, comp);
+		//设置一些基本类型的值
+		BeanUtil.apply(attr, comp);
+		ComponentManager.setCommonAttribute(comp, attr);
+		ComponentManager.setComponentSpecificAttribute(e.getName(), comp, attr);
+		if(l != null){
+			ListenerManager.setComponentListeners(comp, l);
+		}
+		if(container != null){
+			container.add(comp);
+		}
+		parse(comp, e, attr);
 	}
 	
 	@SuppressWarnings("unchecked")
