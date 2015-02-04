@@ -59,6 +59,8 @@ public class AttributeModel {
 	private Boolean popupMenuVisible;//设置菜单弹出的可见性
 	private Boolean state;//选定状态
 	
+	private String color;
+	
 	private Integer windowDecorationStyle;//设置 JRootPane应提供的 Window装饰类型（例如，边界、关闭 Window 的小部件、标题等）。
 	
 	//scroll
@@ -616,5 +618,11 @@ public class AttributeModel {
 	}
 	public Integer getVerticalScrollBarPolicy() {
 		return verticalScrollBarPolicy;
+	}
+	public void setColor(String color) {
+		this.color = color;
+	}
+	public String getColor() {
+		return color;
 	}
 }

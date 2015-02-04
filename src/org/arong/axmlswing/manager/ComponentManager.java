@@ -13,6 +13,7 @@ import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JCheckBox;
 import javax.swing.JCheckBoxMenuItem;
+import javax.swing.JColorChooser;
 import javax.swing.JDialog;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -250,9 +251,11 @@ public class ComponentManager {
 		}else if("jrootpane".equals(name)){
 		}else if("jscrollpane".equals(name)){
 		}else if("jscrollbar".equals(name)){
-			
-		}else if("".equals(name)){
-			
+		}else if("jcolorchooser".equals(name)){
+			JColorChooser comp = (JColorChooser) c;
+			if(AttributeValidator.color(attr.getColor())){
+				comp.setColor(AttributeTransfer.color(attr.getColor()));
+			}
 		}else if("".equals(name)){
 			
 		}else if("".equals(name)){

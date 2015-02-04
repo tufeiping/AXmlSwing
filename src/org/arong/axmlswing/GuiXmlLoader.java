@@ -13,6 +13,7 @@ import java.util.Map;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JCheckBox;
+import javax.swing.JColorChooser;
 import javax.swing.JDialog;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -192,6 +193,9 @@ public class GuiXmlLoader {
 					common(id, comp, attr, l, container, e);
 				}else if("jscrollbar".equals(tagName)){
 					JScrollBar comp = new JScrollBar();
+					common(id, comp, attr, l, container, e);
+				}else if("jcolorchooser".equals(tagName)){
+					JColorChooser comp = new JColorChooser();
 					common(id, comp, attr, l, container, e);
 				}
 			}
