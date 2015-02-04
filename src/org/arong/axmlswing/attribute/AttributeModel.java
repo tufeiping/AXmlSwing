@@ -61,6 +61,15 @@ public class AttributeModel {
 	
 	private String color;
 	
+	private Boolean closable;//设置是否可以通过某个用户操作关闭此 JInternalFrame。
+	private Boolean closed;//如果参数为 true，则关闭此内部窗体
+	private Boolean iconifiable;//设置 iconable 属性，对于能够使 JInternalFrame 变成一个图标的用户而言，该属性必须为 true。某些外观可能不实现图标化；它们将忽略此属性。
+	private String frameIcon;//设置要在此内部窗体的标题栏中显示的图像（通常显示在左上角）。
+	private Integer layer;// 设置此组件 layer 属性的便捷方法
+	private Boolean maximizable;//是否可以通过某个用户操作最大化此 JInternalFrame
+	private Boolean maximum;// 最大化并还原此内部窗体。
+	private Boolean rootPaneCheckingEnabled;//设置是否将对 add 和 setLayout 的调用转发到 contentPane
+	
 	private Integer windowDecorationStyle;//设置 JRootPane应提供的 Window装饰类型（例如，边界、关闭 Window 的小部件、标题等）。
 	
 	//scroll
@@ -624,5 +633,53 @@ public class AttributeModel {
 	}
 	public String getColor() {
 		return color;
+	}
+	public void setClosable(Boolean closable) {
+		this.closable = closable;
+	}
+	public Boolean getClosable() {
+		return closable;
+	}
+	public void setClosed(Boolean closed) {
+		this.closed = closed;
+	}
+	public Boolean getClosed() {
+		return closed;
+	}
+	public void setIconifiable(Boolean iconifiable) {
+		this.iconifiable = iconifiable;
+	}
+	public Boolean getIconifiable() {
+		return iconifiable;
+	}
+	public void setFrameIcon(String frameIcon) {
+		this.frameIcon = frameIcon;
+	}
+	public String getFrameIcon() {
+		return frameIcon;
+	}
+	public void setLayer(Integer layer) {
+		this.layer = layer;
+	}
+	public Integer getLayer() {
+		return layer;
+	}
+	public void setMaximizable(Boolean maximizable) {
+		this.maximizable = maximizable;
+	}
+	public Boolean getMaximizable() {
+		return maximizable;
+	}
+	public void setMaximum(Boolean maximum) {
+		this.maximum = maximum;
+	}
+	public Boolean getMaximum() {
+		return maximum;
+	}
+	public void setRootPaneCheckingEnabled(Boolean rootPaneCheckingEnabled) {
+		this.rootPaneCheckingEnabled = rootPaneCheckingEnabled;
+	}
+	public Boolean getRootPaneCheckingEnabled() {
+		return rootPaneCheckingEnabled;
 	}
 }

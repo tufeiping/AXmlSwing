@@ -16,6 +16,7 @@ import javax.swing.JCheckBox;
 import javax.swing.JColorChooser;
 import javax.swing.JDialog;
 import javax.swing.JFrame;
+import javax.swing.JInternalFrame;
 import javax.swing.JLabel;
 import javax.swing.JMenu;
 import javax.swing.JMenuBar;
@@ -196,6 +197,9 @@ public class GuiXmlLoader {
 					common(id, comp, attr, l, container, e);
 				}else if("jcolorchooser".equals(tagName)){
 					JColorChooser comp = new JColorChooser();
+					common(id, comp, attr, l, container, e);
+				}else if("jinternalframe".equals(tagName)){
+					JInternalFrame comp = new JInternalFrame();
 					common(id, comp, attr, l, container, e);
 				}
 			}

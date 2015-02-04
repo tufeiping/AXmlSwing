@@ -16,6 +16,7 @@ import javax.swing.JCheckBoxMenuItem;
 import javax.swing.JColorChooser;
 import javax.swing.JDialog;
 import javax.swing.JFrame;
+import javax.swing.JInternalFrame;
 import javax.swing.JLabel;
 import javax.swing.JMenu;
 import javax.swing.JMenuBar;
@@ -256,8 +257,11 @@ public class ComponentManager {
 			if(AttributeValidator.color(attr.getColor())){
 				comp.setColor(AttributeTransfer.color(attr.getColor()));
 			}
-		}else if("".equals(name)){
-			
+		}else if("jinternalframe".equals(name)){
+			JInternalFrame comp = (JInternalFrame) c;
+			if(!AttributeValidator.isBlank(attr.getFrameIcon())){
+				comp.setFrameIcon(AttributeTransfer.icon(attr.getFrameIcon()));
+			}
 		}else if("".equals(name)){
 			
 		}else if("".equals(name)){
