@@ -286,7 +286,7 @@ public class ComponentManager {
 		}else if("jprogressbar".equals(name)){
 		}else if("jseparator".equals(name)){
 		}else if("jslider".equals(name)){
-		}else if("".equals(name)){
+		}else if("jspinner".equals(name)){
 			
 		}else if("".equals(name)){
 			
