@@ -24,6 +24,7 @@ import javax.swing.JMenu;
 import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
 import javax.swing.JPanel;
+import javax.swing.JPopupMenu;
 import javax.swing.JRadioButton;
 import javax.swing.JRadioButtonMenuItem;
 import javax.swing.JRootPane;
@@ -208,6 +209,9 @@ public class GuiXmlLoader {
 					common(id, comp, attr, l, container, e);
 				}else if("jlist".equals(tagName)){
 					JList comp = new JList();
+					common(id, comp, attr, l, container, e);
+				}else if("jpopupmenu".equals(tagName)){
+					JPopupMenu comp = new JPopupMenu();
 					common(id, comp, attr, l, container, e);
 				}
 			}

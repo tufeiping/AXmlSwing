@@ -88,6 +88,11 @@ public class AttributeModel {
 	private Boolean valueIsAdjusting;
 	private Integer visibleRowCount;//指示要显示的首选行数（不要求滚动）
 	
+	private Boolean defaultLightWeightPopupEnabled;//弹出菜单是否为轻量级
+	private Boolean lightWeightPopupEnabled;//是否为禁用弹出菜单轻量级
+	private String label;//设置弹出菜单的标签
+	private String popupSize;//设置弹出窗口的大小
+	
 	private Boolean opaque;//如果为 true，则该组件绘制其边界内的所有像素。
 	private String toolTipText;
 	private String text;
@@ -753,5 +758,30 @@ public class AttributeModel {
 	}
 	public Integer getVisibleRowCount() {
 		return visibleRowCount;
+	}
+	public void setDefaultLightWeightPopupEnabled(
+			Boolean defaultLightWeightPopupEnabled) {
+		this.defaultLightWeightPopupEnabled = defaultLightWeightPopupEnabled;
+	}
+	public Boolean getDefaultLightWeightPopupEnabled() {
+		return defaultLightWeightPopupEnabled;
+	}
+	public void setLabel(String label) {
+		this.label = label;
+	}
+	public String getLabel() {
+		return label;
+	}
+	public void setLightWeightPopupEnabled(Boolean lightWeightPopupEnabled) {
+		this.lightWeightPopupEnabled = lightWeightPopupEnabled;
+	}
+	public Boolean getLightWeightPopupEnabled() {
+		return lightWeightPopupEnabled;
+	}
+	public void setPopupSize(String popupSize) {
+		this.popupSize = popupSize;
+	}
+	public String getPopupSize() {
+		return popupSize;
 	}
 }

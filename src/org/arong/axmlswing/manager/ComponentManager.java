@@ -22,6 +22,7 @@ import javax.swing.JList;
 import javax.swing.JMenu;
 import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
+import javax.swing.JPopupMenu;
 import javax.swing.JRadioButton;
 import javax.swing.JRadioButtonMenuItem;
 import javax.swing.JTextArea;
@@ -264,7 +265,7 @@ public class ComponentManager {
 				comp.setFrameIcon(AttributeTransfer.icon(attr.getFrameIcon()));
 			}
 		}else if("jlayeredpane".equals(name)){
-		}else if("JList".equals(name)){
+		}else if("jlist".equals(name)){
 			JList comp = (JList) c;
 			if(AttributeValidator.color(attr.getSelectionBackground())){
 				comp.setSelectionBackground(AttributeTransfer.color(attr.getSelectionBackground()));
@@ -276,8 +277,12 @@ public class ComponentManager {
 				int[] arr = AttributeTransfer.size(attr.getSelectionInterval());
 				comp.setSelectionInterval(arr[0], arr[1]);
 			}
-		}else if("".equals(name)){
-			
+		}else if("jpopupmenu".equals(name)){
+			JPopupMenu comp = (JPopupMenu) c;
+			if(AttributeValidator.size(attr.getPopupSize())){
+				int[] arr = AttributeTransfer.size(attr.getPopupSize());
+				comp.setPopupSize(arr[0], arr[1]);
+			}
 		}else if("".equals(name)){
 			
 		}else if("".equals(name)){
