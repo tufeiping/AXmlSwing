@@ -157,6 +157,8 @@ public class AttributeModel {
 	private Boolean floatable;//是否可以移动工具栏
 	private Boolean rollover;//是否翻转工具栏
 	
+	private String tipText;//设置显示工具提示时要显示的文本。
+	
 	private Boolean opaque;//如果为 true，则该组件绘制其边界内的所有像素。
 	private String toolTipText;
 	private String text;
@@ -1142,5 +1144,11 @@ public class AttributeModel {
 	}
 	public Boolean getRollover() {
 		return rollover;
+	}
+	public void setTipText(String tipText) {
+		this.tipText = tipText;
+	}
+	public String getTipText() {
+		return tipText;
 	}
 }

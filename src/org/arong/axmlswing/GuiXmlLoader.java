@@ -41,6 +41,7 @@ import javax.swing.JTextArea;
 import javax.swing.JTextField;
 import javax.swing.JToggleButton;
 import javax.swing.JToolBar;
+import javax.swing.JToolTip;
 import javax.swing.JWindow;
 import javax.swing.table.JTableHeader;
 
@@ -248,6 +249,9 @@ public class GuiXmlLoader {
 					common(id, comp, attr, l, container, e);
 				}else if("jtoolbar".equals(tagName)){
 					JToolBar comp = new JToolBar();
+					common(id, comp, attr, l, container, e);
+				}else if("jtooltip".equals(tagName)){
+					JToolTip comp = new JToolTip();
 					common(id, comp, attr, l, container, e);
 				}
 			}
