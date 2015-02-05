@@ -25,6 +25,7 @@ import javax.swing.JMenuItem;
 import javax.swing.JPopupMenu;
 import javax.swing.JRadioButton;
 import javax.swing.JRadioButtonMenuItem;
+import javax.swing.JTabbedPane;
 import javax.swing.JTextArea;
 import javax.swing.JTextField;
 import javax.swing.JToggleButton;
@@ -288,9 +289,12 @@ public class ComponentManager {
 		}else if("jslider".equals(name)){
 		}else if("jspinner".equals(name)){
 		}else if("jsplitpane".equals(name)){
-			
-		}else if("".equals(name)){
-			
+		}else if("jtabbedpane".equals(name)){
+			JTabbedPane comp = (JTabbedPane) c;
+			if(AttributeValidator.size(attr.getMnemonicAt())){
+				int[] arr = AttributeTransfer.size(attr.getMnemonicAt());
+				comp.setMnemonicAt(arr[0], arr[1]);
+			}
 		}else if("".equals(name)){
 			
 		}

@@ -113,12 +113,18 @@ public class AttributeModel {
 	private Boolean snapToTicks;//是否解析为最靠近用户放置滑块处的刻度标记的值
 	private Integer value;//设置滑块的当前值
 	
+	//JSplitPane
 	private Boolean continuousLayout;//
 	private Integer dividerLocation;//设置分隔条的位置
 	private Integer dividerSize;// 设置分隔条的大小
 	private Integer lastDividerLocation;//设置分隔条所处的最后位置
 	private Boolean oneTouchExpandable;//
 	private Double resizeWeight;// 指定当分隔窗格的大小改变时如何分配额外空间
+	
+	//JTabbedPane
+	private String mnemonicAt;//设置用于访问指定选项卡的键盘助记符
+	private Integer tabLayoutPolicy;//设置在一次运行中不能放入所有的选项卡时，选项卡窗格使用的对选项卡进行布局安排的策略
+	private Integer tabPlacement;//设置此选项卡窗格的选项卡布局。
 	
 	private Boolean opaque;//如果为 true，则该组件绘制其边界内的所有像素。
 	private String toolTipText;
@@ -930,5 +936,23 @@ public class AttributeModel {
 	}
 	public Integer getDividerLocation() {
 		return dividerLocation;
+	}
+	public void setMnemonicAt(String mnemonicAt) {
+		this.mnemonicAt = mnemonicAt;
+	}
+	public String getMnemonicAt() {
+		return mnemonicAt;
+	}
+	public void setTabLayoutPolicy(Integer tabLayoutPolicy) {
+		this.tabLayoutPolicy = tabLayoutPolicy;
+	}
+	public Integer getTabLayoutPolicy() {
+		return tabLayoutPolicy;
+	}
+	public void setTabPlacement(Integer tabPlacement) {
+		this.tabPlacement = tabPlacement;
+	}
+	public Integer getTabPlacement() {
+		return tabPlacement;
 	}
 }

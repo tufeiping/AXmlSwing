@@ -35,6 +35,7 @@ import javax.swing.JSeparator;
 import javax.swing.JSlider;
 import javax.swing.JSpinner;
 import javax.swing.JSplitPane;
+import javax.swing.JTabbedPane;
 import javax.swing.JTextArea;
 import javax.swing.JTextField;
 import javax.swing.JToggleButton;
@@ -232,6 +233,9 @@ public class GuiXmlLoader {
 					common(id, comp, attr, l, container, e);
 				}else if("jsplitpane".equals(tagName)){
 					JSplitPane comp = new JSplitPane();
+					common(id, comp, attr, l, container, e);
+				}else if("jtabbedpane".equals(tagName)){
+					JTabbedPane comp = new JTabbedPane();
 					common(id, comp, attr, l, container, e);
 				}
 			}
