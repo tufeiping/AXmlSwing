@@ -30,6 +30,7 @@ import javax.swing.JTable;
 import javax.swing.JTextArea;
 import javax.swing.JTextField;
 import javax.swing.JToggleButton;
+import javax.swing.JToolBar;
 import javax.swing.JWindow;
 
 import org.arong.axmlswing.attribute.AttributeModel;
@@ -320,8 +321,12 @@ public class ComponentManager {
 				comp.setSelectionForeground(AttributeTransfer.color(attr.getSelectionForeground()));
 			}
 		}else if("jtableheader".equals(name)){
-		}else if("".equals(name)){
-			
+		}else if("jtoolbar".equals(name)){
+			JToolBar comp = (JToolBar) c;
+			if(AttributeValidator.bounds(attr.getMargin())){
+				int[] arr = AttributeTransfer.bounds(attr.getMargin());
+				comp.setMargin(new Insets(arr[0], arr[1], arr[2], arr[3]));
+			}
 		}else if("".equals(name)){
 			
 		}

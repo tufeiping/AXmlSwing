@@ -153,6 +153,10 @@ public class AttributeModel {
 	private Boolean reorderingAllowed;//是否可以拖动列头，以重新排序各列
 	private Boolean resizingAllowed;//是否可以通过在头间拖动来调整各列的大小
 	
+	//JToolBar
+	private Boolean floatable;//是否可以移动工具栏
+	private Boolean rollover;//是否翻转工具栏
+	
 	private Boolean opaque;//如果为 true，则该组件绘制其边界内的所有像素。
 	private String toolTipText;
 	private String text;
@@ -1126,5 +1130,17 @@ public class AttributeModel {
 	}
 	public Boolean getResizingAllowed() {
 		return resizingAllowed;
+	}
+	public void setFloatable(Boolean floatable) {
+		this.floatable = floatable;
+	}
+	public Boolean getFloatable() {
+		return floatable;
+	}
+	public void setRollover(Boolean rollover) {
+		this.rollover = rollover;
+	}
+	public Boolean getRollover() {
+		return rollover;
 	}
 }
