@@ -102,6 +102,17 @@ public class AttributeModel {
 	private String string;//设置进度字符串的值
 	private Boolean stringPainted;//进度条是否应该呈现进度字符串
 	
+	//JSlider
+	private Integer extent;//设置滑块所“覆盖”的范围的大小
+	private Boolean inverted;//是否转滑块显示的值范围
+	private Integer majorTickSpacing;//设置主刻度标记的间隔
+	private Integer minorTickSpacing;//设置次刻度标记的间隔
+	private Boolean paintLabels;//是否在滑块上绘制标签
+	private Boolean paintTicks;//是否在滑块上绘制刻度标记
+	private Boolean paintTrack;//是否在滑块上绘制滑道
+	private Boolean snapToTicks;//是否解析为最靠近用户放置滑块处的刻度标记的值
+	private Integer value;//设置滑块的当前值
+	
 	private Boolean opaque;//如果为 true，则该组件绘制其边界内的所有像素。
 	private String toolTipText;
 	private String text;
@@ -822,5 +833,59 @@ public class AttributeModel {
 	}
 	public Boolean getStringPainted() {
 		return stringPainted;
+	}
+	public void setExtent(Integer extent) {
+		this.extent = extent;
+	}
+	public Integer getExtent() {
+		return extent;
+	}
+	public void setInverted(Boolean inverted) {
+		this.inverted = inverted;
+	}
+	public Boolean getInverted() {
+		return inverted;
+	}
+	public void setMajorTickSpacing(Integer majorTickSpacing) {
+		this.majorTickSpacing = majorTickSpacing;
+	}
+	public Integer getMajorTickSpacing() {
+		return majorTickSpacing;
+	}
+	public void setMinorTickSpacing(Integer minorTickSpacing) {
+		this.minorTickSpacing = minorTickSpacing;
+	}
+	public Integer getMinorTickSpacing() {
+		return minorTickSpacing;
+	}
+	public void setPaintLabels(Boolean paintLabels) {
+		this.paintLabels = paintLabels;
+	}
+	public Boolean getPaintLabels() {
+		return paintLabels;
+	}
+	public void setPaintTicks(Boolean paintTicks) {
+		this.paintTicks = paintTicks;
+	}
+	public Boolean getPaintTicks() {
+		return paintTicks;
+	}
+	public void setPaintTrack(Boolean paintTrack) {
+		this.paintTrack = paintTrack;
+	}
+	public Boolean getPaintTrack() {
+		return paintTrack;
+	}
+	public void setSnapToTicks(Boolean snapToTicks) {
+		this.snapToTicks = snapToTicks;
+	}
+	public Boolean getSnapToTicks() {
+		return snapToTicks;
+	}
+	public void setValue(Integer value) {
+		this.value = value;
+	}
+	public Integer getValue() {
+		return value;
 	}
 }
