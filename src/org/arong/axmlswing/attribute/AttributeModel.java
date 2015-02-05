@@ -113,6 +113,13 @@ public class AttributeModel {
 	private Boolean snapToTicks;//是否解析为最靠近用户放置滑块处的刻度标记的值
 	private Integer value;//设置滑块的当前值
 	
+	private Boolean continuousLayout;//
+	private Integer dividerLocation;//设置分隔条的位置
+	private Integer dividerSize;// 设置分隔条的大小
+	private Integer lastDividerLocation;//设置分隔条所处的最后位置
+	private Boolean oneTouchExpandable;//
+	private Double resizeWeight;// 指定当分隔窗格的大小改变时如何分配额外空间
+	
 	private Boolean opaque;//如果为 true，则该组件绘制其边界内的所有像素。
 	private String toolTipText;
 	private String text;
@@ -887,5 +894,41 @@ public class AttributeModel {
 	}
 	public Integer getValue() {
 		return value;
+	}
+	public void setContinuousLayout(Boolean continuousLayout) {
+		this.continuousLayout = continuousLayout;
+	}
+	public Boolean getContinuousLayout() {
+		return continuousLayout;
+	}
+	public void setDividerSize(Integer dividerSize) {
+		this.dividerSize = dividerSize;
+	}
+	public Integer getDividerSize() {
+		return dividerSize;
+	}
+	public void setLastDividerLocation(Integer lastDividerLocation) {
+		this.lastDividerLocation = lastDividerLocation;
+	}
+	public Integer getLastDividerLocation() {
+		return lastDividerLocation;
+	}
+	public void setResizeWeight(Double resizeWeight) {
+		this.resizeWeight = resizeWeight;
+	}
+	public Double getResizeWeight() {
+		return resizeWeight;
+	}
+	public void setOneTouchExpandable(Boolean oneTouchExpandable) {
+		this.oneTouchExpandable = oneTouchExpandable;
+	}
+	public Boolean getOneTouchExpandable() {
+		return oneTouchExpandable;
+	}
+	public void setDividerLocation(Integer dividerLocation) {
+		this.dividerLocation = dividerLocation;
+	}
+	public Integer getDividerLocation() {
+		return dividerLocation;
 	}
 }
