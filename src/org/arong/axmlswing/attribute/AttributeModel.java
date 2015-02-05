@@ -149,6 +149,10 @@ public class AttributeModel {
 	private Boolean surrendersFocusOnKeystroke;//设置由于 JTable 为某个单元格转发键盘事件而导致编辑器被激活时，此 JTable 中的编辑器是否获得键盘焦点。
 	private Boolean updateSelectionOnSort;// 指定排序后是否应该更新选择
 	
+	private Integer draggedDistance;//拖动的距离
+	private Boolean reorderingAllowed;//是否可以拖动列头，以重新排序各列
+	private Boolean resizingAllowed;//是否可以通过在头间拖动来调整各列的大小
+	
 	private Boolean opaque;//如果为 true，则该组件绘制其边界内的所有像素。
 	private String toolTipText;
 	private String text;
@@ -1104,5 +1108,23 @@ public class AttributeModel {
 	}
 	public Boolean getUpdateSelectionOnSort() {
 		return updateSelectionOnSort;
+	}
+	public void setDraggedDistance(Integer draggedDistance) {
+		this.draggedDistance = draggedDistance;
+	}
+	public Integer getDraggedDistance() {
+		return draggedDistance;
+	}
+	public void setReorderingAllowed(Boolean reorderingAllowed) {
+		this.reorderingAllowed = reorderingAllowed;
+	}
+	public Boolean getReorderingAllowed() {
+		return reorderingAllowed;
+	}
+	public void setResizingAllowed(Boolean resizingAllowed) {
+		this.resizingAllowed = resizingAllowed;
+	}
+	public Boolean getResizingAllowed() {
+		return resizingAllowed;
 	}
 }

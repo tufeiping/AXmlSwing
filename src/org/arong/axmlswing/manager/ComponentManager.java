@@ -319,8 +319,7 @@ public class ComponentManager {
 			if(AttributeValidator.color(attr.getSelectionForeground())){
 				comp.setSelectionForeground(AttributeTransfer.color(attr.getSelectionForeground()));
 			}
-		}else if("".equals(name)){
-			
+		}else if("jtableheader".equals(name)){
 		}else if("".equals(name)){
 			
 		}else if("".equals(name)){

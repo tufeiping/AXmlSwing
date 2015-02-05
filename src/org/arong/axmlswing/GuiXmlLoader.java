@@ -41,6 +41,7 @@ import javax.swing.JTextArea;
 import javax.swing.JTextField;
 import javax.swing.JToggleButton;
 import javax.swing.JWindow;
+import javax.swing.table.JTableHeader;
 
 import org.arong.axmlswing.attribute.AttributeModel;
 import org.arong.axmlswing.attribute.AttributeTransfer;
@@ -240,6 +241,9 @@ public class GuiXmlLoader {
 					common(id, comp, attr, l, container, e);
 				}else if("jtable".equals(tagName)){
 					JTable comp = new JTable();
+					common(id, comp, attr, l, container, e);
+				}else if("jtableheader".equals(tagName)){
+					JTableHeader comp = new JTableHeader();
 					common(id, comp, attr, l, container, e);
 				}
 			}
