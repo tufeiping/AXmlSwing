@@ -18,6 +18,7 @@ import javax.swing.JDialog;
 import javax.swing.JFrame;
 import javax.swing.JInternalFrame;
 import javax.swing.JLabel;
+import javax.swing.JList;
 import javax.swing.JMenu;
 import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
@@ -263,8 +264,18 @@ public class ComponentManager {
 				comp.setFrameIcon(AttributeTransfer.icon(attr.getFrameIcon()));
 			}
 		}else if("jlayeredpane".equals(name)){
-		}else if("".equals(name)){
-			
+		}else if("JList".equals(name)){
+			JList comp = (JList) c;
+			if(AttributeValidator.color(attr.getSelectionBackground())){
+				comp.setSelectionBackground(AttributeTransfer.color(attr.getSelectionBackground()));
+			}
+			if(AttributeValidator.color(attr.getSelectionForeground())){
+				comp.setSelectionForeground(AttributeTransfer.color(attr.getSelectionForeground()));
+			}
+			if(AttributeValidator.size(attr.getSelectionInterval())){
+				int[] arr = AttributeTransfer.size(attr.getSelectionInterval());
+				comp.setSelectionInterval(arr[0], arr[1]);
+			}
 		}else if("".equals(name)){
 			
 		}else if("".equals(name)){

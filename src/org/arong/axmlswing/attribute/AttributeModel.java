@@ -76,6 +76,18 @@ public class AttributeModel {
 	private Integer horizontalScrollBarPolicy;//确定水平滚动条何时显示在滚动窗格上
 	private Integer verticalScrollBarPolicy;//确定垂直滚动条何时显示在滚动窗格上
 	
+	//jList
+	private Integer fixedCellHeight;//设置一个固定值，将用于列表中每个单元的高度。
+	private Integer fixedCellWidth;//设置一个固定值，将用于列表中每个单元的宽度。
+	private Integer layoutOrientation;//定义布置列表单元的方式。
+	private Integer selectedIndex;//根据索引选中列表项
+	private String selectionBackground;//设置用于绘制选定项的背景的颜色，单元渲染器可以使用此颜色填充所选单元。
+	private String selectionForeground;//设置用于绘制选定项的前景的颜色，单元渲染器可以使用此颜色呈现文本和图形。
+	private String selectionInterval;//选择指定的间隔
+	private Integer selectionMode;//设置列表的选择模式
+	private Boolean valueIsAdjusting;
+	private Integer visibleRowCount;//指示要显示的首选行数（不要求滚动）
+	
 	private Boolean opaque;//如果为 true，则该组件绘制其边界内的所有像素。
 	private String toolTipText;
 	private String text;
@@ -681,5 +693,65 @@ public class AttributeModel {
 	}
 	public Boolean getRootPaneCheckingEnabled() {
 		return rootPaneCheckingEnabled;
+	}
+	public void setFixedCellHeight(Integer fixedCellHeight) {
+		this.fixedCellHeight = fixedCellHeight;
+	}
+	public Integer getFixedCellHeight() {
+		return fixedCellHeight;
+	}
+	public void setFixedCellWidth(Integer fixedCellWidth) {
+		this.fixedCellWidth = fixedCellWidth;
+	}
+	public Integer getFixedCellWidth() {
+		return fixedCellWidth;
+	}
+	public void setLayoutOrientation(Integer layoutOrientation) {
+		this.layoutOrientation = layoutOrientation;
+	}
+	public Integer getLayoutOrientation() {
+		return layoutOrientation;
+	}
+	public void setSelectedIndex(Integer selectedIndex) {
+		this.selectedIndex = selectedIndex;
+	}
+	public Integer getSelectedIndex() {
+		return selectedIndex;
+	}
+	public void setSelectionBackground(String selectionBackground) {
+		this.selectionBackground = selectionBackground;
+	}
+	public String getSelectionBackground() {
+		return selectionBackground;
+	}
+	public void setSelectionForeground(String selectionForeground) {
+		this.selectionForeground = selectionForeground;
+	}
+	public String getSelectionForeground() {
+		return selectionForeground;
+	}
+	public void setSelectionInterval(String selectionInterval) {
+		this.selectionInterval = selectionInterval;
+	}
+	public String getSelectionInterval() {
+		return selectionInterval;
+	}
+	public void setSelectionMode(Integer selectionMode) {
+		this.selectionMode = selectionMode;
+	}
+	public Integer getSelectionMode() {
+		return selectionMode;
+	}
+	public void setValueIsAdjusting(Boolean valueIsAdjusting) {
+		this.valueIsAdjusting = valueIsAdjusting;
+	}
+	public Boolean getValueIsAdjusting() {
+		return valueIsAdjusting;
+	}
+	public void setVisibleRowCount(Integer visibleRowCount) {
+		this.visibleRowCount = visibleRowCount;
+	}
+	public Integer getVisibleRowCount() {
+		return visibleRowCount;
 	}
 }
