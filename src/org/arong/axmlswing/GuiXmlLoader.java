@@ -18,6 +18,7 @@ import javax.swing.JDialog;
 import javax.swing.JFrame;
 import javax.swing.JInternalFrame;
 import javax.swing.JLabel;
+import javax.swing.JLayeredPane;
 import javax.swing.JMenu;
 import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
@@ -200,6 +201,9 @@ public class GuiXmlLoader {
 					common(id, comp, attr, l, container, e);
 				}else if("jinternalframe".equals(tagName)){
 					JInternalFrame comp = new JInternalFrame();
+					common(id, comp, attr, l, container, e);
+				}else if("jlayeredpane".equals(tagName)){
+					JLayeredPane comp = new JLayeredPane();
 					common(id, comp, attr, l, container, e);
 				}
 			}

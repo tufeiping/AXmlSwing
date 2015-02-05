@@ -43,7 +43,6 @@
    * 0.5:CENTER
    * 1.0:BOTTOM
 * **toolTipText**~string,提示文本
-
 * **autoscrolls**~boolean   
 * **opaque**~boolean,是否绘制其边界内的所有像素
 * **requestFocusEnabled**~boolean

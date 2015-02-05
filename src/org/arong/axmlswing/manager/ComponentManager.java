@@ -262,8 +262,7 @@ public class ComponentManager {
 			if(!AttributeValidator.isBlank(attr.getFrameIcon())){
 				comp.setFrameIcon(AttributeTransfer.icon(attr.getFrameIcon()));
 			}
-		}else if("".equals(name)){
-			
+		}else if("jlayeredpane".equals(name)){
 		}else if("".equals(name)){
 			
 		}else if("".equals(name)){
