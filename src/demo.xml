@@ -21,7 +21,7 @@
 	<JTextField id="loginUsernameField" text="逗比" bounds="60, 50, 220, 30" />
 	<JButton id="loginBtn" text="下载" icon="${rootPath}/anchor.gif" toolTipText="按钮提示"
 		bounds="100, 100, 100, 30" foreground="red" cursor="HAND_CURSOR" font="微软染黑,0,12"/>
-	<JList bounds="20, 140, 150, 50"></JList>
+	<jseparator bounds="5, 140, 280, 1"></jseparator>
 </JFrame>
 
 <!-- 

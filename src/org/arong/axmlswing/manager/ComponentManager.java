@@ -284,10 +284,9 @@ public class ComponentManager {
 				comp.setPopupSize(arr[0], arr[1]);
 			}
 		}else if("jprogressbar".equals(name)){
+		}else if("jseparator".equals(name)){
 		}else if("".equals(name)){
-			
-		}else if("".equals(name)){
-			
+			 
 		}else if("".equals(name)){
 			
 		}else if("".equals(name)){

@@ -31,6 +31,7 @@ import javax.swing.JRadioButtonMenuItem;
 import javax.swing.JRootPane;
 import javax.swing.JScrollBar;
 import javax.swing.JScrollPane;
+import javax.swing.JSeparator;
 import javax.swing.JTextArea;
 import javax.swing.JTextField;
 import javax.swing.JToggleButton;
@@ -216,6 +217,9 @@ public class GuiXmlLoader {
 					common(id, comp, attr, l, container, e);
 				}else if("jprogressbar".equals(tagName)){
 					JProgressBar comp = new JProgressBar();
+					common(id, comp, attr, l, container, e);
+				}else if("jseparator".equals(tagName)){
+					JSeparator comp = new JSeparator();
 					common(id, comp, attr, l, container, e);
 				}
 			}
