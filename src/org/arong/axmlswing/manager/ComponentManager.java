@@ -283,6 +283,13 @@ public class ComponentManager {
 				int[] arr = AttributeTransfer.size(attr.getPopupSize());
 				comp.setPopupSize(arr[0], arr[1]);
 			}
+		}else if("jprogressbar".equals(name)){
+		}else if("".equals(name)){
+			
+		}else if("".equals(name)){
+			
+		}else if("".equals(name)){
+			
 		}else if("".equals(name)){
 			
 		}else if("".equals(name)){

@@ -25,6 +25,7 @@ import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
 import javax.swing.JPanel;
 import javax.swing.JPopupMenu;
+import javax.swing.JProgressBar;
 import javax.swing.JRadioButton;
 import javax.swing.JRadioButtonMenuItem;
 import javax.swing.JRootPane;
@@ -212,6 +213,9 @@ public class GuiXmlLoader {
 					common(id, comp, attr, l, container, e);
 				}else if("jpopupmenu".equals(tagName)){
 					JPopupMenu comp = new JPopupMenu();
+					common(id, comp, attr, l, container, e);
+				}else if("jprogressbar".equals(tagName)){
+					JProgressBar comp = new JProgressBar();
 					common(id, comp, attr, l, container, e);
 				}
 			}

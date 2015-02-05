@@ -67,7 +67,7 @@ public class AttributeModel {
 	private String frameIcon;//设置要在此内部窗体的标题栏中显示的图像（通常显示在左上角）。
 	private Integer layer;// 设置此组件 layer 属性的便捷方法
 	private Boolean maximizable;//是否可以通过某个用户操作最大化此 JInternalFrame
-	private Boolean maximum;// 最大化并还原此内部窗体。
+	//private Boolean maximum;// 最大化并还原此内部窗体。
 	private Boolean rootPaneCheckingEnabled;//设置是否将对 add 和 setLayout 的调用转发到 contentPane
 	
 	private Integer windowDecorationStyle;//设置 JRootPane应提供的 Window装饰类型（例如，边界、关闭 Window 的小部件、标题等）。
@@ -88,10 +88,19 @@ public class AttributeModel {
 	private Boolean valueIsAdjusting;
 	private Integer visibleRowCount;//指示要显示的首选行数（不要求滚动）
 	
+	//JPopupMenu
 	private Boolean defaultLightWeightPopupEnabled;//弹出菜单是否为轻量级
 	private Boolean lightWeightPopupEnabled;//是否为禁用弹出菜单轻量级
 	private String label;//设置弹出菜单的标签
 	private String popupSize;//设置弹出窗口的大小
+	
+	//JProgressBar
+	private Boolean indeterminate;//进度条处于确定模式中还是处于不确定模式中
+	private Integer maximum;//设置进度条的最大值
+	private Integer minimum;//设置进度条的最小值
+	private Integer orientation;//设置进度条的方向
+	private String string;//设置进度字符串的值
+	private Boolean stringPainted;//进度条是否应该呈现进度字符串
 	
 	private Boolean opaque;//如果为 true，则该组件绘制其边界内的所有像素。
 	private String toolTipText;
@@ -687,12 +696,6 @@ public class AttributeModel {
 	public Boolean getMaximizable() {
 		return maximizable;
 	}
-	public void setMaximum(Boolean maximum) {
-		this.maximum = maximum;
-	}
-	public Boolean getMaximum() {
-		return maximum;
-	}
 	public void setRootPaneCheckingEnabled(Boolean rootPaneCheckingEnabled) {
 		this.rootPaneCheckingEnabled = rootPaneCheckingEnabled;
 	}
@@ -783,5 +786,41 @@ public class AttributeModel {
 	}
 	public String getPopupSize() {
 		return popupSize;
+	}
+	public void setIndeterminate(Boolean indeterminate) {
+		this.indeterminate = indeterminate;
+	}
+	public Boolean getIndeterminate() {
+		return indeterminate;
+	}
+	public void setMinimum(Integer minimum) {
+		this.minimum = minimum;
+	}
+	public Integer getMinimum() {
+		return minimum;
+	}
+	public void setMaximum(Integer maximum) {
+		this.maximum = maximum;
+	}
+	public Integer getMaximum() {
+		return maximum;
+	}
+	public void setOrientation(Integer orientation) {
+		this.orientation = orientation;
+	}
+	public Integer getOrientation() {
+		return orientation;
+	}
+	public void setString(String string) {
+		this.string = string;
+	}
+	public String getString() {
+		return string;
+	}
+	public void setStringPainted(Boolean stringPainted) {
+		this.stringPainted = stringPainted;
+	}
+	public Boolean getStringPainted() {
+		return stringPainted;
 	}
 }
