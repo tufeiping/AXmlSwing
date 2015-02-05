@@ -159,6 +159,9 @@ public class AttributeModel {
 	
 	private String tipText;//设置显示工具提示时要显示的文本。
 	
+	//JFileChooser
+	private Integer debugGraphicsOptions;//启用或禁用与组件或其某个子组件内执行的每个图形操作有关的诊断信息。
+	
 	private Boolean opaque;//如果为 true，则该组件绘制其边界内的所有像素。
 	private String toolTipText;
 	private String text;
@@ -1150,5 +1153,11 @@ public class AttributeModel {
 	}
 	public String getTipText() {
 		return tipText;
+	}
+	public void setDebugGraphicsOptions(Integer debugGraphicsOptions) {
+		this.debugGraphicsOptions = debugGraphicsOptions;
+	}
+	public Integer getDebugGraphicsOptions() {
+		return debugGraphicsOptions;
 	}
 }

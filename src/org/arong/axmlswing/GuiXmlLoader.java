@@ -15,6 +15,7 @@ import javax.swing.JButton;
 import javax.swing.JCheckBox;
 import javax.swing.JColorChooser;
 import javax.swing.JDialog;
+import javax.swing.JFileChooser;
 import javax.swing.JFrame;
 import javax.swing.JInternalFrame;
 import javax.swing.JLabel;
@@ -252,6 +253,9 @@ public class GuiXmlLoader {
 					common(id, comp, attr, l, container, e);
 				}else if("jtooltip".equals(tagName)){
 					JToolTip comp = new JToolTip();
+					common(id, comp, attr, l, container, e);
+				}else if("jfilechooser".equals(tagName)){
+					JFileChooser comp = new JFileChooser();
 					common(id, comp, attr, l, container, e);
 				}
 			}

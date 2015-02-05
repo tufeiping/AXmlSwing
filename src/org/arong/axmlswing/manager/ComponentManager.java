@@ -328,6 +328,11 @@ public class ComponentManager {
 				comp.setMargin(new Insets(arr[0], arr[1], arr[2], arr[3]));
 			}
 		}else if("jtooltip".equals(name)){
+		}else if("jfilechooser".equals(name)){
+			
+		}else if("".equals(name)){
+		}else if("".equals(name)){
+		}else if("".equals(name)){
 		}
 	}
 	
