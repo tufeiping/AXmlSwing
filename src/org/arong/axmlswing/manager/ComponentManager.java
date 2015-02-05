@@ -26,6 +26,7 @@ import javax.swing.JPopupMenu;
 import javax.swing.JRadioButton;
 import javax.swing.JRadioButtonMenuItem;
 import javax.swing.JTabbedPane;
+import javax.swing.JTable;
 import javax.swing.JTextArea;
 import javax.swing.JTextField;
 import javax.swing.JToggleButton;
@@ -295,6 +296,33 @@ public class ComponentManager {
 				int[] arr = AttributeTransfer.size(attr.getMnemonicAt());
 				comp.setMnemonicAt(arr[0], arr[1]);
 			}
+		}else if("jtable".equals(name)){
+			JTable comp = (JTable) c;
+			if(AttributeValidator.size(attr.getColumnSelectionInterval())){
+				int[] arr = AttributeTransfer.size(attr.getColumnSelectionInterval());
+				comp.setColumnSelectionInterval(arr[0], arr[1]);
+			}
+			if(AttributeValidator.color(attr.getGridColor())){
+				comp.setGridColor(AttributeTransfer.color(attr.getGridColor()));
+			}
+			if(AttributeValidator.size(attr.getIntercellSpacing())){
+				int[] arr = AttributeTransfer.size(attr.getIntercellSpacing());
+				comp.setIntercellSpacing(new Dimension(arr[0], arr[1]));
+			}
+			if(AttributeValidator.size(attr.getPreferredScrollableViewportSize())){
+				int[] arr = AttributeTransfer.size(attr.getPreferredScrollableViewportSize());
+				comp.setPreferredScrollableViewportSize(new Dimension(arr[0], arr[1]));
+			}
+			if(AttributeValidator.color(attr.getSelectionBackground())){
+				comp.setSelectionBackground(AttributeTransfer.color(attr.getSelectionBackground()));
+			}
+			if(AttributeValidator.color(attr.getSelectionForeground())){
+				comp.setSelectionForeground(AttributeTransfer.color(attr.getSelectionForeground()));
+			}
+		}else if("".equals(name)){
+			
+		}else if("".equals(name)){
+			
 		}else if("".equals(name)){
 			
 		}

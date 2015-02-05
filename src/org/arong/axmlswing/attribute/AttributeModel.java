@@ -126,6 +126,29 @@ public class AttributeModel {
 	private Integer tabLayoutPolicy;//设置在一次运行中不能放入所有的选项卡时，选项卡窗格使用的对选项卡进行布局安排的策略
 	private Integer tabPlacement;//设置此选项卡窗格的选项卡布局。
 	
+	//JTable
+	private Boolean autoCreateColumnsFromModel;//是否应该自动创建列
+	private Boolean autoCreateRowSorter;//指定其模型更改时是否应该为表创建一个 RowSorter
+	private Integer autoResizeMode;//当调整表的大小时，设置表的自动调整模式
+	private Boolean cellSelectionEnabled;//是否允许同时存在行选择和列选择
+	private Boolean columnSelectionAllowed;//是否可以选择此模型中的列
+	private String columnSelectionInterval;//选择从 index0 到 index1 之间（包含两端）的列
+	private Integer editingColumn;//要编辑的单元格所在的列
+	private Integer editingRow;//要编辑的单元格所在的行
+	private Boolean fillsViewportHeight;//设置此表是否始终大到足以填充封闭视口的高度
+	private String gridColor;//将用来绘制网格线的颜色设置为 gridColor 并重新显示它
+	private String intercellSpacing;//指定单元格之间高度和宽度
+	private String preferredScrollableViewportSize;//设置此表视口的首选大小
+	private Integer rowHeight;//将所有单元格的高度设置为 rowHeight
+	private Integer rowMargin;//设置相临行中单元格之间的间距
+	private Boolean rowSelectionAllowed;//是否可以选择此模型中的行
+	private String rowSelectionInterval;//选择从 index0 到 index1 之间（包含两端）的行。
+	private Boolean showGrid;//是否绘制单元格周围的网格线
+	private Boolean showHorizontalLines;//是否绘制单元格之间的水平线
+	private Boolean showVerticalLines;//是否绘制单元格之间的垂直线
+	private Boolean surrendersFocusOnKeystroke;//设置由于 JTable 为某个单元格转发键盘事件而导致编辑器被激活时，此 JTable 中的编辑器是否获得键盘焦点。
+	private Boolean updateSelectionOnSort;// 指定排序后是否应该更新选择
+	
 	private Boolean opaque;//如果为 true，则该组件绘制其边界内的所有像素。
 	private String toolTipText;
 	private String text;
@@ -954,5 +977,132 @@ public class AttributeModel {
 	}
 	public Integer getTabPlacement() {
 		return tabPlacement;
+	}
+	public void setAutoCreateColumnsFromModel(Boolean autoCreateColumnsFromModel) {
+		this.autoCreateColumnsFromModel = autoCreateColumnsFromModel;
+	}
+	public Boolean getAutoCreateColumnsFromModel() {
+		return autoCreateColumnsFromModel;
+	}
+	public void setAutoCreateRowSorter(Boolean autoCreateRowSorter) {
+		this.autoCreateRowSorter = autoCreateRowSorter;
+	}
+	public Boolean getAutoCreateRowSorter() {
+		return autoCreateRowSorter;
+	}
+	public void setAutoResizeMode(Integer autoResizeMode) {
+		this.autoResizeMode = autoResizeMode;
+	}
+	public Integer getAutoResizeMode() {
+		return autoResizeMode;
+	}
+	public void setCellSelectionEnabled(Boolean cellSelectionEnabled) {
+		this.cellSelectionEnabled = cellSelectionEnabled;
+	}
+	public Boolean getCellSelectionEnabled() {
+		return cellSelectionEnabled;
+	}
+	public void setColumnSelectionAllowed(Boolean columnSelectionAllowed) {
+		this.columnSelectionAllowed = columnSelectionAllowed;
+	}
+	public Boolean getColumnSelectionAllowed() {
+		return columnSelectionAllowed;
+	}
+	public void setColumnSelectionInterval(String columnSelectionInterval) {
+		this.columnSelectionInterval = columnSelectionInterval;
+	}
+	public String getColumnSelectionInterval() {
+		return columnSelectionInterval;
+	}
+	public void setEditingColumn(Integer editingColumn) {
+		this.editingColumn = editingColumn;
+	}
+	public Integer getEditingColumn() {
+		return editingColumn;
+	}
+	public void setEditingRow(Integer editingRow) {
+		this.editingRow = editingRow;
+	}
+	public Integer getEditingRow() {
+		return editingRow;
+	}
+	public void setFillsViewportHeight(Boolean fillsViewportHeight) {
+		this.fillsViewportHeight = fillsViewportHeight;
+	}
+	public Boolean getFillsViewportHeight() {
+		return fillsViewportHeight;
+	}
+	public void setGridColor(String gridColor) {
+		this.gridColor = gridColor;
+	}
+	public String getGridColor() {
+		return gridColor;
+	}
+	public void setIntercellSpacing(String intercellSpacing) {
+		this.intercellSpacing = intercellSpacing;
+	}
+	public String getIntercellSpacing() {
+		return intercellSpacing;
+	}
+	public void setPreferredScrollableViewportSize(
+			String preferredScrollableViewportSize) {
+		this.preferredScrollableViewportSize = preferredScrollableViewportSize;
+	}
+	public String getPreferredScrollableViewportSize() {
+		return preferredScrollableViewportSize;
+	}
+	public void setRowHeight(Integer rowHeight) {
+		this.rowHeight = rowHeight;
+	}
+	public Integer getRowHeight() {
+		return rowHeight;
+	}
+	public void setRowMargin(Integer rowMargin) {
+		this.rowMargin = rowMargin;
+	}
+	public Integer getRowMargin() {
+		return rowMargin;
+	}
+	public void setRowSelectionAllowed(Boolean rowSelectionAllowed) {
+		this.rowSelectionAllowed = rowSelectionAllowed;
+	}
+	public Boolean getRowSelectionAllowed() {
+		return rowSelectionAllowed;
+	}
+	public void setRowSelectionInterval(String rowSelectionInterval) {
+		this.rowSelectionInterval = rowSelectionInterval;
+	}
+	public String getRowSelectionInterval() {
+		return rowSelectionInterval;
+	}
+	public void setShowGrid(Boolean showGrid) {
+		this.showGrid = showGrid;
+	}
+	public Boolean getShowGrid() {
+		return showGrid;
+	}
+	public void setShowHorizontalLines(Boolean showHorizontalLines) {
+		this.showHorizontalLines = showHorizontalLines;
+	}
+	public Boolean getShowHorizontalLines() {
+		return showHorizontalLines;
+	}
+	public void setShowVerticalLines(Boolean showVerticalLines) {
+		this.showVerticalLines = showVerticalLines;
+	}
+	public Boolean getShowVerticalLines() {
+		return showVerticalLines;
+	}
+	public void setSurrendersFocusOnKeystroke(Boolean surrendersFocusOnKeystroke) {
+		this.surrendersFocusOnKeystroke = surrendersFocusOnKeystroke;
+	}
+	public Boolean getSurrendersFocusOnKeystroke() {
+		return surrendersFocusOnKeystroke;
+	}
+	public void setUpdateSelectionOnSort(Boolean updateSelectionOnSort) {
+		this.updateSelectionOnSort = updateSelectionOnSort;
+	}
+	public Boolean getUpdateSelectionOnSort() {
+		return updateSelectionOnSort;
 	}
 }
