@@ -27,6 +27,15 @@ public class AttributeTransfer {
 		return ret;
 	}
 	
+	public static int[] intArray(String value, String tag){
+		String[] a = value.split(tag);
+		int[] ints = new int[a.length];
+		for(int i = 0; i < a.length; i++){
+			ints[i] = Integer.parseInt(a[i]);
+		}
+		return ints;
+	}
+	
 	public static int[] bounds(String value){
 		String[] arr = value.split(",");
 		int[] ret = new int[4];

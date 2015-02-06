@@ -22,6 +22,22 @@ public class AttributeValidator {
 	}
 	
 	/**
+	 * 是否为整数数组
+	 * @param tag 分隔符
+	 */
+	public static boolean intArray(String value, String tag){
+		if(isBlank(value))
+			return false;
+		String[] a = value.split(tag);
+		for(int i = 0; i < a.length; i++){
+			if(!integer(a[i], true)){
+				return false;
+			}
+		}
+		return true;
+	}
+	
+	/**
 	 * 是否为size的格式：60,30
 	 */
 	public static boolean size(String value){

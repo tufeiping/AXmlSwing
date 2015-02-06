@@ -174,6 +174,18 @@ public class AttributeModel {
 	private String selectedFile;//设置选中的文件
 	private String selectedFiles;//设置选中的文件
 	
+	//JTree
+	private Boolean expandsSelectedPaths;//
+	private Boolean invokesStopCellEditing;//
+	private Boolean largeModel;//指定 UI 是否使用大模型。
+	private Boolean rootVisible;//确定 TreeModel 的根节点是否可见
+	private Boolean scrollsOnExpand;//是否可以滚动显示以前隐藏的子节点
+	private Integer selectionRow;//选择显示的指定行的节点
+	private String selectionRows;//选择与显示的每个指定行对应的节点
+	private Boolean showsRootHandles;//设置 showsRootHandles 属性的值，它指定是否应显示节点句柄
+	private Integer toggleClickCount;//设置节点展开或关闭之前鼠标的单击数
+	
+	
 	private Boolean opaque;//如果为 true，则该组件绘制其边界内的所有像素。
 	private String toolTipText;
 	private String text;
@@ -1079,7 +1091,7 @@ public class AttributeModel {
 	public void setRowHeight(Integer rowHeight) {
 		this.rowHeight = rowHeight;
 	}
-	public Integer getRowHeight() {
+	public Integer getRowHeight() { 
 		return rowHeight;
 	}
 	public void setRowMargin(Integer rowMargin) {
@@ -1243,5 +1255,59 @@ public class AttributeModel {
 	}
 	public String getSelectedFiles() {
 		return selectedFiles;
+	}
+	public void setExpandsSelectedPaths(Boolean expandsSelectedPaths) {
+		this.expandsSelectedPaths = expandsSelectedPaths;
+	}
+	public Boolean getExpandsSelectedPaths() {
+		return expandsSelectedPaths;
+	}
+	public void setInvokesStopCellEditing(Boolean invokesStopCellEditing) {
+		this.invokesStopCellEditing = invokesStopCellEditing;
+	}
+	public Boolean getInvokesStopCellEditing() {
+		return invokesStopCellEditing;
+	}
+	public void setLargeModel(Boolean largeModel) {
+		this.largeModel = largeModel;
+	}
+	public Boolean getLargeModel() {
+		return largeModel;
+	}
+	public void setRootVisible(Boolean rootVisible) {
+		this.rootVisible = rootVisible;
+	}
+	public Boolean getRootVisible() {
+		return rootVisible;
+	}
+	public void setScrollsOnExpand(Boolean scrollsOnExpand) {
+		this.scrollsOnExpand = scrollsOnExpand;
+	}
+	public Boolean getScrollsOnExpand() {
+		return scrollsOnExpand;
+	}
+	public void setSelectionRow(Integer selectionRow) {
+		this.selectionRow = selectionRow;
+	}
+	public Integer getSelectionRow() {
+		return selectionRow;
+	}
+	public void setSelectionRows(String selectionRows) {
+		this.selectionRows = selectionRows;
+	}
+	public String getSelectionRows() {
+		return selectionRows;
+	}
+	public void setShowsRootHandles(Boolean showsRootHandles) {
+		this.showsRootHandles = showsRootHandles;
+	}
+	public Boolean getShowsRootHandles() {
+		return showsRootHandles;
+	}
+	public void setToggleClickCount(Integer toggleClickCount) {
+		this.toggleClickCount = toggleClickCount;
+	}
+	public Integer getToggleClickCount() {
+		return toggleClickCount;
 	}
 }

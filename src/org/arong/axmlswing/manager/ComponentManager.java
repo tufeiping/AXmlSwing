@@ -33,6 +33,7 @@ import javax.swing.JTextArea;
 import javax.swing.JTextField;
 import javax.swing.JToggleButton;
 import javax.swing.JToolBar;
+import javax.swing.JTree;
 import javax.swing.JWindow;
 
 import org.arong.axmlswing.attribute.AttributeModel;
@@ -346,7 +347,13 @@ public class ComponentManager {
 				}
 				comp.setSelectedFiles(fs);
 			}
-		}else if("".equals(name)){
+		}else if("jtree".equals(name)){
+			JTree comp = (JTree) c;
+			if(AttributeValidator.intArray(attr.getSelectionRows(), ",")){
+				int[] rows = AttributeTransfer.intArray(attr.getSelectionRows(), ",");
+				comp.setSelectionRows(rows);
+			}
+			
 		}else if("".equals(name)){
 		}else if("".equals(name)){
 		}
