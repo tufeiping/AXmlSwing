@@ -1338,16 +1338,4 @@ public class AttributeModel {
 	public String getViewSize() {
 		return viewSize;
 	}
-	public void setViewCoordinates(String viewCoordinates) {
-		this.viewCoordinates = viewCoordinates;
-	}
-	public String getViewCoordinates() {
-		return viewCoordinates;
-	}
-	public void setViewCoordinatesByPoint(String viewCoordinatesByPoint) {
-		this.viewCoordinatesByPoint = viewCoordinatesByPoint;
-	}
-	public String getViewCoordinatesByPoint() {
-		return viewCoordinatesByPoint;
-	}
 }
