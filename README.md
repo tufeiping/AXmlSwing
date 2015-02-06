@@ -11,7 +11,7 @@
             iconImage="${rootPath}/anchor.gif">
     	<JLabel text="用户名" bounds="10, 30, 60, 30" foreground="blue" 
             icon="${rootPath}/anchor.gif" />
-    	<JTextField id="loginUsernameField" text="张绍荣" bounds="80, 30, 180, 30" />
+    	<JTextField id="loginUsernameField" text="dipoo" bounds="80, 30, 180, 30" />
     	<JButton id="loginBtn" text="登陆按钮" icon="${rootPath}/anchor.gif"
             toolTipText="按钮提示" bounds="100, 100, 100, 30" foreground="red"
             cursor="HAND_CURSOR" font="微软染黑,0,12" />
@@ -31,8 +31,8 @@
 		}
     }
 ```  
-```java
 ###demo.java
+```java
     public class Demo {
       public static void main(String[] args) throws Exception {
 		    //加载布局文件
