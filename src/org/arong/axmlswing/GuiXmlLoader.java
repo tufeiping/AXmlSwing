@@ -15,6 +15,7 @@ import javax.swing.JButton;
 import javax.swing.JCheckBox;
 import javax.swing.JColorChooser;
 import javax.swing.JDialog;
+import javax.swing.JEditorPane;
 import javax.swing.JFileChooser;
 import javax.swing.JFrame;
 import javax.swing.JInternalFrame;
@@ -264,6 +265,9 @@ public class GuiXmlLoader {
 					common(id, comp, attr, l, container, e);
 				}else if("jviewport".equals(tagName)){
 					JViewport comp = new JViewport();
+					common(id, comp, attr, l, container, e);
+				}else if("jeditorpane".equals(tagName)){
+					JEditorPane comp = new JEditorPane();
 					common(id, comp, attr, l, container, e);
 				}
 			}

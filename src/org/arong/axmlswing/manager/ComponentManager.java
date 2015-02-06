@@ -16,6 +16,7 @@ import javax.swing.JCheckBox;
 import javax.swing.JCheckBoxMenuItem;
 import javax.swing.JColorChooser;
 import javax.swing.JDialog;
+import javax.swing.JEditorPane;
 import javax.swing.JFileChooser;
 import javax.swing.JFrame;
 import javax.swing.JInternalFrame;
@@ -364,7 +365,24 @@ public class ComponentManager {
 				int[] arr = AttributeTransfer.size(attr.getViewPosition());
 				comp.setViewSize(new Dimension(arr[0], arr[1]));
 			}
-		}else if("".equals(name)){
+		}else if("jeditorpane".equals(name)){
+			JEditorPane comp = (JEditorPane) c;
+			if(AttributeValidator.color(attr.getCaretColor())){
+				comp.setCaretColor(AttributeTransfer.color(attr.getCaretColor()));
+			}
+			if(AttributeValidator.color(attr.getSelectionColor())){
+				comp.setSelectionColor(AttributeTransfer.color(attr.getSelectionColor()));
+			}
+			if(AttributeValidator.color(attr.getSelectedTextColor())){
+				comp.setSelectedTextColor(AttributeTransfer.color(attr.getSelectedTextColor()));
+			}
+			if(AttributeValidator.color(attr.getDisabledTextColor())){
+				comp.setDisabledTextColor(AttributeTransfer.color(attr.getDisabledTextColor()));
+			}
+			if(AttributeValidator.bounds(attr.getMargin())){
+				int[] arr = AttributeTransfer.bounds(attr.getMargin());
+				comp.setMargin(new Insets(arr[0], arr[1], arr[2], arr[3]));
+			}
 		}
 	}
 }

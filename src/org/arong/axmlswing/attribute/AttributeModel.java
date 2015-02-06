@@ -47,6 +47,8 @@ public class AttributeModel {
 	private Integer scrollOffset;//滚动偏移量,单位:像素
 	private Integer selectionStart;//选择开始点设置为指定的位置
 	private Integer selectionEnd;//选择结束点设置为指定的位置
+	private String page;//设置当前要显示的 URL
+	private String contentType;//设置此编辑器所处理的内容类型
 	
 	private Boolean lineWrap;//是否可以换行
 	private Integer rows;//设置此 TextArea 的行数
@@ -1337,5 +1339,17 @@ public class AttributeModel {
 	}
 	public String getViewSize() {
 		return viewSize;
+	}
+	public void setPage(String page) {
+		this.page = page;
+	}
+	public String getPage() {
+		return page;
+	}
+	public void setContentType(String contentType) {
+		this.contentType = contentType;
+	}
+	public String getContentType() {
+		return contentType;
 	}
 }
