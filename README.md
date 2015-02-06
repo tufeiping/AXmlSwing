@@ -1,7 +1,7 @@
 ﻿# AXmlSwing
 使用xml简化swing开发
 ###demo.xml
-
+```xml
     <?xml version="1.0" encoding="UTF-8"?>
     <!-- 
     	${rootPath}:项目根目录src
@@ -16,9 +16,9 @@
             toolTipText="按钮提示" bounds="100, 100, 100, 30" foreground="red"
             cursor="HAND_CURSOR" font="微软染黑,0,12" />
     </JFrame>
-
+```
 ###LoginBtnListener.java
-
+```java
     @EventAnnotation("loginBtn")
     public class LoginBtnListener extends AbstractListener{
         public void mouseClicked(MouseEvent e) {
@@ -30,7 +30,8 @@
 			JOptionPane.showMessageDialog(null, field.getText());
 		}
     }
-    
+```  
+```java
 ###demo.java
     public class Demo {
       public static void main(String[] args) throws Exception {
@@ -38,3 +39,4 @@
 		  GuiXmlLoader.load("demo.xml");
 	    }
     }
+```
