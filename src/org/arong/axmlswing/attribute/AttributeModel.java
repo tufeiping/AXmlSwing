@@ -192,6 +192,8 @@ public class AttributeModel {
 	private String viewPosition;//设置显示在视口左上角的视图坐标，如果不存在视图，则不执行任何操作
 	private String viewSize;//设置视图的大小
 	
+	private Integer dragMode;//设置桌面窗格使用的“拖动样式”。
+	
 	private Boolean opaque;//如果为 true，则该组件绘制其边界内的所有像素。
 	private String toolTipText;
 	private String text;
@@ -1351,5 +1353,11 @@ public class AttributeModel {
 	}
 	public String getContentType() {
 		return contentType;
+	}
+	public void setDragMode(Integer dragMode) {
+		this.dragMode = dragMode;
+	}
+	public Integer getDragMode() {
+		return dragMode;
 	}
 }

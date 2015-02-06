@@ -14,6 +14,7 @@ import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JCheckBox;
 import javax.swing.JColorChooser;
+import javax.swing.JDesktopPane;
 import javax.swing.JDialog;
 import javax.swing.JEditorPane;
 import javax.swing.JFileChooser;
@@ -268,6 +269,9 @@ public class GuiXmlLoader {
 					common(id, comp, attr, l, container, e);
 				}else if("jeditorpane".equals(tagName)){
 					JEditorPane comp = new JEditorPane();
+					common(id, comp, attr, l, container, e);
+				}else if("jdesktoppane".equals(tagName)){
+					JDesktopPane comp = new JDesktopPane();
 					common(id, comp, attr, l, container, e);
 				}
 			}
