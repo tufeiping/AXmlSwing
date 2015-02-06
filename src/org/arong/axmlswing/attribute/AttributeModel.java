@@ -184,7 +184,11 @@ public class AttributeModel {
 	private String selectionRows;//选择与显示的每个指定行对应的节点
 	private Boolean showsRootHandles;//设置 showsRootHandles 属性的值，它指定是否应显示节点句柄
 	private Integer toggleClickCount;//设置节点展开或关闭之前鼠标的单击数
-	
+
+	private String extentSize;//使用视图坐标设置该视图可见部分的大小
+	private Integer scrollMode;//用于控制滚动视口内容的方法
+	private String viewPosition;//设置显示在视口左上角的视图坐标，如果不存在视图，则不执行任何操作
+	private String viewSize;//设置视图的大小
 	
 	private Boolean opaque;//如果为 true，则该组件绘制其边界内的所有像素。
 	private String toolTipText;
@@ -1309,5 +1313,41 @@ public class AttributeModel {
 	}
 	public Integer getToggleClickCount() {
 		return toggleClickCount;
+	}
+	public void setExtentSize(String extentSize) {
+		this.extentSize = extentSize;
+	}
+	public String getExtentSize() {
+		return extentSize;
+	}
+	public void setScrollMode(Integer scrollMode) {
+		this.scrollMode = scrollMode;
+	}
+	public Integer getScrollMode() {
+		return scrollMode;
+	}
+	public void setViewPosition(String viewPosition) {
+		this.viewPosition = viewPosition;
+	}
+	public String getViewPosition() {
+		return viewPosition;
+	}
+	public void setViewSize(String viewSize) {
+		this.viewSize = viewSize;
+	}
+	public String getViewSize() {
+		return viewSize;
+	}
+	public void setViewCoordinates(String viewCoordinates) {
+		this.viewCoordinates = viewCoordinates;
+	}
+	public String getViewCoordinates() {
+		return viewCoordinates;
+	}
+	public void setViewCoordinatesByPoint(String viewCoordinatesByPoint) {
+		this.viewCoordinatesByPoint = viewCoordinatesByPoint;
+	}
+	public String getViewCoordinatesByPoint() {
+		return viewCoordinatesByPoint;
 	}
 }

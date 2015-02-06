@@ -34,6 +34,7 @@ import javax.swing.JTextField;
 import javax.swing.JToggleButton;
 import javax.swing.JToolBar;
 import javax.swing.JTree;
+import javax.swing.JViewport;
 import javax.swing.JWindow;
 
 import org.arong.axmlswing.attribute.AttributeModel;
@@ -353,8 +354,16 @@ public class ComponentManager {
 				int[] rows = AttributeTransfer.intArray(attr.getSelectionRows(), ",");
 				comp.setSelectionRows(rows);
 			}
-			
-		}else if("".equals(name)){
+		}else if("jviewport".equals(name)){
+			JViewport comp = (JViewport) c;
+			if(AttributeValidator.size(attr.getExtentSize())){
+				int[] arr = AttributeTransfer.size(attr.getExtentSize());
+				comp.setExtentSize(new Dimension(arr[0], arr[1]));
+			}
+			if(AttributeValidator.size(attr.getViewPosition())){
+				int[] arr = AttributeTransfer.size(attr.getViewPosition());
+				comp.setViewSize(new Dimension(arr[0], arr[1]));
+			}
 		}else if("".equals(name)){
 		}
 	}

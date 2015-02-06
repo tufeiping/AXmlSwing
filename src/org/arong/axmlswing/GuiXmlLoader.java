@@ -44,6 +44,7 @@ import javax.swing.JToggleButton;
 import javax.swing.JToolBar;
 import javax.swing.JToolTip;
 import javax.swing.JTree;
+import javax.swing.JViewport;
 import javax.swing.JWindow;
 import javax.swing.table.JTableHeader;
 
@@ -260,6 +261,9 @@ public class GuiXmlLoader {
 					common(id, comp, attr, l, container, e);
 				}else if("jtree".equals(tagName)){
 					JTree comp = new JTree();
+					common(id, comp, attr, l, container, e);
+				}else if("jviewport".equals(tagName)){
+					JViewport comp = new JViewport();
 					common(id, comp, attr, l, container, e);
 				}
 			}
