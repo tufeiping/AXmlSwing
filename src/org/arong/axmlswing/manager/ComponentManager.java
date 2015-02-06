@@ -5,6 +5,7 @@ import java.awt.Container;
 import java.awt.Dimension;
 import java.awt.Insets;
 import java.awt.Rectangle;
+import java.io.File;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -15,6 +16,7 @@ import javax.swing.JCheckBox;
 import javax.swing.JCheckBoxMenuItem;
 import javax.swing.JColorChooser;
 import javax.swing.JDialog;
+import javax.swing.JFileChooser;
 import javax.swing.JFrame;
 import javax.swing.JInternalFrame;
 import javax.swing.JLabel;
@@ -329,11 +331,24 @@ public class ComponentManager {
 			}
 		}else if("jtooltip".equals(name)){
 		}else if("jfilechooser".equals(name)){
-			
+			JFileChooser comp = (JFileChooser) c;
+			if(!AttributeValidator.isBlank(attr.getCurrentDirectory())){
+				comp.setCurrentDirectory(new File(attr.getCurrentDirectory()));
+			}
+			if(!AttributeValidator.isBlank(attr.getSelectedFile())){
+				comp.setSelectedFile(new File(attr.getSelectedFile()));
+			}
+			if(!AttributeValidator.isBlank(attr.getSelectedFiles())){
+				String[] a = attr.getSelectedFiles().split("\\|");
+				File[] fs = new File[a.length];
+				for(int i = 0; i < a.length; i++){
+					fs[i] = new File(a[i]);
+				}
+				comp.setSelectedFiles(fs);
+			}
 		}else if("".equals(name)){
 		}else if("".equals(name)){
 		}else if("".equals(name)){
 		}
 	}
-	
 }

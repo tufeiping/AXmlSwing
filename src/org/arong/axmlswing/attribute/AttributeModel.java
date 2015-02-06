@@ -161,6 +161,18 @@ public class AttributeModel {
 	
 	//JFileChooser
 	private Integer debugGraphicsOptions;//启用或禁用与组件或其某个子组件内执行的每个图形操作有关的诊断信息。
+	private Boolean acceptAllFileFilterUsed;//确定是否将 AcceptAll FileFilter 用作可选择过滤器列表中一个可用选项
+	private String approveButtonText;//设置 FileChooserUI 中的 ApproveButton 内使用的文本
+	private String approveButtonToolTipText;//设置 ApproveButton 中使用的工具提示文本
+	private Boolean controlButtonsAreShown;//设置属性，指示在文件选择器中是否显示 approve 和 cancel 按钮。
+	private String currentDirectory;//设置当前目录
+	private String dialogTitle;//设置显示在 JFileChooser 窗口标题栏的字符串
+	private Integer dialogType;//设置此对话框的类型
+	private Boolean fileHidingEnabled;//设置是否实现文件隐藏
+	private Integer fileSelectionMode;//设置 JFileChooser，以允许用户只选择文件、只选择目录，或者可选择文件和目录。
+	private Boolean multiSelectionEnabled;//设置文件选择器，以允许选择多个文件
+	private String selectedFile;//设置选中的文件
+	private String selectedFiles;//设置选中的文件
 	
 	private Boolean opaque;//如果为 true，则该组件绘制其边界内的所有像素。
 	private String toolTipText;
@@ -1159,5 +1171,77 @@ public class AttributeModel {
 	}
 	public Integer getDebugGraphicsOptions() {
 		return debugGraphicsOptions;
+	}
+	public void setAcceptAllFileFilterUsed(Boolean acceptAllFileFilterUsed) {
+		this.acceptAllFileFilterUsed = acceptAllFileFilterUsed;
+	}
+	public Boolean getAcceptAllFileFilterUsed() {
+		return acceptAllFileFilterUsed;
+	}
+	public void setApproveButtonText(String approveButtonText) {
+		this.approveButtonText = approveButtonText;
+	}
+	public String getApproveButtonText() {
+		return approveButtonText;
+	}
+	public void setApproveButtonToolTipText(String approveButtonToolTipText) {
+		this.approveButtonToolTipText = approveButtonToolTipText;
+	}
+	public String getApproveButtonToolTipText() {
+		return approveButtonToolTipText;
+	}
+	public void setControlButtonsAreShown(Boolean controlButtonsAreShown) {
+		this.controlButtonsAreShown = controlButtonsAreShown;
+	}
+	public Boolean getControlButtonsAreShown() {
+		return controlButtonsAreShown;
+	}
+	public void setCurrentDirectory(String currentDirectory) {
+		this.currentDirectory = currentDirectory;
+	}
+	public String getCurrentDirectory() {
+		return currentDirectory;
+	}
+	public void setDialogTitle(String dialogTitle) {
+		this.dialogTitle = dialogTitle;
+	}
+	public String getDialogTitle() {
+		return dialogTitle;
+	}
+	public void setDialogType(Integer dialogType) {
+		this.dialogType = dialogType;
+	}
+	public Integer getDialogType() {
+		return dialogType;
+	}
+	public void setFileHidingEnabled(Boolean fileHidingEnabled) {
+		this.fileHidingEnabled = fileHidingEnabled;
+	}
+	public Boolean getFileHidingEnabled() {
+		return fileHidingEnabled;
+	}
+	public void setFileSelectionMode(Integer fileSelectionMode) {
+		this.fileSelectionMode = fileSelectionMode;
+	}
+	public Integer getFileSelectionMode() {
+		return fileSelectionMode;
+	}
+	public void setMultiSelectionEnabled(Boolean multiSelectionEnabled) {
+		this.multiSelectionEnabled = multiSelectionEnabled;
+	}
+	public Boolean getMultiSelectionEnabled() {
+		return multiSelectionEnabled;
+	}
+	public void setSelectedFile(String selectedFile) {
+		this.selectedFile = selectedFile;
+	}
+	public String getSelectedFile() {
+		return selectedFile;
+	}
+	public void setSelectedFiles(String selectedFiles) {
+		this.selectedFiles = selectedFiles;
+	}
+	public String getSelectedFiles() {
+		return selectedFiles;
 	}
 }
