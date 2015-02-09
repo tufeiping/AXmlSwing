@@ -26,6 +26,7 @@ import javax.swing.JList;
 import javax.swing.JMenu;
 import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
+import javax.swing.JPasswordField;
 import javax.swing.JPopupMenu;
 import javax.swing.JRadioButton;
 import javax.swing.JRadioButtonMenuItem;
@@ -381,7 +382,9 @@ public class ComponentManager {
 		}else if("jformattedtextfield".equals(name)){
 			JFormattedTextField comp = (JFormattedTextField) c;
 			setTextComponentAttribute(comp, attr);
-		}else if("".equals(name)){
+		}else if("jpasswordfield".equals(name)){
+			JPasswordField comp = (JPasswordField) c;
+			setTextComponentAttribute(comp, attr);
 		}else if("".equals(name)){
 		}else if("".equals(name)){
 		}

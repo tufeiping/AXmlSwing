@@ -28,6 +28,7 @@ import javax.swing.JMenu;
 import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
 import javax.swing.JPanel;
+import javax.swing.JPasswordField;
 import javax.swing.JPopupMenu;
 import javax.swing.JProgressBar;
 import javax.swing.JRadioButton;
@@ -276,6 +277,9 @@ public class GuiXmlLoader {
 					common(id, comp, attr, l, container, e);
 				}else if("jformattedtextfield".equals(tagName)){
 					JFormattedTextField comp = new JFormattedTextField();
+					common(id, comp, attr, l, container, e);
+				}else if("jpasswordfield".equals(tagName)){
+					JPasswordField comp = new JPasswordField();
 					common(id, comp, attr, l, container, e);
 				}
 			}
