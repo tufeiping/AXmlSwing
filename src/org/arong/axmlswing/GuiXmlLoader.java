@@ -105,7 +105,6 @@ public class GuiXmlLoader {
 				window.setLocationRelativeTo(ComponentManager.getComponent(attr.getLocationRelativeTo()));
 			}
 			parse(window, e, attr);
-			
 			window.setVisible(true);
 		} catch (IllegalArgumentException e1) {
 			e1.printStackTrace();
@@ -137,15 +136,19 @@ public class GuiXmlLoader {
 	}
 	
 	public static void main(String[] args) {
-		printListener(JFrame.class, JWindow.class, JDialog.class, JTextField.class, JButton.class, JTabbedPane.class, JEditorPane.class,
+		/*printListener(JFrame.class, JWindow.class, JDialog.class, JTextField.class, JButton.class, JTabbedPane.class, JEditorPane.class,
 				JTable.class ,JLabel.class, JTextArea.class, JRadioButton.class, JRadioButtonMenuItem.class, JCheckBox.class, JCheckBoxMenuItem.class,
 				JColorChooser.class, JComboBox.class, JDesktopPane.class, JFileChooser.class, JFormattedTextField.class,
 				JInternalFrame.class,JLayeredPane.class,JList.class, JMenu.class, JMenuBar.class,JMenuItem.class, JPanel.class, JPasswordField.class,
 				JPopupMenu.class, JProgressBar.class,JRootPane.class, JScrollBar.class, JScrollPane.class,JSeparator.class, JSlider.class,
-				JSpinner.class, JSplitPane.class, JToggleButton.class, JToolBar.class, JToolTip.class, JTree.class, JViewport.class);
+				JSpinner.class, JSplitPane.class, JToggleButton.class, JToolBar.class, JToolTip.class, JTree.class, JViewport.class,
+				JTableHeader.class,JTextPane.class);*/
 //		ListenerManager.setComponentListeners(JLabel.class, null);
 	}
 	
+	/**
+	 * 解析xml文档
+	 */
 	@SuppressWarnings("unchecked")
 	public static void parse(Container container, Element e, AttributeModel attr){
 		try {
@@ -201,7 +204,7 @@ public class GuiXmlLoader {
 					JMenu comp = new JMenu();
 					common(id, comp, attr, l, container, e);
 				}else if("jcheckboxmenuitem".equals(tagName)){
-					JMenu comp = new JMenu();
+					JCheckBoxMenuItem comp = new JCheckBoxMenuItem();
 					common(id, comp, attr, l, container, e);
 				}else if("jradiobuttonmenuitem".equals(tagName)){
 					JRadioButtonMenuItem comp = new JRadioButtonMenuItem();
@@ -293,7 +296,7 @@ public class GuiXmlLoader {
 				}
 			}
 		} catch (IllegalArgumentException e1) {
-			//e1.printStackTrace();
+			e1.printStackTrace();
 		} catch (IllegalAccessException e1) {
 			e1.printStackTrace();
 		} finally{
