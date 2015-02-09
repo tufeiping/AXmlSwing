@@ -26,12 +26,12 @@ import sun.net.www.protocol.jar.JarURLConnection;
  * @since 2015-01-27
  */
 public class ListenerManager {
-	public static Map<String, EventListener> listeners = new HashMap<String, EventListener>();
-	
+	public static ThreadLocal<Map<String, EventListener>> listeners = new ThreadLocal<Map<String,EventListener>>();
 	/**
 	 * 扫描注解，添加控件事件
 	 */
 	static {
+		listeners.set(new HashMap<String, EventListener>());
 		Set<Class<?>> classes = getClasses(VarsManager.getVarValue("scan-package"));
 		if(classes != null){
 			for(Class<?> clazz : classes){
@@ -40,7 +40,7 @@ public class ListenerManager {
 //					System.out.println(ea.value());
 					String id = ea.value();
 					try {
-						listeners.put(id, (EventListener)clazz.newInstance());
+						listeners.get().put(id, (EventListener)clazz.newInstance());
 					} catch (InstantiationException e) {
 						e.printStackTrace();
 					} catch (IllegalAccessException e) {
@@ -52,7 +52,7 @@ public class ListenerManager {
 	}
 
 	public static EventListener getListener(String key) {
-		return listeners.get(key);
+		return listeners.get().get(key);
 	}
 	
 	/**
