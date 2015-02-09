@@ -92,7 +92,7 @@ public class GuiXmlLoader {
 			ComponentManager.putComponent(attr.getId(), window);
 			ComponentManager.setMainWindow(window);
 			BeanUtil.apply(attr, window);
-			window.setLayout(null);
+			window.setLayout(null/*new FlowLayout()*/);
 			ComponentManager.setCommonAttribute(window, attr);
 			if(AttributeValidator.bounds(attr.getMaximizedBounds())){
 				int[] arr = AttributeTransfer.bounds(attr.getMaximizedBounds());
@@ -305,7 +305,9 @@ public class GuiXmlLoader {
 	}
 	
 	public static void common(String id, Container comp, AttributeModel attr, EventListener l, Container container, Element e){
-		ComponentManager.putComponent(id, comp);
+		if(id != null){
+			ComponentManager.putComponent(id, comp);
+		}
 		//设置一些基本类型的值
 		BeanUtil.apply(attr, comp);
 		ComponentManager.setCommonAttribute(comp, attr);
