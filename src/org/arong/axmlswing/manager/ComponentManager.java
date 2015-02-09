@@ -229,6 +229,7 @@ public class ComponentManager {
 		}else if("jcheckbox".equals(name)){
 			JCheckBox comp = (JCheckBox) c;
 			setAbstactButtonAttribute(comp, attr);
+		}else if("jcombobox".equals(name)){
 		}else if("jradiobutton".equals(name)){
 			JRadioButton comp = (JRadioButton) c;
 			setAbstactButtonAttribute(comp, attr);

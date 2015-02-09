@@ -196,6 +196,9 @@ public class AttributeModel {
 	
 	private Integer focusLostBehavior;//设置丢失焦点时的行为
 	
+	private Integer maximumRowCount;//设置 JComboBox 显示的最大行数
+	private Boolean popupVisible;//设置弹出窗口的可见性
+	
 	private Boolean opaque;//如果为 true，则该组件绘制其边界内的所有像素。
 	private String toolTipText;
 	private String text;
@@ -1367,5 +1370,17 @@ public class AttributeModel {
 	}
 	public Integer getFocusLostBehavior() {
 		return focusLostBehavior;
+	}
+	public void setMaximumRowCount(Integer maximumRowCount) {
+		this.maximumRowCount = maximumRowCount;
+	}
+	public Integer getMaximumRowCount() {
+		return maximumRowCount;
+	}
+	public void setPopupVisible(Boolean popupVisible) {
+		this.popupVisible = popupVisible;
+	}
+	public Boolean getPopupVisible() {
+		return popupVisible;
 	}
 }
