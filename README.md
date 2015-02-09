@@ -1,7 +1,7 @@
 # AXmlSwing
 使用xml简化swing开发
 ######文档
-[wiki]( "https://github.com/dipoo/AXmlSwing/wiki")
+[wiki](https://github.com/dipoo/AXmlSwing/wiki)
 #####demo.xml
 ```xml
     <?xml version="1.0" encoding="UTF-8"?>
