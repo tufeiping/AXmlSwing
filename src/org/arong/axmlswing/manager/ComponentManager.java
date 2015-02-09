@@ -34,6 +34,7 @@ import javax.swing.JTabbedPane;
 import javax.swing.JTable;
 import javax.swing.JTextArea;
 import javax.swing.JTextField;
+import javax.swing.JTextPane;
 import javax.swing.JToggleButton;
 import javax.swing.JToolBar;
 import javax.swing.JTree;
@@ -362,22 +363,7 @@ public class ComponentManager {
 			}
 		}else if("jeditorpane".equals(name)){
 			JEditorPane comp = (JEditorPane) c;
-			if(AttributeValidator.color(attr.getCaretColor())){
-				comp.setCaretColor(AttributeTransfer.color(attr.getCaretColor()));
-			}
-			if(AttributeValidator.color(attr.getSelectionColor())){
-				comp.setSelectionColor(AttributeTransfer.color(attr.getSelectionColor()));
-			}
-			if(AttributeValidator.color(attr.getSelectedTextColor())){
-				comp.setSelectedTextColor(AttributeTransfer.color(attr.getSelectedTextColor()));
-			}
-			if(AttributeValidator.color(attr.getDisabledTextColor())){
-				comp.setDisabledTextColor(AttributeTransfer.color(attr.getDisabledTextColor()));
-			}
-			if(AttributeValidator.bounds(attr.getMargin())){
-				int[] arr = AttributeTransfer.bounds(attr.getMargin());
-				comp.setMargin(new Insets(arr[0], arr[1], arr[2], arr[3]));
-			}
+			setTextComponentAttribute(comp, attr);
 		}else if("jdesktoppane".equals(name)){
 		}else if("jformattedtextfield".equals(name)){
 			JFormattedTextField comp = (JFormattedTextField) c;
@@ -385,7 +371,9 @@ public class ComponentManager {
 		}else if("jpasswordfield".equals(name)){
 			JPasswordField comp = (JPasswordField) c;
 			setTextComponentAttribute(comp, attr);
-		}else if("".equals(name)){
+		}else if("jtextpane".equals(name)){
+			JTextPane comp = (JTextPane) c;
+			setTextComponentAttribute(comp, attr);
 		}else if("".equals(name)){
 		}
 	}

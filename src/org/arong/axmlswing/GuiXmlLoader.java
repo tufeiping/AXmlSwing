@@ -44,6 +44,7 @@ import javax.swing.JTabbedPane;
 import javax.swing.JTable;
 import javax.swing.JTextArea;
 import javax.swing.JTextField;
+import javax.swing.JTextPane;
 import javax.swing.JToggleButton;
 import javax.swing.JToolBar;
 import javax.swing.JToolTip;
@@ -280,6 +281,9 @@ public class GuiXmlLoader {
 					common(id, comp, attr, l, container, e);
 				}else if("jpasswordfield".equals(tagName)){
 					JPasswordField comp = new JPasswordField();
+					common(id, comp, attr, l, container, e);
+				}else if("jtextpane".equals(tagName)){
+					JTextPane comp = new JTextPane();
 					common(id, comp, attr, l, container, e);
 				}
 			}
