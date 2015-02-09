@@ -18,6 +18,7 @@ import javax.swing.JDesktopPane;
 import javax.swing.JDialog;
 import javax.swing.JEditorPane;
 import javax.swing.JFileChooser;
+import javax.swing.JFormattedTextField;
 import javax.swing.JFrame;
 import javax.swing.JInternalFrame;
 import javax.swing.JLabel;
@@ -272,6 +273,9 @@ public class GuiXmlLoader {
 					common(id, comp, attr, l, container, e);
 				}else if("jdesktoppane".equals(tagName)){
 					JDesktopPane comp = new JDesktopPane();
+					common(id, comp, attr, l, container, e);
+				}else if("jformattedtextfield".equals(tagName)){
+					JFormattedTextField comp = new JFormattedTextField();
 					common(id, comp, attr, l, container, e);
 				}
 			}

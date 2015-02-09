@@ -194,6 +194,8 @@ public class AttributeModel {
 	
 	private Integer dragMode;//设置桌面窗格使用的“拖动样式”。
 	
+	private Integer focusLostBehavior;//设置丢失焦点时的行为
+	
 	private Boolean opaque;//如果为 true，则该组件绘制其边界内的所有像素。
 	private String toolTipText;
 	private String text;
@@ -1359,5 +1361,11 @@ public class AttributeModel {
 	}
 	public Integer getDragMode() {
 		return dragMode;
+	}
+	public void setFocusLostBehavior(Integer focusLostBehavior) {
+		this.focusLostBehavior = focusLostBehavior;
+	}
+	public Integer getFocusLostBehavior() {
+		return focusLostBehavior;
 	}
 }

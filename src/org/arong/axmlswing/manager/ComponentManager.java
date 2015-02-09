@@ -18,6 +18,7 @@ import javax.swing.JColorChooser;
 import javax.swing.JDialog;
 import javax.swing.JEditorPane;
 import javax.swing.JFileChooser;
+import javax.swing.JFormattedTextField;
 import javax.swing.JFrame;
 import javax.swing.JInternalFrame;
 import javax.swing.JLabel;
@@ -37,6 +38,7 @@ import javax.swing.JToolBar;
 import javax.swing.JTree;
 import javax.swing.JViewport;
 import javax.swing.JWindow;
+import javax.swing.text.JTextComponent;
 
 import org.arong.axmlswing.attribute.AttributeModel;
 import org.arong.axmlswing.attribute.AttributeTransfer;
@@ -149,6 +151,28 @@ public class ComponentManager {
 	}
 	
 	/**
+	 * 设置Text共有的属性
+	 */
+	public static void setTextComponentAttribute(JTextComponent comp, AttributeModel attr){
+		if(AttributeValidator.color(attr.getCaretColor())){
+			comp.setCaretColor(AttributeTransfer.color(attr.getCaretColor()));
+		}
+		if(AttributeValidator.color(attr.getSelectionColor())){
+			comp.setSelectionColor(AttributeTransfer.color(attr.getSelectionColor()));
+		}
+		if(AttributeValidator.color(attr.getSelectedTextColor())){
+			comp.setSelectedTextColor(AttributeTransfer.color(attr.getSelectedTextColor()));
+		}
+		if(AttributeValidator.color(attr.getDisabledTextColor())){
+			comp.setDisabledTextColor(AttributeTransfer.color(attr.getDisabledTextColor()));
+		}
+		if(AttributeValidator.bounds(attr.getMargin())){
+			int[] arr = AttributeTransfer.bounds(attr.getMargin());
+			comp.setMargin(new Insets(arr[0], arr[1], arr[2], arr[3]));
+		}
+	}
+	
+	/**
 	 * 设置组件的特殊属性
 	 */
 	public static void setComponentSpecificAttribute(String name, Component c, AttributeModel attr){
@@ -182,40 +206,10 @@ public class ComponentManager {
 			}
 		}else if("jtextfield".equals(name)){
 			JTextField comp = (JTextField) c;
-			if(AttributeValidator.color(attr.getCaretColor())){
-				comp.setCaretColor(AttributeTransfer.color(attr.getCaretColor()));
-			}
-			if(AttributeValidator.color(attr.getSelectionColor())){
-				comp.setSelectionColor(AttributeTransfer.color(attr.getSelectionColor()));
-			}
-			if(AttributeValidator.color(attr.getSelectedTextColor())){
-				comp.setSelectedTextColor(AttributeTransfer.color(attr.getSelectedTextColor()));
-			}
-			if(AttributeValidator.color(attr.getDisabledTextColor())){
-				comp.setDisabledTextColor(AttributeTransfer.color(attr.getDisabledTextColor()));
-			}
-			if(AttributeValidator.bounds(attr.getMargin())){
-				int[] arr = AttributeTransfer.bounds(attr.getMargin());
-				comp.setMargin(new Insets(arr[0], arr[1], arr[2], arr[3]));
-			}
+			setTextComponentAttribute(comp, attr);
 		}else if("jtextarea".equals(name)){
 			JTextArea comp = (JTextArea) c;
-			if(AttributeValidator.color(attr.getCaretColor())){
-				comp.setCaretColor(AttributeTransfer.color(attr.getCaretColor()));
-			}
-			if(AttributeValidator.color(attr.getSelectionColor())){
-				comp.setSelectionColor(AttributeTransfer.color(attr.getSelectionColor()));
-			}
-			if(AttributeValidator.color(attr.getSelectedTextColor())){
-				comp.setSelectedTextColor(AttributeTransfer.color(attr.getSelectedTextColor()));
-			}
-			if(AttributeValidator.color(attr.getDisabledTextColor())){
-				comp.setDisabledTextColor(AttributeTransfer.color(attr.getDisabledTextColor()));
-			}
-			if(AttributeValidator.bounds(attr.getMargin())){
-				int[] arr = AttributeTransfer.bounds(attr.getMargin());
-				comp.setMargin(new Insets(arr[0], arr[1], arr[2], arr[3]));
-			}
+			setTextComponentAttribute(comp, attr);
 		}else if("jlabel".equals(name)){
 			JLabel comp = (JLabel) c;
 			if(!AttributeValidator.isBlank(attr.getIcon())){
@@ -384,6 +378,12 @@ public class ComponentManager {
 				comp.setMargin(new Insets(arr[0], arr[1], arr[2], arr[3]));
 			}
 		}else if("jdesktoppane".equals(name)){
+		}else if("jformattedtextfield".equals(name)){
+			JFormattedTextField comp = (JFormattedTextField) c;
+			setTextComponentAttribute(comp, attr);
+		}else if("".equals(name)){
+		}else if("".equals(name)){
+		}else if("".equals(name)){
 		}
 	}
 }
