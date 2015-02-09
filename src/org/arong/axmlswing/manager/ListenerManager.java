@@ -32,18 +32,20 @@ public class ListenerManager {
 	 * 扫描注解，添加控件事件
 	 */
 	static {
-		Set<Class<?>> classes = getClasses("demo.listeners");
-		for(Class<?> clazz : classes){
-			EventAnnotation ea = clazz.getAnnotation(EventAnnotation.class);
-			if(ea != null){
-//				System.out.println(ea.value());
-				String id = ea.value();
-				try {
-					listeners.put(id, (EventListener)clazz.newInstance());
-				} catch (InstantiationException e) {
-					e.printStackTrace();
-				} catch (IllegalAccessException e) {
-					e.printStackTrace();
+		Set<Class<?>> classes = getClasses(VarsManager.getVarValue("scan-package"));
+		if(classes != null){
+			for(Class<?> clazz : classes){
+				EventAnnotation ea = clazz.getAnnotation(EventAnnotation.class);
+				if(ea != null){
+//					System.out.println(ea.value());
+					String id = ea.value();
+					try {
+						listeners.put(id, (EventListener)clazz.newInstance());
+					} catch (InstantiationException e) {
+						e.printStackTrace();
+					} catch (IllegalAccessException e) {
+						e.printStackTrace();
+					}
 				}
 			}
 		}
@@ -83,7 +85,8 @@ public class ListenerManager {
 	 * @return
 	 */
 	public static Set<Class<?>> getClasses(String pack) {
-
+		if(pack == null)
+			return null;
 		// 第一个class类的集合
 		Set<Class<?>> classes = new LinkedHashSet<Class<?>>();
 		// 是否循环迭代
