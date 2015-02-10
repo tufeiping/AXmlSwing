@@ -2,7 +2,7 @@
 使用xml简化swing开发
 ######文档
 [wiki](https://github.com/dipoo/AXmlSwing/wiki)
-#####demo.xml
+#####布局文件demo.xml
 ```xml
     <?xml version="1.0" encoding="UTF-8"?>
     <!-- 
@@ -19,8 +19,12 @@
             cursor="HAND_CURSOR" font="微软染黑,0,12" />
     </JFrame>
 ```
-#####LoginBtnListener.java
+#####事件处理LoginBtnListener.java
 ```java
+    package demo.listeners;
+    import java.awt.event.ActionEvent;
+    import org.arong.axmlswing.event.AbstractListener;
+    import org.arong.axmlswing.event.EventAnnotation;
     @EventAnnotation("loginBtn")
     public class LoginBtnListener extends AbstractListener{
         public void mouseClicked(MouseEvent e) {
@@ -33,8 +37,9 @@
 		}
     }
 ```  
-#####demo.java
+#####加载布局文件demo.java
 ```java
+    package demo;	
     public class Demo {
       public static void main(String[] args) throws Exception {
 		  //加载布局文件
