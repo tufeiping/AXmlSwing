@@ -24,6 +24,7 @@ public class AttributeModel {
 	private Boolean visible;
 	private Boolean autoscrolls;
 	private Boolean enabled;
+	private Integer layout;//布局管理器
 	
 	
 	private String title;
@@ -1382,5 +1383,11 @@ public class AttributeModel {
 	}
 	public Boolean getPopupVisible() {
 		return popupVisible;
+	}
+	public void setLayout(Integer layout) {
+		this.layout = layout;
+	}
+	public Integer getLayout() {
+		return layout;
 	}
 }

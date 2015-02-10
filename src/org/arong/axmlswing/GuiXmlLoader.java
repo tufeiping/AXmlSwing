@@ -92,7 +92,6 @@ public class GuiXmlLoader {
 			ComponentManager.putComponent(attr.getId(), window);
 			ComponentManager.setMainWindow(window);
 			BeanUtil.apply(attr, window);
-			window.setLayout(null/*new FlowLayout()*/);
 			ComponentManager.setCommonAttribute(window, attr);
 			if(AttributeValidator.bounds(attr.getMaximizedBounds())){
 				int[] arr = AttributeTransfer.bounds(attr.getMaximizedBounds());

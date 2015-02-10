@@ -1,8 +1,13 @@
 package org.arong.axmlswing.manager;
 
+import java.awt.BorderLayout;
+import java.awt.CardLayout;
 import java.awt.Component;
 import java.awt.Container;
 import java.awt.Dimension;
+import java.awt.FlowLayout;
+import java.awt.GridBagLayout;
+import java.awt.GridLayout;
 import java.awt.Insets;
 import java.awt.Rectangle;
 import java.io.File;
@@ -10,6 +15,8 @@ import java.util.HashMap;
 import java.util.Map;
 
 import javax.swing.AbstractButton;
+import javax.swing.BoxLayout;
+import javax.swing.GroupLayout;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JCheckBox;
@@ -40,6 +47,9 @@ import javax.swing.JToolBar;
 import javax.swing.JTree;
 import javax.swing.JViewport;
 import javax.swing.JWindow;
+import javax.swing.OverlayLayout;
+import javax.swing.ScrollPaneLayout;
+import javax.swing.SpringLayout;
 import javax.swing.text.JTextComponent;
 
 import org.arong.axmlswing.attribute.AttributeModel;
@@ -74,7 +84,7 @@ public class ComponentManager {
 	/**
 	 * 设置组件共有的属性
 	 */
-	public static void setCommonAttribute(Component comp, AttributeModel attr){
+	public static void setCommonAttribute(Container comp, AttributeModel attr){
 		comp.setBounds(attr.getX(), attr.getY(), attr.getWidth(), attr.getHeight());
 		if(AttributeValidator.size(attr.getSize())){
 			int[] arr = AttributeTransfer.size(attr.getSize());
@@ -121,6 +131,43 @@ public class ComponentManager {
 		if(AttributeValidator.font(attr.getFont())){
 			//setFont
 			comp.setFont(AttributeTransfer.font(attr.getFont()));
+		}
+		if(attr.getLayout() != null){
+			switch(attr.getLayout()){
+				case 0:
+					comp.setLayout(null);
+					break;
+				case 1:
+					comp.setLayout(new FlowLayout());
+					break;
+				case 2:
+					comp.setLayout(new BorderLayout());
+					break;
+				case 3:
+					comp.setLayout(new BoxLayout(comp, BoxLayout.X_AXIS));
+					break;
+				case 4:
+					comp.setLayout(new CardLayout());
+					break;
+				case 5:
+					comp.setLayout(new GridLayout());
+					break;
+				case 6:
+					comp.setLayout(new GridBagLayout());
+					break;
+				case 7:
+					comp.setLayout(new GroupLayout(comp));
+					break;
+				case 8:
+					comp.setLayout(new OverlayLayout(null));
+					break;
+				case 9:
+					comp.setLayout(new ScrollPaneLayout());
+					break;
+				case 10:
+					comp.setLayout(new SpringLayout());
+					break;
+			}
 		}
 	}
 	

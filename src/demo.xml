@@ -5,7 +5,7 @@
 	${rootPath}:项目根目录src
  -->
 <JFrame id="mainWindow" title="虾片神器" width="300" height="300" locationRelativeTo="null" defaultCloseOperation="3"
-	iconImage="${rootPath}/anchor.gif" resizable="false">
+	iconImage="${rootPath}/anchor.gif" resizable="false" layout="0">
 	<JMenuBar bounds="5, 0, 280, 25" cursor="HAND_CURSOR">
 		<JMenu text="任务">
 			<JMenuItem text="打开"/>
@@ -13,7 +13,10 @@
 			<JMenuItem text="另存为"/>
 			<JMenuItem id="exitMenuItem" text="退出" icon="${rootPath}/anchor.gif"/>
 		</JMenu>
-		<JMenu text="编辑"/>
+		<JMenu text="编辑">
+			<JMenuItem text="新建"/>
+			<JMenuItem text="删除"/>
+		</JMenu>
 		<JMenu text="搜索"/>
 		<JMenu text="帮助"/>
 	</JMenuBar>
