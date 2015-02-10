@@ -19,7 +19,7 @@ public class VarsManager {
 	
 	private static ThreadLocal<Map<String, String>> vars = new ThreadLocal<Map<String, String>>();
 	
-	public final static String CONFIG_FILE_NAME = "/aswing-cfg.xml"; 
+	public final static String CONFIG_FILE_NAME = "/aswing.cfg.xml"; 
 	
 	static{
 		vars.set(new HashMap<String, String>());

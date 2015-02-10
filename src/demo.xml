@@ -1,10 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- 
-	主窗口里的配置可以覆盖全局配置
-	变量列表
-	${rootPath}:项目根目录src
+	${rootPath}:项目根目录src(内置变量)
  -->
-<JFrame id="mainWindow" title="虾片神器" width="300" height="300" locationRelativeTo="null" defaultCloseOperation="3"
+<JFrame id="mainWindow" title="${title}" width="300" height="300" locationRelativeTo="null" defaultCloseOperation="3"
 	iconImage="${rootPath}/anchor.gif" resizable="false" layout="0">
 	<JMenuBar bounds="5, 0, 280, 25" cursor="HAND_CURSOR">
 		<JMenu text="任务">
@@ -24,5 +22,4 @@
 	<JTextField id="loginUsernameField" text="逗比" bounds="60, 50, 220, 30" />
 	<JButton id="loginBtn" text="下载" icon="${rootPath}/anchor.gif" toolTipText="按钮提示"
 		bounds="100, 100, 100, 30" foreground="red" cursor="HAND_CURSOR" font="微软染黑,0,12"/>
-	<JSpinner bounds="5, 140, 280, 30"></JSpinner>
 </JFrame>

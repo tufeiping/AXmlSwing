@@ -4,905 +4,230 @@
 	变量列表
 	${rootPath}:项目根目录src
  -->
-<JFrame id="mainWindow" title="渲染测试" width="800" height="600" locationRelativeTo="null" defaultCloseOperation="3">
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
-	<JButton text="按钮" background="black" foreground="white" size="60,30"/>
+<JFrame id="mainWindow" title="渲染测试" width="800" height="600" locationRelativeTo="null" defaultCloseOperation="3" layout="1">
+	<JButton text="按钮" foreground="black" size="60,30"/>
+	<JButton text="按钮" foreground="black" size="60,30"/>
+	<JButton text="按钮" foreground="black" size="60,30"/>
+	<JButton text="按钮" foreground="black" size="60,30"/>
+	<JButton text="按钮" foreground="black" size="60,30"/>
+	<JButton text="按钮" foreground="black" size="60,30"/>
+	<JButton text="按钮" foreground="black" size="60,30"/>
+	<JButton text="按钮" foreground="black" size="60,30"/>
+	<JButton text="按钮" foreground="black" size="60,30"/>
+	<JButton text="按钮" foreground="black" size="60,30"/>
+	<JButton text="按钮" foreground="black" size="60,30"/>
+	<JButton text="按钮" foreground="black" size="60,30"/>
+	<JButton text="按钮" foreground="black" size="60,30"/>
+	<JButton text="按钮" foreground="black" size="60,30"/>
+	<JButton text="按钮" foreground="black" size="60,30"/>
+	<JButton text="按钮" foreground="black" size="60,30"/>
+	<JButton text="按钮" foreground="black" size="60,30"/>
+	<JButton text="按钮" foreground="black" size="60,30"/>
+	<JButton text="按钮" foreground="black" size="60,30"/>
+	<JButton text="按钮" foreground="black" size="60,30"/>
+	<JButton text="按钮" foreground="black" size="60,30"/>
+	<JButton text="按钮" foreground="black" size="60,30"/>
+	<JButton text="按钮" foreground="black" size="60,30"/>
+	<JButton text="按钮" foreground="black" size="60,30"/>
+	<JButton text="按钮" foreground="black" size="60,30"/>
+	<JButton text="按钮" foreground="black" size="60,30"/>
+	<JButton text="按钮" foreground="black" size="60,30"/>
+	<JButton text="按钮" foreground="black" size="60,30"/>
+	<JButton text="按钮" foreground="black" size="60,30"/>
+	<JButton text="按钮" foreground="black" size="60,30"/>
+	<JButton text="按钮" foreground="black" size="60,30"/>
+	<JButton text="按钮" foreground="black" size="60,30"/>
+	<JButton text="按钮" foreground="black" size="60,30"/>
+	<JButton text="按钮" foreground="black" size="60,30"/>
+	<JButton text="按钮" foreground="black" size="60,30"/>
+	<JButton text="按钮" foreground="black" size="60,30"/>
+	<JButton text="按钮" foreground="black" size="60,30"/>
+	<JButton text="按钮" foreground="black" size="60,30"/>
+	<JButton text="按钮" foreground="black" size="60,30"/>
+	<JButton text="按钮" foreground="black" size="60,30"/>
+	<JButton text="按钮" foreground="black" size="60,30"/>
+	<JButton text="按钮" foreground="black" size="60,30"/>
+	<JButton text="按钮" foreground="black" size="60,30"/>
+	<JButton text="按钮" foreground="black" size="60,30"/>
+	<JButton text="按钮" foreground="black" size="60,30"/>
+	<JButton text="按钮" foreground="black" size="60,30"/>
+	<JButton text="按钮" foreground="black" size="60,30"/>
+	<JButton text="按钮" foreground="black" size="60,30"/>
+	<JButton text="按钮" foreground="black" size="60,30"/>
+	<JButton text="按钮" foreground="black" size="60,30"/>
+	<JButton text="按钮" foreground="black" size="60,30"/>
+	<JButton text="按钮" foreground="black" size="60,30"/>
+	<JButton text="按钮" foreground="black" size="60,30"/>
+	<JButton text="按钮" foreground="black" size="60,30"/>
+	<JButton text="按钮" foreground="black" size="60,30"/>
+	<JButton text="按钮" foreground="black" size="60,30"/>
+	<JButton text="按钮" foreground="black" size="60,30"/>
+	<JButton text="按钮" foreground="black" size="60,30"/>
+	<JButton text="按钮" foreground="black" size="60,30"/>
+	<JButton text="按钮" foreground="black" size="60,30"/>
+	<JButton text="按钮" foreground="black" size="60,30"/>
+	<JButton text="按钮" foreground="black" size="60,30"/>
+	<JButton text="按钮" foreground="black" size="60,30"/>
+	<JButton text="按钮" foreground="black" size="60,30"/>
+	<JButton text="按钮" foreground="black" size="60,30"/>
+	<JButton text="按钮" foreground="black" size="60,30"/>
+	<JButton text="按钮" foreground="black" size="60,30"/>
+	<JButton text="按钮" foreground="black" size="60,30"/>
+	<JButton text="按钮" foreground="black" size="60,30"/>
+	<JButton text="按钮" foreground="black" size="60,30"/>
+	<JButton text="按钮" foreground="black" size="60,30"/>
+	<JButton text="按钮" foreground="black" size="60,30"/>
+	<JButton text="按钮" foreground="black" size="60,30"/>
+	<JButton text="按钮" foreground="black" size="60,30"/>
+	<JButton text="按钮" foreground="black" size="60,30"/>
+	<JButton text="按钮" foreground="black" size="60,30"/>
+	<JButton text="按钮" foreground="black" size="60,30"/>
+	<JButton text="按钮" foreground="black" size="60,30"/>
+	<JButton text="按钮" foreground="black" size="60,30"/>
+	<JButton text="按钮" foreground="black" size="60,30"/>
+	<JButton text="按钮" foreground="black" size="60,30"/>
+	<JButton text="按钮" foreground="black" size="60,30"/>
+	<JButton text="按钮" foreground="black" size="60,30"/>
+	<JButton text="按钮" foreground="black" size="60,30"/>
+	<JButton text="按钮" foreground="black" size="60,30"/>
+	<JButton text="按钮" foreground="black" size="60,30"/>
+	<JButton text="按钮" foreground="black" size="60,30"/>
+	<JButton text="按钮" foreground="black" size="60,30"/>
+	<JButton text="按钮" foreground="black" size="60,30"/>
+	<JButton text="按钮" foreground="black" size="60,30"/>
+	<JButton text="按钮" foreground="black" size="60,30"/>
+	<JButton text="按钮" foreground="black" size="60,30"/>
+	<JButton text="按钮" foreground="black" size="60,30"/>
+	<JButton text="按钮" foreground="black" size="60,30"/>
+	<JButton text="按钮" foreground="black" size="60,30"/>
+	<JButton text="按钮" foreground="black" size="60,30"/>
+	<JButton text="按钮" foreground="black" size="60,30"/>
+	<JButton text="按钮" foreground="black" size="60,30"/>
+	<JButton text="按钮" foreground="black" size="60,30"/>
+	<JButton text="按钮" foreground="black" size="60,30"/>
+	<JButton text="按钮" foreground="black" size="60,30"/>
+	<JButton text="按钮" foreground="black" size="60,30"/>
+	<JButton text="按钮" foreground="black" size="60,30"/>
+	<JButton text="按钮" foreground="black" size="60,30"/>
+	<JButton text="按钮" foreground="black" size="60,30"/>
+	<JButton text="按钮" foreground="black" size="60,30"/>
+	<JButton text="按钮" foreground="black" size="60,30"/>
+	<JButton text="按钮" foreground="black" size="60,30"/>
+	<JButton text="按钮" foreground="black" size="60,30"/>
+	<JButton text="按钮" foreground="black" size="60,30"/>
+	<JButton text="按钮" foreground="black" size="60,30"/>
+	<JButton text="按钮" foreground="black" size="60,30"/>
+	<JButton text="按钮" foreground="black" size="60,30"/>
+	<JButton text="按钮" foreground="black" size="60,30"/>
+	<JButton text="按钮" foreground="black" size="60,30"/>
+	<JButton text="按钮" foreground="black" size="60,30"/>
+	<JButton text="按钮" foreground="black" size="60,30"/>
+	<JButton text="按钮" foreground="black" size="60,30"/>
+	<JButton text="按钮" foreground="black" size="60,30"/>
+	<JButton text="按钮" foreground="black" size="60,30"/>
+	<JButton text="按钮" foreground="black" size="60,30"/>
+	<JButton text="按钮" foreground="black" size="60,30"/>
+	<JButton text="按钮" foreground="black" size="60,30"/>
+	<JButton text="按钮" foreground="black" size="60,30"/>
+	<JButton text="按钮" foreground="black" size="60,30"/>
+	<JButton text="按钮" foreground="black" size="60,30"/>
+	<JButton text="按钮" foreground="black" size="60,30"/>
+	<JButton text="按钮" foreground="black" size="60,30"/>
+	<JButton text="按钮" foreground="black" size="60,30"/>
+	<JButton text="按钮" foreground="black" size="60,30"/>
+	<JButton text="按钮" foreground="black" size="60,30"/>
+	<JButton text="按钮" foreground="black" size="60,30"/>
+	<JButton text="按钮" foreground="black" size="60,30"/>
+	<JButton text="按钮" foreground="black" size="60,30"/>
+	<JButton text="按钮" foreground="black" size="60,30"/>
+	<JButton text="按钮" foreground="black" size="60,30"/>
+	<JButton text="按钮" foreground="black" size="60,30"/>
+	<JButton text="按钮" foreground="black" size="60,30"/>
+	<JButton text="按钮" foreground="black" size="60,30"/>
+	<JButton text="按钮" foreground="black" size="60,30"/>
+	<JButton text="按钮" foreground="black" size="60,30"/>
+	<JButton text="按钮" foreground="black" size="60,30"/>
+	<JButton text="按钮" foreground="black" size="60,30"/>
+	<JButton text="按钮" foreground="black" size="60,30"/>
+	<JButton text="按钮" foreground="black" size="60,30"/>
+	<JButton text="按钮" foreground="black" size="60,30"/>
+	<JButton text="按钮" foreground="black" size="60,30"/>
+	<JButton text="按钮" foreground="black" size="60,30"/>
+	<JButton text="按钮" foreground="black" size="60,30"/>
+	<JButton text="按钮" foreground="black" size="60,30"/>
+	<JButton text="按钮" foreground="black" size="60,30"/>
+	<JButton text="按钮" foreground="black" size="60,30"/>
+	<JButton text="按钮" foreground="black" size="60,30"/>
+	<JButton text="按钮" foreground="black" size="60,30"/>
+	<JButton text="按钮" foreground="black" size="60,30"/>
+	<JButton text="按钮" foreground="black" size="60,30"/>
+	<JButton text="按钮" foreground="black" size="60,30"/>
+	<JButton text="按钮" foreground="black" size="60,30"/>
+	<JButton text="按钮" foreground="black" size="60,30"/>
+	<JButton text="按钮" foreground="black" size="60,30"/>
+	<JButton text="按钮" foreground="black" size="60,30"/>
+	<JButton text="按钮" foreground="black" size="60,30"/>
+	<JButton text="按钮" foreground="black" size="60,30"/>
+	<JButton text="按钮" foreground="black" size="60,30"/>
+	<JButton text="按钮" foreground="black" size="60,30"/>
+	<JButton text="按钮" foreground="black" size="60,30"/>
+	<JButton text="按钮" foreground="black" size="60,30"/>
+	<JButton text="按钮" foreground="black" size="60,30"/>
+	<JButton text="按钮" foreground="black" size="60,30"/>
+	<JButton text="按钮" foreground="black" size="60,30"/>
+	<JButton text="按钮" foreground="black" size="60,30"/>
+	<JButton text="按钮" foreground="black" size="60,30"/>
+	<JButton text="按钮" foreground="black" size="60,30"/>
+	<JButton text="按钮" foreground="black" size="60,30"/>
+	<JButton text="按钮" foreground="black" size="60,30"/>
+	<JButton text="按钮" foreground="black" size="60,30"/>
+	<JButton text="按钮" foreground="black" size="60,30"/>
+	<JButton text="按钮" foreground="black" size="60,30"/>
+	<JButton text="按钮" foreground="black" size="60,30"/>
+	<JButton text="按钮" foreground="black" size="60,30"/>
+	<JButton text="按钮" foreground="black" size="60,30"/>
+	<JButton text="按钮" foreground="black" size="60,30"/>
+	<JButton text="按钮" foreground="black" size="60,30"/>
+	<JButton text="按钮" foreground="black" size="60,30"/>
+	<JButton text="按钮" foreground="black" size="60,30"/>
+	<JButton text="按钮" foreground="black" size="60,30"/>
+	<JButton text="按钮" foreground="black" size="60,30"/>
+	<JButton text="按钮" foreground="black" size="60,30"/>
+	<JButton text="按钮" foreground="black" size="60,30"/>
+	<JButton text="按钮" foreground="black" size="60,30"/>
+	<JButton text="按钮" foreground="black" size="60,30"/>
+	<JButton text="按钮" foreground="black" size="60,30"/>
+	<JButton text="按钮" foreground="black" size="60,30"/>
+	<JButton text="按钮" foreground="black" size="60,30"/>
+	<JButton text="按钮" foreground="black" size="60,30"/>
+	<JButton text="按钮" foreground="black" size="60,30"/>
+	<JButton text="按钮" foreground="black" size="60,30"/>
+	<JButton text="按钮" foreground="black" size="60,30"/>
+	<JButton text="按钮" foreground="black" size="60,30"/>
+	<JButton text="按钮" foreground="black" size="60,30"/>
+	<JButton text="按钮" foreground="black" size="60,30"/>
+	<JButton text="按钮" foreground="black" size="60,30"/>
+	<JButton text="按钮" foreground="black" size="60,30"/>
+	<JButton text="按钮" foreground="black" size="60,30"/>
+	<JButton text="按钮" foreground="black" size="60,30"/>
+	<JButton text="按钮" foreground="black" size="60,30"/>
+	<JButton text="按钮" foreground="black" size="60,30"/>
+	<JButton text="按钮" foreground="black" size="60,30"/>
+	<JButton text="按钮" foreground="black" size="60,30"/>
+	<JButton text="按钮" foreground="black" size="60,30"/>
+	<JButton text="按钮" foreground="black" size="60,30"/>
+	<JButton text="按钮" foreground="black" size="60,30"/>
+	<JButton text="按钮" foreground="black" size="60,30"/>
+	<JButton text="按钮" foreground="black" size="60,30"/>
+	<JButton text="按钮" foreground="black" size="60,30"/>
+	<JButton text="按钮" foreground="black" size="60,30"/>
+	<JButton text="按钮" foreground="black" size="60,30"/>
+	<JButton text="按钮" foreground="black" size="60,30"/>
+	<JButton text="按钮" foreground="black" size="60,30"/>
+	<JButton text="按钮" foreground="black" size="60,30"/>
+	<JButton text="按钮" foreground="black" size="60,30"/>
+	<JButton text="按钮" foreground="black" size="60,30"/>
+	<JButton text="按钮" foreground="black" size="60,30"/>
+	<JButton text="按钮" foreground="black" size="60,30"/>
+	<JButton text="按钮" foreground="black" size="60,30"/>
 </JFrame>
