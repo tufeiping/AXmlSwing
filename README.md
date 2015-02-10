@@ -3,7 +3,7 @@
 ###文档
 请查看[wiki](https://github.com/dipoo/AXmlSwing/wiki)
 ###如何使用
-#####1、配置文件axmlswing.cfg.xml
+#####1、配置文件src/axmlswing.cfg.xml
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <configuation>
@@ -73,3 +73,6 @@
 		}
     }
 ```
+###依赖包
+* dom4j-1.6.1.jar
+* jaxen-1.1.1.jar
