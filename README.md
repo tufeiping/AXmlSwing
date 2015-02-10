@@ -9,7 +9,8 @@
 <configuation>
 	<!-- 配置扫描事件监听器的包名 -->
 	<scan-package>demo.listeners</scan-package>
-	<!-- 自定义属性，可用于布局文件中：如${title}，或者通过VarsManager.getVarValue(name)获取值 -->
+	<!-- 自定义属性，可用于布局文件中：如${title}，
+	或者通过VarsManager.getVarValue(name)获取值 -->
 	<properties>
 		<property name="title">虾片神器</property>
 		<property name="alert">下载地址不能为空</property>
