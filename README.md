@@ -73,6 +73,8 @@
 		}
     }
 ```
+#####5、效果图
+![demo](https://raw.githubusercontent.com/dipoo/AXmlSwing/master/demo.png)
 ###依赖包
 * dom4j-1.6.1.jar
 * jaxen-1.1.1.jar
