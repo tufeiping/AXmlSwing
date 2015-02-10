@@ -2,6 +2,7 @@ package org.arong.axmlswing;
 
 import java.awt.Container;
 import java.awt.Rectangle;
+import java.awt.Window;
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
 import java.util.EventListener;
@@ -29,6 +30,7 @@ import javax.swing.JList;
 import javax.swing.JMenu;
 import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JPasswordField;
 import javax.swing.JPopupMenu;
@@ -85,17 +87,26 @@ public class GuiXmlLoader {
 		Element e = doc.getRootElement();
 		try {
 			attr = parseAttribute(e);
-			/**
-			 * JFrame
-			 */
-			JFrame window = new JFrame();
+			Window window;
+			if("jframe".equals(e.getName().toLowerCase())){
+				window = new JFrame();
+			}else if("jdialog".equals(e.getName().toLowerCase())){
+				window = new JDialog();
+			}else if("jwindow".equals(e.getName().toLowerCase())){
+				window = new JWindow();
+			}else{
+				JOptionPane.showMessageDialog(null, "只能使用JFrame/JWindow/JDialog作为根元素！");
+				return;
+			}
 			ComponentManager.putComponent(attr.getId(), window);
 			ComponentManager.setMainWindow(window);
 			BeanUtil.apply(attr, window);
 			ComponentManager.setCommonAttribute(window, attr);
-			if(AttributeValidator.bounds(attr.getMaximizedBounds())){
-				int[] arr = AttributeTransfer.bounds(attr.getMaximizedBounds());
-				window.setMaximizedBounds(new Rectangle(arr[0], arr[1], arr[2], arr[3]));
+			if(window instanceof JFrame){
+				if(AttributeValidator.bounds(attr.getMaximizedBounds())){
+					int[] arr = AttributeTransfer.bounds(attr.getMaximizedBounds());
+					((JFrame)window).setMaximizedBounds(new Rectangle(arr[0], arr[1], arr[2], arr[3]));
+				}
 			}
 			if(!AttributeValidator.isBlank(attr.getIconImage())){
 				window.setIconImage(((ImageIcon)AttributeTransfer.icon(attr.getIconImage())).getImage());
@@ -110,7 +121,6 @@ public class GuiXmlLoader {
 		} catch (IllegalAccessException e1) {
 			e1.printStackTrace();
 		} finally{
-			
 		}
 	}
 	
