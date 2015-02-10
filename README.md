@@ -53,6 +53,7 @@
 ```java
     package demo.listeners;
     @EventAnnotation("loginBtn")//标明id=loginBtn控件事件监听器
+    //所有控件的事件监听器都要继承AbstractListener类并改写其中的方法
     public class LoginBtnListener extends AbstractListener{
         public void mouseClicked(MouseEvent e) {
 			JButton btn = (JButton) e.getSource();
