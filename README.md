@@ -1,7 +1,8 @@
 # AXmlSwing
 使用xml简化swing开发
-######文档
-[wiki](https://github.com/dipoo/AXmlSwing/wiki)
+###文档
+请查看[wiki](https://github.com/dipoo/AXmlSwing/wiki)
+###如何使用
 #####1、配置文件axmlswing.cfg.xml
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -50,7 +51,7 @@
 ####3、事件处理LoginBtnListener.java
 ```java
     package demo.listeners;
-    @EventAnnotation("loginBtn")
+    @EventAnnotation("loginBtn")//标明id=loginBtn控件事件监听器
     public class LoginBtnListener extends AbstractListener{
         public void mouseClicked(MouseEvent e) {
 			JButton btn = (JButton) e.getSource();
