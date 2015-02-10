@@ -15,7 +15,7 @@
 	</properties>
 </configuation>
 ```
-#####布局文件demo.xml
+#####2、布局文件demo.xml
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- 
@@ -47,7 +47,7 @@
 		foreground="red" cursor="HAND_CURSOR" font="微软染黑,0,12"/>
 </JFrame>
 ```
-#####事件处理LoginBtnListener.java
+####3、事件处理LoginBtnListener.java
 ```java
     package demo.listeners;
     @EventAnnotation("loginBtn")
@@ -62,7 +62,7 @@
 		}
     }
 ```  
-#####加载布局文件demo.java
+#####4、加载布局文件demo.java
 ```java
     package demo;	
     public class Demo {
