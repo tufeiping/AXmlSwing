@@ -198,7 +198,12 @@ public class GuiXmlLoader {
 					JToggleButton comp = new JToggleButton();
 					common(id, comp, attr, l, container, e);
 				}else if("jcombobox".equals(tagName)){
-					JComboBox comp = new JComboBox();
+					JComboBox comp;
+					if(!AttributeValidator.isBlank(attr.getItems())){
+						comp = new JComboBox(attr.getItems().split(","));
+					}else{
+						comp = new JComboBox();
+					}
 					common(id, comp, attr, l, container, e);
 				}else if("jcheckbox".equals(tagName)){
 					JCheckBox comp = new JCheckBox();
@@ -244,6 +249,12 @@ public class GuiXmlLoader {
 					common(id, comp, attr, l, container, e);
 				}else if("jlist".equals(tagName)){
 					JList comp = new JList();
+					if(!AttributeValidator.isBlank(attr.getItems())){
+						comp = new JList(attr.getItems().split(","));
+					}else{
+						comp = new JList();
+					}
+
 					common(id, comp, attr, l, container, e);
 				}else if("jpopupmenu".equals(tagName)){
 					JPopupMenu comp = new JPopupMenu();

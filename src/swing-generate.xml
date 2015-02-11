@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+	${rootPath}:项目根目录src(内置变量)
+ -->
+<JFrame id="mainWindow" title="代码生成器" width="377" height="490" locationRelativeTo="null" defaultCloseOperation="3" resizable="false" layout="0">
+	<JLabel bounds="10, 35, 90, 15" text="数据库连接：" horizontalAlignment="4" />
+	<JComboBox bounds="110, 30, 205, 25" items="com.mysql.jdbc.Driver,oracle.jdbc.dirver.OracleDriver" />
+	<JLabel bounds="10, 75, 90, 15" text="用户名：" horizontalAlignment="4" verticalAlignment="3" />
+	<JTextField bounds="110, 70, 205, 25" columns="10" text="root" />
+	<JLabel bounds="10, 115, 90, 15" text="登录密码：" horizontalAlignment="4" verticalAlignment="3" />
+	<JTextField bounds="110, 110, 205, 25" columns="10" text="root" />
+	<JLabel bounds="10, 195, 90, 15" text="数据表前缀：" horizontalAlignment="4" verticalAlignment="3" />
+	<JTextField bounds="110, 190, 205, 25" columns="10" />
+	<JLabel bounds="10, 155, 90, 15" text="数据库URL：" horizontalAlignment="4" verticalAlignment="3" />
+	<JTextField bounds="110, 150, 205, 25" columns="10" text="jdbc:mysql://127.0.0.1:3306/test" />
+	<JLabel bounds="10, 230, 90, 15" text="生成包前缀：" horizontalAlignment="4" verticalAlignment="3" />
+	<JTextField bounds="110, 225, 205, 25" columns="10" text="com.exemple" />
+	<JSeparator bounds="10, 270, 350, 2" />
+	<JLabel bounds="10, 299, 90, 15" text="作者：" horizontalAlignment="4" verticalAlignment="3" />
+	<JTextField bounds="110, 294, 205, 25" columns="10" text="dipoo" />
+	<JLabel bounds="10, 339, 90, 15" text="联系方式：" horizontalAlignment="4" verticalAlignment="3" />
+	<JTextField bounds="110, 334, 205, 25" columns="10" text="120826531@qq.com" />
+	<JLabel bounds="10, 374, 90, 15" text="生成目录：" horizontalAlignment="4" verticalAlignment="3" />
+	<JTextField bounds="110, 369, 205, 25" columns="10" text="F:/exemple" />
+	<JButton bounds="55, 415, 95, 25" text="测试连接" />
+	<JButton bounds="220, 415, 95, 25" text="生成代码" />
+</JFrame>

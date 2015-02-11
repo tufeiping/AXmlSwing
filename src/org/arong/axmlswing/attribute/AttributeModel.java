@@ -90,6 +90,7 @@ public class AttributeModel {
 	private Integer selectionMode;//设置列表的选择模式
 	private Boolean valueIsAdjusting;
 	private Integer visibleRowCount;//指示要显示的首选行数（不要求滚动）
+	private String items;//选项
 	
 	//JPopupMenu
 	private Boolean defaultLightWeightPopupEnabled;//弹出菜单是否为轻量级
@@ -1389,5 +1390,11 @@ public class AttributeModel {
 	}
 	public Integer getLayout() {
 		return layout;
+	}
+	public void setItems(String items) {
+		this.items = items;
+	}
+	public String getItems() {
+		return items;
 	}
 }
