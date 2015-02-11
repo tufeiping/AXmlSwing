@@ -7,4 +7,17 @@
 		<property name="title">虾片神器</property>
 		<property name="alert">下载地址不能为空</property>
 	</properties>
+	<!-- 定义标签全局属性 -->
+	<!---->
+	<tag-default>
+		<tag name="JLabel">
+			<attr name="horizontalAlignment">4</attr>
+			<attr name="verticalAlignment">3</attr>
+			<attr name="foreground">blue</attr>
+		</tag>
+		<tag name="JTextField">
+			<attr name="columns">10</attr>
+		</tag>
+	</tag-default>
+	
 </configuation>

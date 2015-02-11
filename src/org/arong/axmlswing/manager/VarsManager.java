@@ -4,6 +4,8 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import org.arong.axmlswing.attribute.AttributeModel;
+import org.arong.util.BeanUtil;
 import org.arong.util.Dom4jUtil;
 import org.dom4j.Document;
 import org.dom4j.Element;
@@ -19,6 +21,11 @@ public class VarsManager {
 	
 	private static ThreadLocal<Map<String, String>> vars = new ThreadLocal<Map<String, String>>();
 	
+	/**
+	 * 组件全局属性
+	 */
+	private static Map<String, AttributeModel> defaults = new HashMap<String, AttributeModel>();
+	
 	public final static String CONFIG_FILE_NAME = "/aswing.cfg.xml"; 
 	
 	static{
@@ -28,17 +35,34 @@ public class VarsManager {
 		//加载配置文件
 		try {
 			Document doc = Dom4jUtil.getDOM(rootPath + CONFIG_FILE_NAME);
-			Node n = doc.selectSingleNode("/configuation");
-			if(n != null){
-				n = doc.selectSingleNode("/configuation/scan-package");
+			Node root = doc.selectSingleNode("/configuation");
+			if(root != null){
+				Node n = root.selectSingleNode("scan-package");
 				if(n != null){
 					vars.get().put("scan-package", n.getText());
-					n = doc.selectSingleNode("/configuation/properties");
-					if(n != null){
-						List<Node> ns =  doc.selectNodes("/configuation/properties/property");
-						if(ns != null && ns.size() > 0){
-							for(Node node : ns){
-								vars.get().put(((Element)node).attributeValue("name"), node.getText());
+				}
+				n = root.selectSingleNode("properties");
+				if(n != null){
+					List<Node> ns =  n.selectNodes("property");
+					if(ns != null && ns.size() > 0){
+						for(Node node : ns){
+							vars.get().put(((Element)node).attributeValue("name"), node.getText());
+						}
+					}
+				}
+				n = root.selectSingleNode("tag-default");
+				if(n != null){
+					List<Node> ns =  n.selectNodes("tag");
+					if(ns != null && ns.size() > 0){
+						List<Node> attrs;
+						for(Node tag : ns){
+							attrs = tag.selectNodes("attr");
+							if(attrs != null && attrs.size() > 0){
+								AttributeModel model = new AttributeModel();
+								for(Node attr : attrs){
+									BeanUtil.setProperty(model, ((Element)attr).attributeValue("name"), new String[]{attr.getText()});
+								}
+								defaults.put(((Element)tag).attributeValue("name").toLowerCase(), model);
 							}
 						}
 					}
@@ -55,6 +79,10 @@ public class VarsManager {
 	
 	public static String getVarValue(String name){
 		return getVars().get(name);
+	}
+	
+	public static Map<String, AttributeModel> getDefaults() {
+		return defaults;
 	}
 	
 	/**

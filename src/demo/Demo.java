@@ -17,7 +17,9 @@ public class Demo {
 		}
 		long s = System.currentTimeMillis();
 		//加载布局文件
-		GuiXmlLoader.load(Demo.class.getResource("/").getPath() + "/swing-generate.xml");
+		//GuiXmlLoader.load(Demo.class.getResource("/").getPath() + "layout/demo.xml");
+		//GuiXmlLoader.load(Demo.class.getResource("/").getPath() + "layout/demo2.xml");
+		GuiXmlLoader.load(Demo.class.getResource("/").getPath() + "layout/swing-generate.xml");
 		System.out.println("渲染时间："+ (System.currentTimeMillis() - s));
 	}
 }

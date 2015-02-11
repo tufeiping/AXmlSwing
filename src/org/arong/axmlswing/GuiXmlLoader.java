@@ -4,12 +4,9 @@ import java.awt.Container;
 import java.awt.Rectangle;
 import java.awt.Window;
 import java.lang.reflect.Field;
-import java.lang.reflect.Method;
 import java.util.EventListener;
-import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
-import java.util.Map;
 
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
@@ -122,37 +119,6 @@ public class GuiXmlLoader {
 			e1.printStackTrace();
 		} finally{
 		}
-	}
-	
-	public static void printListener(Class<?>... classes){
-		Map<String, String> maps = new HashMap<String, String>();
-		String key;
-		int i = 0;
-		for(Class<?> clazz : classes){
-			Method[] methods = clazz.getMethods();
-			for(Method method : methods){
-				if(method.getName().startsWith("add") && method.getName().endsWith("Listener")){
-					key = method.getName().substring(3, method.getName().length());
-					if(!maps.containsKey(key)){
-						System.out.println(key + ",");
-						maps.put(key, key);
-						i++;
-					}
-				}
-			}
-		}
-		System.out.println(i);
-	}
-	
-	public static void main(String[] args) {
-		/*printListener(JFrame.class, JWindow.class, JDialog.class, JTextField.class, JButton.class, JTabbedPane.class, JEditorPane.class,
-				JTable.class ,JLabel.class, JTextArea.class, JRadioButton.class, JRadioButtonMenuItem.class, JCheckBox.class, JCheckBoxMenuItem.class,
-				JColorChooser.class, JComboBox.class, JDesktopPane.class, JFileChooser.class, JFormattedTextField.class,
-				JInternalFrame.class,JLayeredPane.class,JList.class, JMenu.class, JMenuBar.class,JMenuItem.class, JPanel.class, JPasswordField.class,
-				JPopupMenu.class, JProgressBar.class,JRootPane.class, JScrollBar.class, JScrollPane.class,JSeparator.class, JSlider.class,
-				JSpinner.class, JSplitPane.class, JToggleButton.class, JToolBar.class, JToolTip.class, JTree.class, JViewport.class,
-				JTableHeader.class,JTextPane.class);*/
-//		ListenerManager.setComponentListeners(JLabel.class, null);
 	}
 	
 	/**
@@ -326,13 +292,26 @@ public class GuiXmlLoader {
 	
 	public static void common(String id, Container comp, AttributeModel attr, EventListener l, Container container, Element e){
 		if(id != null){
+			//将组件放进组件管理器
 			ComponentManager.putComponent(id, comp);
 		}
-		//设置一些基本类型的值
+		AttributeModel defaultAttr = VarsManager.getDefaults().get(e.getName().toLowerCase());
+		if(defaultAttr != null){
+			//设置组件全局属性
+			BeanUtil.apply(defaultAttr, comp);
+			//转换设置组件的公共属性
+			ComponentManager.setCommonAttribute(comp, defaultAttr);
+			//转换设置不同组件的属性
+			ComponentManager.setComponentSpecificAttribute(e.getName().toLowerCase(), comp, defaultAttr);
+		}
+		//设置基本属性，可以覆盖全局属性
 		BeanUtil.apply(attr, comp);
+		//转换设置组件的公共属性
 		ComponentManager.setCommonAttribute(comp, attr);
+		//转换设置不同组件的属性
 		ComponentManager.setComponentSpecificAttribute(e.getName().toLowerCase(), comp, attr);
 		if(l != null){
+			//将监听器放进监听器管理器
 			ListenerManager.setComponentListeners(comp, l);
 		}
 		if(container != null){
