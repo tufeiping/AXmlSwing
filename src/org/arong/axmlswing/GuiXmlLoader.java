@@ -220,7 +220,6 @@ public class GuiXmlLoader {
 					}else{
 						comp = new JList();
 					}
-
 					common(id, comp, attr, l, container, e);
 				}else if("jpopupmenu".equals(tagName)){
 					JPopupMenu comp = new JPopupMenu();
@@ -296,7 +295,7 @@ public class GuiXmlLoader {
 			ComponentManager.putComponent(id, comp);
 		}
 		AttributeModel defaultAttr = VarsManager.getDefaults().get(e.getName().toLowerCase());
-		if(defaultAttr != null){
+		if(defaultAttr != null && !"true".equals(e.attributeValue("a-ignore"))){
 			//设置组件全局属性
 			BeanUtil.apply(defaultAttr, comp);
 			//转换设置组件的公共属性
