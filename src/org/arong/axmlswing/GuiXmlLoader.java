@@ -313,7 +313,7 @@ public class GuiXmlLoader {
 			//将监听器放进监听器管理器
 			ListenerManager.setComponentListeners(comp, l);
 		}
-		if(container != null){
+		if(container != null && !"false".equals(e.attributeValue("a-added"))){
 			container.add(comp);
 		}
 		parse(comp, e, attr);
