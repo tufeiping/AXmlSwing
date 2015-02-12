@@ -15,6 +15,15 @@
 		<property name="title">虾片神器</property>
 		<property name="alert">下载地址不能为空</property>
 	</properties>
+	<!-- 定义标签全局属性 -->
+	<tag-default>
+		<tag name="JLabel">
+			<attr name="foreground">blue</attr>
+		</tag>
+		<tag name="JTextField">
+			<attr name="columns">10</attr>
+		</tag>
+	</tag-default>
 </configuation>
 ```
 #####2、布局文件demo.xml
@@ -40,8 +49,7 @@
 		<JMenu text="搜索"/>
 		<JMenu text="帮助"/>
 	</JMenuBar>
-	<JLabel text="地址" bounds="10, 50, 60, 30" foreground="blue"
-		icon="${rootPath}/anchor.gif" />
+	<JLabel text="地址" bounds="10, 50, 60, 30" icon="${rootPath}/anchor.gif" />
 	<JTextField id="loginUsernameField" text="逗比"
 		bounds="60, 50, 220, 30" />
 	<JButton id="loginBtn" text="下载" icon="${rootPath}/anchor.gif"
