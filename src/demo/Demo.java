@@ -3,7 +3,6 @@ package demo;
 import javax.swing.UIManager;
 
 import org.arong.axmlswing.GuiXmlLoader;
-import org.arong.axmlswing.manager.ComponentManager;
 import org.jb2011.lnf.beautyeye.BeautyEyeLNFHelper;
 
 import demo.listeners.SwingGenerateListeners;
@@ -14,7 +13,6 @@ public class Demo {
 			BeautyEyeLNFHelper.frameBorderStyle = BeautyEyeLNFHelper.FrameBorderStyle.generalNoTranslucencyShadow;
 			BeautyEyeLNFHelper.launchBeautyEyeLNF();
 			UIManager.put("RootPane.setupButtonVisible", false);
-//			WebLookAndFeel.install();
 		} catch (Exception e) {
 
 		}

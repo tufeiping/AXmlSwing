@@ -297,11 +297,10 @@ public class GuiXmlLoader {
 		AttributeModel defaultAttr = VarsManager.getDefaults().get(e.getName().toLowerCase());
 		if(defaultAttr != null && !"true".equals(e.attributeValue("a-ignore"))){
 			//设置组件全局属性
-			BeanUtil.apply(defaultAttr, comp);
-			//转换设置组件的公共属性
-			ComponentManager.setCommonAttribute(comp, defaultAttr);
-			//转换设置不同组件的属性
-			ComponentManager.setComponentSpecificAttribute(e.getName().toLowerCase(), comp, defaultAttr);
+			AttributeModel temp = new AttributeModel();
+			BeanUtil.apply(defaultAttr, temp);
+			BeanUtil.apply(attr, temp);
+			attr = temp;
 		}
 		//设置基本属性，可以覆盖全局属性
 		BeanUtil.apply(attr, comp);

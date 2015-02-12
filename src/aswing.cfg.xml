@@ -14,9 +14,11 @@
 			<attr name="horizontalAlignment">4</attr>
 			<attr name="verticalAlignment">3</attr>
 			<attr name="foreground">blue</attr>
+			<attr name="size">90, 15</attr>
 		</tag>
 		<tag name="JTextField">
 			<attr name="columns">10</attr>
+			<attr name="size">205, 25</attr>
 		</tag>
 	</tag-default>
 	

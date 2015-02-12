@@ -3,25 +3,25 @@
 	${rootPath}:项目根目录src(内置变量)
  -->
 <JFrame id="mainWindow" title="代码生成器" width="377" height="490" locationRelativeTo="null" defaultCloseOperation="3" resizable="false" layout="0">
-	<JLabel bounds="10, 35, 90, 15" text="数据库连接：" foreground="red" />
+	<JLabel location="10, 35" text="数据库连接：" foreground="red" />
 	<JComboBox id="driver" bounds="110, 30, 205, 25" items="com.mysql.jdbc.Driver,oracle.jdbc.dirver.OracleDriver" />
-	<JLabel bounds="10, 75, 90, 15" text="用户名：" />
-	<JTextField id="username" bounds="110, 70, 205, 25" text="root" />
-	<JLabel bounds="10, 115, 90, 15" text="登录密码：" />
-	<JTextField id="pwd" bounds="110, 110, 205, 25" text="root" />
-	<JLabel bounds="10, 195, 90, 15" text="数据表前缀：" />
-	<JTextField id="tbPreffix" bounds="110, 190, 205, 25" />
-	<JLabel bounds="10, 155, 90, 15" text="数据库URL：" />
-	<JTextField id="url" bounds="110, 150, 205, 25" text="jdbc:mysql://127.0.0.1:3306/test" />
-	<JLabel bounds="10, 230, 90, 15" text="生成包前缀：" />
-	<JTextField id="packagePreffix" bounds="110, 225, 205, 25" text="com.exemple" />
+	<JLabel location="10, 75" text="用户名：" />
+	<JTextField id="username" location="110, 70" text="root" />
+	<JLabel location="10, 115" text="登录密码：" />
+	<JTextField id="pwd" location="110, 110" text="root" />
+	<JLabel location="10, 195" text="数据表前缀：" />
+	<JTextField id="tbPreffix" location="110, 190" />
+	<JLabel location="10, 155" text="数据库URL：" />
+	<JTextField id="url" location="110, 150" text="jdbc:mysql://127.0.0.1:3306/test" />
+	<JLabel location="10, 230" text="生成包前缀：" />
+	<JTextField id="packagePreffix" location="110, 225" text="com.exemple" />
 	<JSeparator bounds="10, 270, 350, 2" />
-	<JLabel bounds="10, 299, 90, 15" text="作者：" />
-	<JTextField id="author" bounds="110, 294, 205, 25" text="dipoo" />
-	<JLabel bounds="10, 339, 90, 15" text="联系方式：" />
-	<JTextField id="contact" bounds="110, 334, 205, 25" text="120826531@qq.com" />
-	<JLabel bounds="10, 374, 90, 15" text="生成目录：" />
-	<JTextField id="folder" bounds="110, 369, 205, 25" text="F:/exemple" />
+	<JLabel location="10, 299" text="作者：" />
+	<JTextField id="author" location="110, 294" text="dipoo" />
+	<JLabel location="10, 339" text="联系方式：" />
+	<JTextField id="contact" location="110, 334" text="120826531@qq.com" />
+	<JLabel location="10, 374" text="生成目录：" />
+	<JTextField id="folder" location="110, 369" text="F:/exemple" />
 	<JButton id="testBtn" bounds="55, 415, 95, 25" text="测试连接" />
 	<JButton id="genBtn" bounds="220, 415, 95, 25" text="生成代码" />
 </JFrame>
