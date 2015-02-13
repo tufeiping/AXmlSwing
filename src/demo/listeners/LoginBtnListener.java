@@ -1,5 +1,6 @@
 package demo.listeners;
 
+import java.awt.Container;
 import java.awt.event.MouseEvent;
 
 import javax.swing.JButton;
@@ -21,4 +22,8 @@ public class LoginBtnListener extends AbstractListener{
 		JOptionPane.showMessageDialog(null, field.getText());
 	}
 
+	public void init(Container c) {
+		JButton btn = (JButton)c;
+		System.out.println("初始化：" + btn.getText());
+	}
 }

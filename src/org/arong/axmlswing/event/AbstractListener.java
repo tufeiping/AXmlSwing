@@ -1,5 +1,6 @@
 package org.arong.axmlswing.event;
 
+import java.awt.Container;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.AdjustmentEvent;
@@ -97,6 +98,8 @@ public class AbstractListener implements
 	VetoableChangeListener,
 	PropertyChangeListener
 {
+	//初始化
+	public void init(Container c){}
 	//--------------MouseListener---------------
 	/**
      * Invoked when the mouse button has been clicked (pressed

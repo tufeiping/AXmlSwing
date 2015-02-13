@@ -57,6 +57,7 @@ import javax.swing.table.JTableHeader;
 import org.arong.axmlswing.attribute.AttributeModel;
 import org.arong.axmlswing.attribute.AttributeTransfer;
 import org.arong.axmlswing.attribute.AttributeValidator;
+import org.arong.axmlswing.event.AbstractListener;
 import org.arong.axmlswing.manager.ComponentManager;
 import org.arong.axmlswing.manager.ListenerManager;
 import org.arong.axmlswing.manager.VarsManager;
@@ -110,6 +111,13 @@ public class GuiXmlLoader {
 			}
 			if(!AttributeValidator.isBlank(attr.getLocationRelativeTo())){
 				window.setLocationRelativeTo(ComponentManager.getComponent(attr.getLocationRelativeTo()));
+			}
+			EventListener l = ListenerManager.getListener(attr.getId());
+			if(l != null){
+				//设置监听器
+				ListenerManager.setComponentListeners(window, l);
+				//执行初始化
+				((AbstractListener)l).init(window);
 			}
 			parse(window, e, attr);
 			window.setVisible(true);
@@ -309,8 +317,10 @@ public class GuiXmlLoader {
 		//转换设置不同组件的属性
 		ComponentManager.setComponentSpecificAttribute(e.getName().toLowerCase(), comp, attr);
 		if(l != null){
-			//将监听器放进监听器管理器
+			//设置监听器
 			ListenerManager.setComponentListeners(comp, l);
+			//执行初始化
+			((AbstractListener)l).init(comp);
 		}
 		if(container != null && !"false".equals(e.attributeValue("a-added"))){
 			container.add(comp);
