@@ -32,7 +32,7 @@
 <!-- 
 	${rootPath}:项目根目录src(内置变量)
  -->
-<JFrame id="mainWindow" title="${title}" width="300" height="200"
+<JFrame id="mainWindow" title="${title}" width="300" height="300"
 	locationRelativeTo="null" defaultCloseOperation="3" 
 	iconImage="${rootPath}/anchor.gif" layout="0">
 	<JMenuBar bounds="5, 0, 280, 25" cursor="HAND_CURSOR">
@@ -50,25 +50,25 @@
 		<JMenu text="帮助"/>
 	</JMenuBar>
 	<JLabel text="地址" bounds="10, 50, 60, 30" icon="${rootPath}/anchor.gif" />
-	<JTextField id="loginUsernameField" text="逗比"
+	<JTextField id="urlField" text="逗比"
 		bounds="60, 50, 220, 30" />
-	<JButton id="loginBtn" text="下载" icon="${rootPath}/anchor.gif"
+	<JButton id="downBtn" text="下载" icon="${rootPath}/anchor.gif"
 		toolTipText="按钮提示" bounds="100, 100, 100, 30"
 		foreground="red" cursor="HAND_CURSOR" font="微软染黑,0,12"/>
 </JFrame>
 ```
-####3、事件处理LoginBtnListener.java
+####3、事件处理DownBtnListener.java
 ```java
     package demo.listeners;
-    @EventAnnotation("loginBtn")//标明id=loginBtn控件事件监听器
+    @EventAnnotation("downBtn")//标明id=downBtn控件事件监听器
     //所有控件的事件监听器都要继承AbstractListener类并改写其中的方法
-    public class LoginBtnListener extends AbstractListener{
+    public class DownBtnListener extends AbstractListener{
         public void mouseClicked(MouseEvent e) {
 			JButton btn = (JButton) e.getSource();
 			JFrame mainWindow = (JFrame) ComponentManager.getMainWindow();
 			JOptionPane.showMessageDialog(null, "你好, 主窗口名称为：" + 
 			     mainWindow.getTitle() + ",按钮text:" + btn.getText());
-			JTextField field=(JTextField)ComponentManager.getComponent("loginUsernameField");
+			JTextField field=(JTextField)ComponentManager.getComponent("urlField");
 			JOptionPane.showMessageDialog(null, field.getText());
 		}
     }
@@ -88,3 +88,4 @@
 ###依赖包
 * dom4j-1.6.1.jar
 * jaxen-1.1.1.jar
+* beautyeye_lnf.jar(皮肤包，可选)
