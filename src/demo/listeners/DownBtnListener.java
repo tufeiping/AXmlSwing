@@ -11,14 +11,14 @@ import javax.swing.JTextField;
 import org.arong.axmlswing.event.AbstractListener;
 import org.arong.axmlswing.event.EventAnnotation;
 import org.arong.axmlswing.manager.ComponentManager;
-@EventAnnotation("loginBtn")
-public class LoginBtnListener extends AbstractListener{
+@EventAnnotation("downBtn")
+public class DownBtnListener extends AbstractListener{
 
 	public void mouseClicked(MouseEvent e) {
 		JButton btn = (JButton) e.getSource();
 		JFrame mainWindow = (JFrame) ComponentManager.getMainWindow();
 		JOptionPane.showMessageDialog(null, "你好, 主窗口名称为：" + mainWindow.getTitle() + ",按钮text:" + btn.getText());
-		JTextField field = (JTextField) ComponentManager.getComponent("loginUsernameField");
+		JTextField field = (JTextField) ComponentManager.getComponent("urlField");
 		JOptionPane.showMessageDialog(null, field.getText());
 	}
 

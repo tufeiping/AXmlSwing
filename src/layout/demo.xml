@@ -19,7 +19,7 @@
 		<JMenu text="帮助"/>
 	</JMenuBar>
 	<JLabel text="地址" bounds="10, 50, 60, 30" foreground="blue" icon="${rootPath}/anchor.gif" />
-	<JTextField id="loginUsernameField" text="逗比" bounds="60, 50, 220, 30" />
-	<JButton id="loginBtn" text="下载" icon="${rootPath}/anchor.gif" toolTipText="按钮提示"
+	<JTextField id="urlField" text="逗比" bounds="60, 50, 220, 30" />
+	<JButton id="downBtn" text="下载" icon="${rootPath}/anchor.gif" toolTipText="按钮提示"
 		bounds="100, 100, 100, 30" foreground="red" cursor="HAND_CURSOR" font="微软染黑,0,12"/>
 </JFrame>

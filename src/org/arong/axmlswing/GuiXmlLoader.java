@@ -323,7 +323,15 @@ public class GuiXmlLoader {
 			((AbstractListener)l).init(comp);
 		}
 		if(container != null && !"false".equals(e.attributeValue("a-added"))){
-			container.add(comp);
+			if(container instanceof JFrame){
+				((JFrame)container).getContentPane().add(comp);
+			}else if(container instanceof JWindow){
+				((JWindow)container).getContentPane().add(comp);
+			}else if(container instanceof JDialog){
+				((JDialog)container).getContentPane().add(comp);
+			}else{
+				container.add(comp);
+			}
 		}
 		parse(comp, e, attr);
 	}
