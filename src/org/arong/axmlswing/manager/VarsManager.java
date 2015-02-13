@@ -19,7 +19,7 @@ import org.dom4j.Node;
 @SuppressWarnings("unchecked")
 public class VarsManager {
 	
-	private static ThreadLocal<Map<String, String>> vars = new ThreadLocal<Map<String, String>>();
+	private static Map<String, String> vars = new HashMap<String, String>();
 	
 	/**
 	 * 组件全局属性
@@ -29,9 +29,8 @@ public class VarsManager {
 	public final static String CONFIG_FILE_NAME = "/aswing.cfg.xml"; 
 	
 	static{
-		vars.set(new HashMap<String, String>());
 		String rootPath = ClassLoader.getSystemResource("").getPath();
-		vars.get().put("rootPath", rootPath);
+		vars.put("rootPath", rootPath);
 		//加载配置文件
 		try {
 			Document doc = Dom4jUtil.getDOM(rootPath + CONFIG_FILE_NAME);
@@ -39,14 +38,14 @@ public class VarsManager {
 			if(root != null){
 				Node n = root.selectSingleNode("scan-package");
 				if(n != null){
-					vars.get().put("scan-package", n.getText());
+					vars.put("scan-package", n.getText());
 				}
 				n = root.selectSingleNode("properties");
 				if(n != null){
 					List<Node> ns =  n.selectNodes("property");
 					if(ns != null && ns.size() > 0){
 						for(Node node : ns){
-							vars.get().put(((Element)node).attributeValue("name"), node.getText());
+							vars.put(((Element)node).attributeValue("name"), node.getText());
 						}
 					}
 				}
@@ -74,7 +73,7 @@ public class VarsManager {
 	}
 	
 	public static Map<String, String> getVars() {
-		return vars.get();
+		return vars;
 	}
 	
 	public static String getVarValue(String name){
@@ -92,8 +91,8 @@ public class VarsManager {
 		if(value == null)
 			return null;
 		String str = value.trim();
-		for(String key : vars.get().keySet()){
-			str = str.replaceAll("\\$\\{" + key + "\\}", vars.get().get(key));
+		for(String key : vars.keySet()){
+			str = str.replaceAll("\\$\\{" + key + "\\}", vars.get(key));
 		}
 		return str;
 	}

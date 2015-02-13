@@ -8,7 +8,9 @@ import javax.swing.JComboBox;
 import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 
+import org.arong.axmlswing.GuiXmlLoader;
 import org.arong.axmlswing.manager.ComponentManager;
+import org.arong.axmlswing.manager.VarsManager;
 
 public class SwingGenerateListeners {
 	public SwingGenerateListeners(){
@@ -33,6 +35,7 @@ public class SwingGenerateListeners {
 					}else if("".equals(url_.getText())){
 						JOptionPane.showMessageDialog(null, "数据库URL不能为空");
 					}else{
+						GuiXmlLoader.load(VarsManager.getVarValue("rootPath") + "/layout/demo2.xml");
 					}
 				}
 			});

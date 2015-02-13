@@ -83,6 +83,12 @@ public class GuiXmlLoader {
 		}
 		AttributeModel attr;
 		Element e = doc.getRootElement();
+		
+		//检测是否已存在
+		if(ComponentManager.getComponent("window:" + path) != null){
+			ComponentManager.getComponent("window:" + path).setVisible(true);
+			return;
+		}
 		try {
 			attr = parseAttribute(e);
 			Window window;
@@ -96,8 +102,14 @@ public class GuiXmlLoader {
 				JOptionPane.showMessageDialog(null, "只能使用JFrame/JWindow/JDialog作为根元素！");
 				return;
 			}
+			//如果未定义id属性,则将组件name值设置为id
+			if(attr.getId() == null){
+				attr.setId(window.getName());
+			}
 			ComponentManager.putComponent(attr.getId(), window);
-			ComponentManager.setMainWindow(window);
+			if(ComponentManager.getMainWindow() == null){
+				ComponentManager.setMainWindow(window);
+			}
 			BeanUtil.apply(attr, window);
 			ComponentManager.setCommonAttribute(window, attr);
 			if(window instanceof JFrame){
@@ -121,6 +133,8 @@ public class GuiXmlLoader {
 			}
 			parse(window, e, attr);
 			window.setVisible(true);
+			//将此布局文件放入组件管理器
+			ComponentManager.putComponent("window:" + path, window);
 		} catch (IllegalArgumentException e1) {
 			e1.printStackTrace();
 		} catch (IllegalAccessException e1) {

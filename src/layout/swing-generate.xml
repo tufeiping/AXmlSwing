@@ -2,7 +2,7 @@
 <!-- 
 	${rootPath}:项目根目录src(内置变量)
  -->
-<JFrame id="mainWindow" title="代码生成器" width="377" height="490" locationRelativeTo="null" defaultCloseOperation="3" resizable="false" layout="0">
+<JFrame title="代码生成器" width="377" height="490" locationRelativeTo="null" defaultCloseOperation="3" resizable="false" layout="0">
 	<JLabel location="10, 35" text="数据库连接：" foreground="red" />
 	<JComboBox id="driver" bounds="110, 30, 205, 25" items="com.mysql.jdbc.Driver,oracle.jdbc.dirver.OracleDriver" />
 	<JLabel location="10, 75" text="用户名：" />
